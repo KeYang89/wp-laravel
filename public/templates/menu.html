@@ -1,0 +1,33 @@
+
+
+<ion-side-menus>
+    <ion-pane ion-side-menu-content>
+        <ion-nav-bar class="bar-positive">
+            <ion-nav-back-button class="button-clear"><i class="icon ion-chevron-left"></i> Back</ion-nav-back-button>
+        </ion-nav-bar>
+
+        <ion-nav-view name="menuContent" animation="slide-left-right"></ion-nav-view>
+    </ion-pane>
+
+    <ion-side-menu side="left" class="left-menu-container" expose-aside-when="large">
+        <header class="bar bar-header bar-positive">
+            <h1 class="title">Team</h1>
+        </header>
+
+       <ion-content class="has-header">
+            <ion-list>
+                <ion-item nav-clear menu-close href="">
+                    Field View
+                </ion-item>
+                <ion-item nav-clear menu-close style="color:#cccccc;">
+                    Data View
+                </ion-item>
+            </ion-list>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>
+<ion-footer-bar align-title="left" class="bar-assertive">
+    &nbsp;
+</ion-footer-bar>
+
+

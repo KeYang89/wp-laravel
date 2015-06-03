@@ -1,0 +1,35 @@
+/* Empty. Add your own CSS if you like */
+
+body, ion-item{
+    font-size: 13px !important;
+}
+
+.bar-header, .bar-footer, .navbar-default, .panel-heading{
+    background-color: #3a3a3a !important;
+    border-color: #808080 !important;
+}
+
+.navbar-default a, .panel-heading{
+    color: #fff !important;
+}
+
+.left-menu-container{
+    background-color: #eaeaea;
+}
+
+#wrapper{
+    padding: 10px;
+}
+
+.action-sheet-options {
+    top: 0 !important;
+    overflow: auto !important;
+}
+
+h1.title{
+    color: #ffffff;
+}
+
+.item-thumbnail-left, .item-thumbnail-left .item-content{
+    min-height: 50px;
+}
