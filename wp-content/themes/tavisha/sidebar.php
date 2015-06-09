@@ -4,7 +4,7 @@
 <div class="login-box-body" style="background-color:rgba(255,255,255,0.5);padding:10px;">
         <h3>Sign/Register</h3>
         <form role="form" method="POST" action="http://matchday45.com/team/auth/login">
-            <input type="hidden" name="_token" value="<?php getbody()?>">
+            <input type="hidden" name="_token" value="<?php echo getbody();?>">
             <div class="form-group has-feedback">
                 <input type="email" class="form-control" placeholder="Email" name="email" value="" autocomplete="off" style="cursor: auto;">
                 <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
