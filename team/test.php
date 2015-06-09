@@ -1,11 +1,19 @@
-<script src="http://matchday45.com/team/public/plugins/jQuery/jQuery-2.1.4.min.js"></script>
-<script>
+<?php
 
-    $(document).ready(function(){
-        console.log('running');
-        $.getJSON('http://matchday45.com/team/api/v1/getUserTeam/6', function(data){
-            console.log('success');
-        });
-    });
+function httpGet($url)
+{
+    $ch = curl_init();
 
-</script>
+    curl_setopt($ch,CURLOPT_URL,$url);
+    curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
+//  curl_setopt($ch,CURLOPT_HEADER, false);
+
+    $output=curl_exec($ch);
+
+    curl_close($ch);
+    return $output;
+}
+
+echo httpGet("/team/api/v1/getToken");
+
+?>

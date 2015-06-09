@@ -403,7 +403,6 @@ class Sidebar_Login_Widget extends WP_Widget {
 			}
 
 			echo '</p>';
-
 		}
 	}
 }
