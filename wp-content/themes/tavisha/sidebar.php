@@ -4,7 +4,7 @@
 <div class="login-box-body" style="background-color:rgba(255,255,255,0.5);padding:10px;">
         <h3>Sign/Register</h3>
         <form role="form" method="POST" action="http://matchday45.com/team/auth/login">
-            <input type="hidden" name="_token" value="<?php ?>">
+            <input type="hidden" name="_token" value="<?php getbody()?>">
             <div class="form-group has-feedback">
                 <input type="email" class="form-control" placeholder="Email" name="email" value="" autocomplete="off" style="cursor: auto;">
                 <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
@@ -26,12 +26,6 @@
                 </div><!-- /.col -->
             </div>
         </form>
-
-        <div class="social-auth-links text-center">
-            <p>- OR -</p>
-            <a href="#" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-facebook"></i> Sign in using Facebook</a>
-            <a href="#" class="btn btn-block btn-social btn-google-plus btn-flat"><i class="fa fa-google-plus"></i> Sign in using Google+</a>
-        </div><!-- /.social-auth-links -->
 
         <a href="#">I forgot my password</a><br>
         <a href="http://matchday45.com/team/auth/register" class="text-center">Register a new membership</a>

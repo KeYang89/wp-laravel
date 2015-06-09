@@ -18,6 +18,24 @@ error_reporting(0);
 //     return $output;
 // }
 
+
+/**
+ * Returns the body content of the specified HTML file.
+ */
+function getbody($filename) {
+  $file = file_get_contents($filename);
+
+  $bodypattern = ".*<body>";
+  $bodyendpattern = "</body>.*";
+
+  $noheader = eregi_replace($bodypattern, "", $file);
+
+  $noheader = eregi_replace($bodyendpattern, "", $noheader);
+
+  return $noheader;
+}
+
+
 if ( ! isset( $content_width ) ){
   $content_width = 1170;
 }
