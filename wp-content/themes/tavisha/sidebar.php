@@ -1,6 +1,6 @@
 <?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
   <div id="widget-area" class="sidebar column col3 col4-sm" role="complementary">
-    <?php dynamic_sidebar( 'sidebar-1' ); ?>
+  
 <div class="login-box-body" style="background-color:rgba(255,255,255,0.5);padding:10px;">
         <h3>Sign/Register</h3>
         <form role="form" method="POST" action="http://matchday45.com/team/auth/login">
@@ -31,6 +31,7 @@
         <a href="http://matchday45.com/team/auth/register" class="text-center">Register a new membership</a>
 
     </div>
+      <?php dynamic_sidebar( 'sidebar-1' ); ?>
 <div class="team">
                              <div class="team-header">
                              
