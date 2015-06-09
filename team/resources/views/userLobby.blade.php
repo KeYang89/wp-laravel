@@ -20,8 +20,8 @@
                     </div>
 
                 </div><!-- /.box-header -->
-                <div class="box-body">
-                    <table id="tbl-lobby" class="table table-bordered table-hover">
+                <div class="box-body no-padding">
+                    <table id="tbl-lobby" class="table table-striped">
                         <thead>
                         <tr>
                             <th class="no-sort"></th>

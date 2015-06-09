@@ -21,6 +21,7 @@ Route::get('scouts', 'UserTeamController@scout');
 Route::get('statistics', 'UserTeamController@statistics');
 Route::get('fixtures', 'UserTeamController@fixtures');
 Route::get('lobby', 'UserTeamController@userLobby');
+Route::get('player-stats', 'UserTeamController@playerStats');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
@@ -30,6 +31,13 @@ Route::controllers([
 Route::group(array('prefix' => 'api/v1'), function()
 {
     Route::get('getAllPlayers', 'Api\PlayerController@getAllPlayers');
+    Route::get('getAllTeams', 'Api\PlayerController@getAllTeams');
+    Route::get('getAllLeagues', 'Api\PlayerController@getAllLeagues');
+    Route::get('getAllSeasons', 'Api\PlayerController@getAllSeasons');
+
     Route::get('getUserTeam/{teamId}', 'Api\PlayerController@getUserTeam');
     Route::post('saveTeam', 'Api\PlayerController@saveTeam');
+    Route::get('getPlayerStat/{playerId}/{leagueId}/{seasonId}', 'Api\PlayerController@getPlayerStat');
+    Route::get('getToken', 'Api\PlayerController@getToken');
+
 });

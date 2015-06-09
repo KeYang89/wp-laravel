@@ -12,5 +12,6 @@ return [
     'player_profile'    =>  '/player-profile',
     'fixtures'          =>  '/fixtures',
     'statistics'        =>  '/statistics',
-    'scouts'            =>  '/scouts'
+    'scouts'            =>  '/scouts',
+    'player-stats'      =>  '/player-stats'
 ];

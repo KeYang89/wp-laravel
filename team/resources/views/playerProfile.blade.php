@@ -23,8 +23,8 @@
                     <!-- Morris chart - Sales -->
                     <div class="chart tab-pane active" id="field-view" style="position: relative;">
                         <div class="box-header"><h4>{{ $playerData->first_name }} {{ $playerData->last_name }}</h4></div>
-                        <div  class="row" style="margin: 0px 10px 10px 10px; height: 400px; background-size: cover; background-image: url('{{Config::get('app.url')}}/public/images/player_{{ $playerData->id }}.jpg');">
-
+                        <div  class="row" style="margin: 0px 10px 10px 10px;">
+                            <img src="{{Config::get('app.url')}}/public/images/player_{{ $playerData->id }}.jpg" style="width: 100%;">
                         </div>
                     </div>
                 </div>
@@ -43,59 +43,34 @@
                     <!-- Morris chart - Sales -->
                     <div class="chart tab-pane active" id="overview" style="position: relative;">
                         <div class="box-body no-padding">
-                            <table id="tbl-gameweek" class="table table-striped">
-
-                                <tr>
-                                    <th>Date of birth:</th>
-                                    <td>07/01/1991</td>
-                                    <th>Height:</th>
-                                    <td>1.73 m</td>
-                                </tr>
-
-                                <tr>
-                                    <th>Age:</th>
-                                    <td>24</td>
-                                    <th>Weight:</th>
-                                    <td>74 kg</td>
-                                </tr>
-
-                                <tr>
-                                    <th>Country of birth:</th>
-                                    <td></td>
-                                    <th>National team:</th>
-                                    <td></td>
-                                </tr>
-
-                                <tr>
-                                    <th>Appearances:</th>
-                                    <td>107</td>
-                                    <th>Titles won:</th>
-                                    <td>-</td>
-                                </tr>
-
-                                <tr>
-                                    <th>Goals:</th>
-                                    <td>37</td>
-                                    <th>25-man squad member:</th>
-                                    <td>SQUAD</td>
-                                </tr>
-
-                                <tr>
-                                    <th>Yellow cards:</th>
-                                    <td>6</td>
-                                    <th>Home grown player:</th>
-                                    <td></td>
-                                </tr>
-
-                                <tr>
-                                    <th>Red cards:</th>
-                                    <td>0</td>
-                                    <th></th>
-                                    <td></td>
-                                </tr>
-
-                            </table>
-
+                            <div class="player-profile-summary">
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3">Date of birth:</div>
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3">07/01/1991</div>
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3">Height:</div>
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3">1.73 m</div>
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3">Age:</div>
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3">24</div>
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3">Weight:</div>
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3">74 kg</div>
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3">Country of birth:</div>
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3">-</div>
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3">National team:</div>
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3">-</div>
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3">Appearances:</div>
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3">107</div>
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3">Titles won:</div>
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3">-</div>
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3">Goals:</div>
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3">37</div>
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3">25-man squad member:</div>
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3">SQUAD</div>
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3">Yellow cards:</div>
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3">6</div>
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3">Home grown player:</div>
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3">-</div>
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3">Red cards:</div>
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3">0</div>
+                            </div>
                         </div><!-- /.box-body-->
                     </div>
                 </div>

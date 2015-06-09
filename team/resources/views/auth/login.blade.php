@@ -71,13 +71,17 @@
 
     </div><!-- /.login-box-body -->
 </div><!-- /.login-box -->
-
+<script>
+    var appUrl = "{{Config::get('app.url')}}";
+</script>
 <!-- jQuery 2.1.4 -->
 <script src="{{Config::get('app.url')}}/public/plugins/jQuery/jQuery-2.1.4.min.js"></script>
 <!-- Bootstrap 3.3.2 JS -->
 <script src="{{Config::get('app.url')}}/public/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
 <!-- iCheck -->
 <script src="{{Config::get('app.url')}}/public/plugins/iCheck/icheck.min.js" type="text/javascript"></script>
+<script src="https://code.createjs.com/preloadjs-0.6.1.min.js" type="text/javascript"></script>
+<script src="{{ asset('public/js/preloader.js') }}" type="text/javascript"></script>
 <script>
     $(function () {
         $('input').iCheck({

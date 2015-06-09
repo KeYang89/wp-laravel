@@ -71,6 +71,13 @@
             >
                 <a href="{{ url(Config::get('url.scouts')) }}"><span>Scouts</span></a>
             </li>
+            <li
+            @if ($routePath == Config::get('url.player-stats'))
+            class="active"
+            @endif
+            >
+            <a href="{{ url(Config::get('url.player-stats')) }}"><span>Comparison Matrix</span></a>
+            </li>
         </ul>
     </section>
     <!-- /.sidebar -->

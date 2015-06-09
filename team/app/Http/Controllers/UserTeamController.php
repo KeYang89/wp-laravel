@@ -245,4 +245,9 @@ class UserTeamController extends Controller {
     {
         return view('fixtures');
     }
+
+    public function playerStats()
+    {
+        return view('playerStats');
+    }
 }

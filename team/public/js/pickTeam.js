@@ -65,7 +65,7 @@ var loadPitch = function()
     container.y = 10;
     container.setBounds(0, 0, 100, 100);
 
-    $.getJSON(appUrl + '/api/v1/getUserTeam/' + selectedUserTeamId, function(data){
+    $.getJSON('/team/api/v1/getUserTeam/' + selectedUserTeamId, function(data){
 
         console.log(JSON.stringify(data.result.team_players));
 
@@ -84,7 +84,7 @@ var loadPitch = function()
             });
         }
 
-        $.getJSON(appUrl + '/api/v1/getAllPlayers', function(data){
+        $.getJSON('/team/api/v1/getAllPlayers', function(data){
             if(data.result != '')
             {
                 console.log('got');
@@ -133,6 +133,9 @@ var loadPitch = function()
                                 btn[player].scaleX = 0.5;
                                 btn[player].scaleY = 0.5;
                                 btn[player].id = player;
+                                btn[player].image.onload = function(){
+                                    stage.update();
+                                }
                                 stage.addChild(btn[player]);
 
                                 playerInfoContainer[player] = new createjs.Container();
@@ -183,6 +186,9 @@ var loadPitch = function()
                         btn[player].scaleX = 0.5;
                         btn[player].scaleY = 0.5;
                         btn[player].id = player;
+                        btn[player].image.onload = function(){
+                            stage.update();
+                        }
 
                         btn[player].on("click", function(){
                             selectedPlayerPosition = this.id;
@@ -419,7 +425,7 @@ var saveTeamBasic = function (){
         teamPlayers :   teamPlayers
     };
 
-    $.post('api/v1/saveTeam', dataObj, function(r){
+    $.post('/team/api/v1/saveTeam', dataObj, function(r){
         //console.log(r.result);
         $("#confirm-model").modal('show');
     });

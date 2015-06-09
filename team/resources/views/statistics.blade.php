@@ -20,11 +20,11 @@
                         <tr>
                             <th>&nbsp;</th>
                             <th>Player</th>
-                            <th>Team</th>
-                            <th>Position</th>
+                            <th class="mobile-hidden">Team</th>
+                            <th class="mobile-hidden">Position</th>
                             <th>Selected</th>
                             <th>Price</th>
-                            <th>GW</th>
+                            <th class="mobile-hidden">GW</th>
                             <th>Total</th>
                         </tr>
                         </thead>
@@ -33,11 +33,11 @@
                         <tr>
                             <td style="width: 20px;"><img src="{{ $teamPlayer['tshirt'] }}" style="width: 20px;" /></td>
                             <td><a href="{{ url(Config::get('url.player_profile')) . '/' . $teamPlayer['playerId'] }}">{{ $teamPlayer['name'] }}</a></td>
-                            <td>{{ $teamPlayer['team'] }}</td>
-                            <td>{{ $teamPlayer['position'] }}</td>
+                            <td class="mobile-hidden">{{ $teamPlayer['team'] }}</td>
+                            <td class="mobile-hidden">{{ $teamPlayer['position'] }}</td>
                             <td>{{ $teamPlayer['selected'] }}</td>
                             <td>{{ $teamPlayer['price'] }}</td>
-                            <td>{{ $teamPlayer['gw'] }}</td>
+                            <td class="mobile-hidden">{{ $teamPlayer['gw'] }}</td>
                             <td>{{ $teamPlayer['total'] }}</td>
                         </tr>
                         @endforeach

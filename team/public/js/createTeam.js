@@ -117,6 +117,9 @@ var loadPitch = function()
                             btn[player].scaleX = 0.5;
                             btn[player].scaleY = 0.5;
                             btn[player].id = player;
+                            btn[player].image.onload = function(){
+                                stage.update();
+                            }
                             stage.addChild(btn[player]);
 
                             playerInfoContainer[player] = new createjs.Container();
@@ -167,6 +170,9 @@ var loadPitch = function()
                     btn[player].scaleX = 0.5;
                     btn[player].scaleY = 0.5;
                     btn[player].id = player;
+                    btn[player].image.onload = function(){
+                        stage.update();
+                    }
 
                     btn[player].on("click", function(){
                         selectedPlayerPosition = this.id;

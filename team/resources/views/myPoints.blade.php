@@ -145,83 +145,83 @@
                 <tbody>
                 <tr>
                     <td>24 May 15:00</td>
-                    <td>Arsenal</td>
+                    <td class="mobile-hidden">Arsenal</td>
                     <td><img class="small-icon" src="http://cdn.ismfg.net/static/plfpl/img/badges/badge_1.png" alt="Arsenal"></td>
                     <td>4 - 1</td>
                     <td><img class="small-icon" src="http://cdn.ismfg.net/static/plfpl/img/badges/badge_19.png" alt="West Brom"></td>
-                    <td>West Brom</td>
+                    <td class="mobile-hidden">West Brom</td>
                 </tr>
                 <tr>
                     <td>24 May 15:00</td>
-                    <td>Aston Villa</td>
+                    <td class="mobile-hidden">Aston Villa</td>
                     <td><img class="small-icon" src="http://cdn.ismfg.net/static/plfpl/img/badges/badge_2.png" alt="Aston Villa"></td>
                     <td>0 - 1</td>
                     <td><img class="small-icon" src="http://cdn.ismfg.net/static/plfpl/img/badges/badge_3.png" alt="Burnley"></td>
-                    <td>Burnley</td>
+                    <td class="mobile-hidden">Burnley</td>
                 </tr>
                 <tr>
                     <td>24 May 15:00</td>
-                    <td>Crystal Palace</td>
+                    <td class="mobile-hidden">Crystal Palace</td>
                     <td><img  class="small-icon" src="http://cdn.ismfg.net/static/plfpl/img/badges/badge_5.png" alt="Crystal Palace"></td>
                     <td>1 - 0</td>
                     <td><img class="small-icon" src="http://cdn.ismfg.net/static/plfpl/img/badges/badge_18.png" alt="Swansea"></td>
-                    <td>Swansea</td>
+                    <td class="mobile-hidden">Swansea</td>
                 </tr>
                 <tr>
                     <td>24 May 15:00</td>
-                    <td>Chelsea</td>
+                    <td class="mobile-hidden">Chelsea</td>
                     <td><img class="small-icon" src="http://cdn.ismfg.net/static/plfpl/img/badges/badge_4.png" alt="Chelsea"></td>
                     <td>3 - 1</td>
                     <td><img class="small-icon" src="http://cdn.ismfg.net/static/plfpl/img/badges/badge_17.png" alt="Sunderland"></td>
-                    <td>Sunderland</td>
+                    <td class="mobile-hidden">Sunderland</td>
                 </tr>
                 <tr>
                     <td>24 May 15:00</td>
-                    <td>Everton</td>
+                    <td class="mobile-hidden">Everton</td>
                     <td><img class="small-icon" src="http://cdn.ismfg.net/static/plfpl/img/badges/badge_6.png" alt="Everton"></td>
                     <td>0 - 1</td>
                     <td><img class="small-icon" src="http://cdn.ismfg.net/static/plfpl/img/badges/badge_15.png" alt="Spurs"></td>
-                    <td>Spurs</td>
+                    <td class="mobile-hidden">Spurs</td>
                 </tr>
                 <tr>
                     <td>24 May 15:00</td>
-                    <td>Hull</td>
+                    <td class="mobile-hidden">Hull</td>
                     <td><img class="small-icon" src="http://cdn.ismfg.net/static/plfpl/img/badges/badge_7.png" alt="Hull"></td>
                     <td>0 - 0</td>
                     <td><img class="small-icon" src="http://cdn.ismfg.net/static/plfpl/img/badges/badge_11.png" alt="Man Utd"></td>
-                    <td>Man Utd</td>
+                    <td class="mobile-hidden">Man Utd</td>
                 </tr>
                 <tr>
                     <td>24 May 15:00</td>
-                    <td>Leicester</td>
+                    <td class="mobile-hidden">Leicester</td>
                     <td><img class="small-icon" src="http://cdn.ismfg.net/static/plfpl/img/badges/badge_8.png" alt="Leicester"></td>
                     <td>5 - 1</td>
                     <td><img class="small-icon" src="http://cdn.ismfg.net/static/plfpl/img/badges/badge_13.png" alt="QPR"></td>
-                    <td>QPR</td>
+                    <td class="mobile-hidden">QPR</td>
                 </tr>
                 <tr>
                     <td>24 May 15:00</td>
-                    <td>Man City</td>
+                    <td class="mobile-hidden">Man City</td>
                     <td><img class="small-icon" src="http://cdn.ismfg.net/static/plfpl/img/badges/badge_10.png" alt="Man City"></td>
                     <td>2 - 0</td>
                     <td><img class="small-icon" src="http://cdn.ismfg.net/static/plfpl/img/badges/badge_14.png" alt="Southampton"></td>
-                    <td>Southampton</td>
+                    <td class="mobile-hidden">Southampton</td>
                 </tr>
                 <tr>
                     <td>24 May 15:00</td>
-                    <td>Newcastle</td>
+                    <td class="mobile-hidden">Newcastle</td>
                     <td><img class="small-icon" src="http://cdn.ismfg.net/static/plfpl/img/badges/badge_12.png" alt="Newcastle"></td>
                     <td>2 - 0</td>
                     <td><img class="small-icon" src="http://cdn.ismfg.net/static/plfpl/img/badges/badge_20.png" alt="West Ham"></td>
-                    <td>West Ham</td>
+                    <td class="mobile-hidden">West Ham</td>
                 </tr>
                 <tr>
                     <td>24 May 15:00</td>
-                    <td>Stoke</td>
+                    <td class="mobile-hidden">Stoke</td>
                     <td><img class="small-icon" src="http://cdn.ismfg.net/static/plfpl/img/badges/badge_16.png" alt="Stoke"></td>
                     <td>6 - 1</td>
                     <td><img class="small-icon" src="http://cdn.ismfg.net/static/plfpl/img/badges/badge_9.png" alt="Liverpool"></td>
-                    <td>Liverpool</td>
+                    <td class="mobile-hidden">Liverpool</td>
                 </tr>
                 </tbody>
             </table>
@@ -241,6 +241,8 @@
     var selectedUserTeamId = "{{$team->id}}";
 </script>
 <script src="https://code.createjs.com/easeljs-0.8.1.min.js" type="text/javascript"></script>
+<script src="https://code.createjs.com/preloadjs-0.6.1.min.js" type="text/javascript"></script>
+<script src="{{ asset('public/js/preloader.js') }}" type="text/javascript"></script>
 <script src="{{Config::get('app.url')}}/public/js/pickTeam.js" type="text/javascript"></script>
 @endif
 @endsection

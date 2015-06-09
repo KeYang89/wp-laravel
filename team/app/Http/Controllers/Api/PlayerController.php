@@ -88,6 +88,25 @@ class PlayerController extends Controller {
         }
     }
 
+    public function getPlayerStat($playerId, $leagueId, $seasonId)
+    {
+        $respone = \DB::table('player_statistics')->where('player_id', $playerId)->where('league_id', $leagueId)->where('season_id', $seasonId)->first();
+        if(!empty($respone))
+        {
+            // success
+            return Response::json([
+                    'status'    =>  200,
+                    'result'    =>  $respone
+                ], 200);
+        }
+        else{
+            // no result found
+            return Response::json([
+                    'status'    =>  204
+                ], 204);
+        }
+    }
+
     public function saveTeam()
     {
         $teamName = Request::input('teamName');
@@ -108,4 +127,68 @@ class PlayerController extends Controller {
                 'teamId'    =>  $teamId
             ], 200);
     }
+
+    public function getAllLeagues()
+    {
+        $respone = \DB::table('leagues')->get();
+
+        if(!empty($respone)){
+            // success
+            return Response::json([
+                    'status'    =>  200,
+                    'result'    =>  $respone
+                ], 200);
+        }
+        else{
+            // no result found
+            return Response::json([
+                    'status'    =>  204
+                ], 204);
+        }
+    }
+
+    public function getAllSeasons()
+    {
+        $respone = \DB::table('seasons')->get();
+
+        if(!empty($respone)){
+            // success
+            return Response::json([
+                    'status'    =>  200,
+                    'result'    =>  $respone
+                ], 200);
+        }
+        else{
+            // no result found
+            return Response::json([
+                    'status'    =>  204
+                ], 204);
+        }
+    }
+
+    public function getAllTeams()
+    {
+        $respone = \DB::table('teams')->get();
+
+        if(!empty($respone)){
+            // success
+            return Response::json([
+                    'status'    =>  200,
+                    'result'    =>  $respone
+                ], 200);
+        }
+        else{
+            // no result found
+            return Response::json([
+                    'status'    =>  204
+                ], 204);
+        }
+    }
+
+    public function getToken()
+    {
+        return csrf_token();
+    }
+
+
 }
