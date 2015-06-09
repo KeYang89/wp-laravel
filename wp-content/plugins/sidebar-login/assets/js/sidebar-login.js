@@ -1,5 +1,6 @@
 jQuery(function(){
 
+    /*
 	// Ajax Login
 	jQuery('.widget_wp_sidebarlogin form').submit(function(){
 
@@ -73,5 +74,6 @@ jQuery(function(){
 
 		return false;
 	});
+	*/
 
 });

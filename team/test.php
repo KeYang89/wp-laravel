@@ -14,6 +14,6 @@ function httpGet($url)
     return $output;
 }
 
-echo httpGet("/team/api/v1/getToken");
+echo httpGet("http://matchday45.com/team/api/v1/getToken");
 
 ?>
