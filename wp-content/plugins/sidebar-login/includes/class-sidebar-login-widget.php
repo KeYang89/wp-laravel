@@ -404,7 +404,6 @@ class Sidebar_Login_Widget extends WP_Widget {
 
 			echo '</p>';
 
-            echo '<input type="text" name="_token" value="123" />';
 		}
 	}
 }
