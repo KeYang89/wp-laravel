@@ -29,7 +29,7 @@ class AuthController extends Controller {
 	 */
 
 	protected $redirectTo = '/lobby';
-    protected $redirectAfterLogout = '../';
+    protected $redirectAfterLogout = '/auth/login';
 
     public function __construct(Guard $auth, Registrar $registrar)
 	{
