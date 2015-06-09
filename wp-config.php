@@ -1,5 +1,5 @@
 <?php
-//config file 
+//config file
 /**
  * The base configurations of the WordPress.
  *
