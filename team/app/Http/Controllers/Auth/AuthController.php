@@ -29,8 +29,9 @@ class AuthController extends Controller {
 	 */
 
 	protected $redirectTo = '/lobby';
+    protected $redirectAfterLogout = '../';
 
-	public function __construct(Guard $auth, Registrar $registrar)
+    public function __construct(Guard $auth, Registrar $registrar)
 	{
 		$this->auth = $auth;
 		$this->registrar = $registrar;
