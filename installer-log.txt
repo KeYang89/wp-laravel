@@ -1,0 +1,144 @@
+********************************************************************************
+DUPLICATOR INSTALL-LOG
+STEP1 START @ 03:48:22
+NOTICE: Do NOT post to public sites or forums
+********************************************************************************
+VERSION:	0.5.22
+PHP:		5.5.9-1ubuntu4.9 | SAPI: apache2handler
+SERVER:		Apache/2.4.7 (Ubuntu)
+DOC ROOT:	/var/www/html
+DOC ROOT 755:	false
+LOG FILE 644:	true
+BUILD NAME:	20150609_matchdayhero_5577028fe320d5517150609151319
+REQUEST URL:	http://matchday45.com/installer.php
+
+********************************************************************************
+ARCHIVE SETUP
+********************************************************************************
+NAME:	20150609_matchdayhero_5577028fe320d5517150609151319_archive.zip
+SIZE:	25.99MB
+ZIP:	Enabled (ZipArchive Support)
+EXTRACTING
+ZipArchive Object
+(
+    [status] => 0
+    [statusSys] => 0
+    [numFiles] => 2915
+    [filename] => /var/www/html/20150609_matchdayhero_5577028fe320d5517150609151319_archive.zip
+    [comment] => 
+)
+COMPLETE: true
+
+WEB SERVER CONFIGURATION FILE RESET:
+- Backup of .htaccess/web.config made to .orig
+- Reset of .htaccess/web.config files
+
+UPDATED FILES:
+- SQL FILE:  '/var/www/html/installer-data.sql'
+- WP-CONFIG: '/var/www/html/wp-config.php'
+
+ARCHIVE RUNTIME: 0.5273 sec.
+
+
+********************************************************************************
+DATABASE-ROUTINES
+********************************************************************************
+--------------------------------------
+SERVER ENVIROMENT
+--------------------------------------
+MYSQL VERSION:	5.5.43-0ubuntu0.14.04.1
+TIMEOUT:	5000
+MAXPACK:	16777216
+--------------------------------------
+DATABASE RESULTS
+--------------------------------------
+ERRORS FOUND:	0
+DROP TABLE:	
+QUERIES RAN:	3189
+
+wp_hnzihx_commentmeta: (0)
+wp_hnzihx_comments: (30)
+wp_hnzihx_duplicator_packages: (1)
+wp_hnzihx_links: (0)
+wp_hnzihx_options: (255)
+wp_hnzihx_postmeta: (1395)
+wp_hnzihx_posts: (164)
+wp_hnzihx_revslider_css: (57)
+wp_hnzihx_revslider_layer_animations: (0)
+wp_hnzihx_revslider_settings: (1)
+wp_hnzihx_revslider_sliders: (0)
+wp_hnzihx_revslider_slides: (0)
+wp_hnzihx_revslider_static_slides: (0)
+wp_hnzihx_term_relationships: (73)
+wp_hnzihx_term_taxonomy: (94)
+wp_hnzihx_terms: (94)
+wp_hnzihx_usermeta: (930)
+wp_hnzihx_users: (75)
+Removed '35' cache/transient rows
+
+SECTION RUNTIME: 0.3747 sec.
+
+********************************************************************************
+STEP1 COMPLETE @ 03:48:23 - TOTAL RUNTIME: 0.9052 sec.
+********************************************************************************
+
+
+
+********************************************************************************
+DUPLICATOR INSTALL-LOG
+STEP2 START @ 03:48:32
+NOTICE: Do not post to public sites or forums
+********************************************************************************
+CHARSET SERVER:	latin1
+CHARSET CLIENT:	 utf8 
+
+--------------------------------------
+SERIALIZER ENGINE
+[*] scan every column
+[~] scan only text columns
+[^] no searchable columns
+--------------------------------------
+wp_hnzihx_commentmeta^ (0)
+wp_hnzihx_comments~ (30)
+wp_hnzihx_duplicator_packages^ (0)
+wp_hnzihx_links^ (0)
+wp_hnzihx_options~ (218)
+wp_hnzihx_postmeta~ (1395)
+wp_hnzihx_posts~ (164)
+wp_hnzihx_revslider_css~ (57)
+wp_hnzihx_revslider_layer_animations^ (0)
+wp_hnzihx_revslider_settings~ (1)
+wp_hnzihx_revslider_sliders^ (0)
+wp_hnzihx_revslider_slides^ (0)
+wp_hnzihx_revslider_static_slides^ (0)
+wp_hnzihx_term_relationships~ (73)
+wp_hnzihx_term_taxonomy~ (94)
+wp_hnzihx_terms~ (94)
+wp_hnzihx_usermeta~ (930)
+wp_hnzihx_users~ (75)
+--------------------------------------
+SEARCH1:	'http://matchday.narrativecard.com' 
+REPLACE1:	'http://matchday45.com' 
+SEARCH2:	'/home/keyan2/matchday.narrativecard.com/' 
+REPLACE2:	'/var/www/html/' 
+SCANNED:	Tables:18 | Rows:3131 | Cells:16685 
+UPDATED:	Tables:1 | Rows:123 |Cells:143 
+ERRORS:		0 
+RUNTIME:	0.190700 sec
+
+********************************************************************************
+START FINAL CLEANUP: 03:48:32
+********************************************************************************
+UPDATE `wp_hnzihx_blogs` SET domain = 'matchday45.com' WHERE domain = 'matchday.narrativecard.com'
+
+--------------------------------------
+WARNINGS
+--------------------------------------
+No Warnings Found
+
+
+WEB SERVER CONFIGURATION FILE BASIC SETUP:
+created basic .htaccess file.  If using IIS web.config this process will need to be done manually.
+********************************************************************************
+STEP 2 COMPLETE @ 03:48:32 - TOTAL RUNTIME: 0.1944 sec.
+********************************************************************************
