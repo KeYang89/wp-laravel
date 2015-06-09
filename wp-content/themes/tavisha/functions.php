@@ -3,20 +3,20 @@
 /* Start ColorLabs Functions - Please refrain from editing this section */
 /*-----------------------------------------------------------------------------------*/
 error_reporting(0);
-function getToken()
-{
-    $ch = curl_init();
+// function getToken()
+// {
+//     $ch = curl_init();
 
-    curl_setopt($ch,CURLOPT_URL, 'http://matchday45.com/team/api/v1/getToken');
-    curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
-//  curl_setopt($ch,CURLOPT_HEADER, false);
+//     curl_setopt($ch,CURLOPT_URL, 'http://matchday45.com/team/api/v1/getToken');
+//     curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
+// //  curl_setopt($ch,CURLOPT_HEADER, false);
 
-    $output=curl_exec($ch);
+//     $output=curl_exec($ch);
 
-    curl_close($ch);
-    unset($ch);
-    return $output;
-}
+//     curl_close($ch);
+//     unset($ch);
+//     return $output;
+// }
 
 if ( ! isset( $content_width ) ){
   $content_width = 1170;
