@@ -382,7 +382,7 @@ $can_delete = current_user_can( 'delete_themes' );
 				<h4 class="theme-author"><?php printf( __( 'By %s' ), '{{{ data.authorAndUri }}}' ); ?></h4>
 
 				<# if ( data.hasUpdate ) { #>
-				<div class="theme-update-message">
+				<div class="theme-update-message" style="display:none;">
 					<h4 class="theme-update"><?php _e( 'Update Available' ); ?></h4>
 					{{{ data.update }}}
 				</div>
