@@ -3,37 +3,6 @@
 /* Start ColorLabs Functions - Please refrain from editing this section */
 /*-----------------------------------------------------------------------------------*/
 error_reporting(0);
-// function getToken()
-// {
-//     $ch = curl_init();
-
-//     curl_setopt($ch,CURLOPT_URL, 'http://matchday45.com/team/api/v1/getToken');
-//     curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
-// //  curl_setopt($ch,CURLOPT_HEADER, false);
-
-//     $output=curl_exec($ch);
-
-//     curl_close($ch);
-//     unset($ch);
-//     return $output;
-// }
-
-
-/**
- * Returns the body content of the specified HTML file.
- */
-function getbody($filename) {
-  $file = file_get_contents($filename);
-
-  $bodypattern = ".*<body>";
-  $bodyendpattern = "</body>.*";
-
-  $noheader = eregi_replace($bodypattern, "", $file);
-
-  $noheader = eregi_replace($bodyendpattern, "", $noheader);
-
-  return $noheader;
-}
 
 
 if ( ! isset( $content_width ) ){
