@@ -26,7 +26,7 @@ return [
 	|
 	*/
 
-	'url' => 'http://www.matchday45.com/team',
+	'url' => 'http://centosserver.com/matchday/team',
 
 	/*
 	|--------------------------------------------------------------------------
