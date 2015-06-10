@@ -4,7 +4,7 @@
 <div class="login-box-body" style="background-color:rgba(255,255,255,0.5);padding:10px;">
         <h3>Sign/Register</h3>
         <form role="form" method="POST" action="http://matchday45.com/team/auth/login">
-            <input type="hidden" name="_token" value="<?php echo //getToken()?>">
+            <input type="hidden" name="_token" value="<?php //echo getToken()?>">
             <div class="form-group has-feedback">
                 <input type="email" class="form-control" placeholder="Email" name="email" value="" autocomplete="off" style="cursor: auto;">
                 <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
@@ -57,18 +57,18 @@
 
 <?php endif; ?>
 <?php
-function getToken()
-{
-    $ch = curl_init();
+// function getToken()
+// {
+//     $ch = curl_init();
 
-    curl_setopt($ch,CURLOPT_URL, 'http://matchday45.com/team/api/v1/getToken');
-    curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
-//  curl_setopt($ch,CURLOPT_HEADER, false);
+//     curl_setopt($ch,CURLOPT_URL, 'http://matchday45.com/team/api/v1/getToken');
+//     curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
+// //  curl_setopt($ch,CURLOPT_HEADER, false);
 
-    $output=curl_exec($ch);
+//     $output=curl_exec($ch);
 
-    curl_close($ch);
-    unset($ch);
-    return $output;
-}
+//     curl_close($ch);
+//     unset($ch);
+//     return $output;
+// }
 ?>
