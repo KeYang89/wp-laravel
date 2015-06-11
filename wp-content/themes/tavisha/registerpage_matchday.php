@@ -43,18 +43,18 @@
                         <label>
                             <div class="icheckbox_square-blue" aria-checked="false" aria-disabled="false" style="position: relative;">
                               <input type="checkbox">
-                              <ins class="iCheck-helper"></ins></div> I agree to the <a href="#" class="darkblue">terms</a>
+                              <ins class="iCheck-helper"></ins></div> I agree to the <a href="#" class="darkblue"><strong>terms</strong></a>
                         </label>
                     </div>
              
              
-                    <button type="submit" class="registerpage-btn col12">Register</button>
+                    <button type="submit" class="registerpage-btn col6">Register</button>
         
            
         </form>
 
-        <a href="http://matchday45.com/team/auth/login" class="registerpage-btn col12">I already have a membership</a>
-        <a href="http://matchday45.com/" class="registerpage-btn col12">MatchDayHero Home</a>
+        <div class="col6"> <a href="http://matchday45.com/team/auth/login" class="registerpage-btn">I already have a membership</a></div>
+        <div class="col6"><a href="http://matchday45.com/" class="registerpage-btn">MatchDayHero Home</a></div>
     </div>
         <?php
 
