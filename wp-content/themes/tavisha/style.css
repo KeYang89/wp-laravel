@@ -78,6 +78,9 @@ margin-top:8px;
 .darkblue {
   color:#09092B;
 }
+.icheck {
+  margin:auto;
+}
 input {
   width:90%;
   max-width: 300px;

@@ -39,7 +39,7 @@
             </div>
             
               
-                    <div class="checkbox icheck col8">
+                    <div class="checkbox icheck col4">
                         <label>
                             <div class="icheckbox_square-blue" aria-checked="false" aria-disabled="false" style="position: relative;">
                               <input type="checkbox">
@@ -48,13 +48,13 @@
                     </div>
              
              
-                    <button type="submit" class="registerpage-btn col4">Register</button>
+                    <button type="submit" class="registerpage-btn col12">Register</button>
         
            
         </form>
 
-        <a href="http://matchday45.com/team/auth/login" class="registerpage-btn">I already have a membership</a><br>
-        <a href="http://matchday45.com/" class="registerpage-btn">MatchDayHero Home</a>
+        <a href="http://matchday45.com/team/auth/login" class="registerpage-btn col12">I already have a membership</a>
+        <a href="http://matchday45.com/" class="registerpage-btn col12">MatchDayHero Home</a>
     </div>
         <?php
 
