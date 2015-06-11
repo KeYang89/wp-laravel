@@ -89,19 +89,17 @@ input {
   padding: 4px 10px;
   text-align: center;
   background-color: #53A71D;
-  margin-top: 10px;
-  margin-bottom: 10px;
   color:white;
-  margin:auto;
+  margin: 10px auto;
+  font-size: 14px;
 }
 .registerpage-btn2 {
   padding: 4px 10px;
   text-align: center;
   background-color: #38475F;
-  margin-top: 10px;
-  margin-bottom: 10px;
   color:white;
-  margin:auto;
+  margin: 10px auto;
+  font-size: 14px;
 }
 .Top-Logout {
   padding: 4px 10px;
