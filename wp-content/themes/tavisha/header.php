@@ -46,6 +46,9 @@
                   <div class="Top-Login">
                       <a href="#">Login</a>
                     </div><!--Top-Login-->
+                 <!-- <div class="Top-Logout">
+                      <a href="#">Log out</a>
+                   </div> --><!--Top-Logout-->
                  
               
       </div><!-- .search-wrapper -->

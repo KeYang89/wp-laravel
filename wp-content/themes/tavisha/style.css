@@ -69,6 +69,17 @@ font-size:1.5em;
 text-transform:uppercase;
 margin-top:8px;
 }
+
+.Top-Logout {
+  padding: 4px 10px;
+  text-align: center;
+  background-color: #38475F;
+  width: 60px;
+  float: right;
+  margin-right: 10px;
+  margin-top: 4px;
+}
+
 .Top-Login {
   padding: 4px 10px;
   text-align: center;
