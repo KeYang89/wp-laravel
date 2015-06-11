@@ -37,8 +37,8 @@
                 <input type="password" class="form-control" placeholder="Retype password" name="password_confirmation" style="cursor: auto; background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABMUlEQVQ4T32SgVHDMAxF6QZ0AswELRuECcoGhAloJwAmACZomAA6QbMBZYKaDRih/+UkTvHF1d0/x/L317eU2cX5WNrxoUabTRwk5Z6EtjjrtH8RcsyXAlx6FS6FneCVcbIS/oSNgNgQUQDSt/Bj1UvbnHNxIdy4eBTolYQEsOkXKIQzBL0I3NvoIGlzFN6Ftbl71gqRaAT2xJvwKFwL2R1A2Jsql6hEL7JdSlp5Oy7uhE/nukCrxDYIUI1JxGAC5L3Yg7670sGQNGJNwMXpQR+byIjoAx3mCViN8aVNFpjUXGDUozG6srvgPJkYlwnc3Qv+nJEAhNZIfDcCzfoVeA4FcPZhvEFx6ld2IZpaxn9lP6gJUAnbV+aA6uzp0yhqApBoUmdrM+Hm7BMiP2mTawInofVEEf5J2pUAAAAASUVORK5CYII=); background-attachment: scroll; background-position: 100% 50%; background-repeat: no-repeat;">
                 <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
             </div>
-            <div class="row">
-                <div class="col-xs-8">
+            
+                <div class="col8">
                     <div class="checkbox icheck">
                         <label>
                             <div class="icheckbox_square-blue" aria-checked="false" aria-disabled="false" style="position: relative;">
@@ -47,10 +47,10 @@
                         </label>
                     </div>
                 </div><!-- /.col -->
-                <div class="col-xs-4">
+                <div class="col4">
                     <button type="submit" class="registerpage-btn">Register</button>
                 </div><!-- /.col -->
-            </div>
+           
         </form>
 
         <a href="http://matchday45.com/team/auth/login" class="registerpage-btn">I already have a membership</a><br>
