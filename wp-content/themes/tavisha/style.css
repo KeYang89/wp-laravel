@@ -70,6 +70,14 @@ text-transform:uppercase;
 margin-top:8px;
 }
 
+.register-box-body {
+  font-family: Arial;
+  color: black;
+  text-align: center;
+}
+.darkblue {
+  color:#09092B;
+}
 .Top-Logout {
   padding: 4px 10px;
   text-align: center;

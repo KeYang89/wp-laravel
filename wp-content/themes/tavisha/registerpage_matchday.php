@@ -46,13 +46,13 @@
                     </div>
                 </div><!-- /.col -->
                 <div class="col-xs-4">
-                    <button type="submit" class="btn btn-primary btn-block btn-flat btn-black">Register</button>
+                    <button type="submit" class="Top-Register">Register</button>
                 </div><!-- /.col -->
             </div>
         </form>
 
-        <a href="http://matchday45.com/team/auth/login" class="text-center">I already have a membership</a><br>
-        <a href="/" class="text-center">MatchDayHero Home</a>
+        <a href="http://matchday45.com/team/auth/login" class="darkblue">I already have a membership</a><br>
+        <a href="http://matchday45.com/" class="darkblue">MatchDayHero Home</a>
     </div>
         <?php
 
