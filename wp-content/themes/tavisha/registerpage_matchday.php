@@ -48,13 +48,13 @@
                     </div>
              
              
-                    <button type="submit" class="registerpage-btn col6">Register</button>
+                    <button type="submit" class="registerpage-btn1 col6">Register</button>
         
            
         </form>
 
-        <div class="col6"> <a href="http://matchday45.com/team/auth/login" class="registerpage-btn">I already have a membership</a></div>
-        <div class="col6"><a href="http://matchday45.com/" class="registerpage-btn">MatchDayHero Home</a></div>
+        <div class="col6 registerpage-btn2"> <a href="http://matchday45.com/team/auth/login">I already have a membership</a></div>
+        <div class="col6 registerpage-btn2"><a href="http://matchday45.com/">MatchDayHero Home</a></div>
     </div>
         <?php
 
