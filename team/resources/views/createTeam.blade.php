@@ -230,14 +230,14 @@
         <tr>
             <td style="width: 18px;"><img src="{{Config::get('app.url')}}/public/images/shirt_{{ $singlePlayer->team_id }}.png" width="18" /></td>
             <td>{{ $singlePlayer->first_name }} {{ $singlePlayer->last_name }}</td>
-            <td><a href="javascript:void(0);" onclick="javascript:chooseTeamPlayer('{{ $var }}');" <button class="btn btn-default pull-right btn-player-select"><i class="fa fa-plus"></i></button></td>
+            <td><a href="javascript:void(0);" onclick="javascript:chooseTeamPlayer('{{ $var }}');" <button class="btn btn-medium pull-right btn-player-select"><i class="fa fa-plus"></i></button></td>
         </tr>
         {{--*/ $var++ /*--}}
         @endforeach
         </tbody>
     </table>
 
-    <div style="margin-top: 10px;"><a data-toggle="control-sidebar" href="#"><button class="pull-left btn btn-default" style="margin-left: 90px;">Hide <i class="fa fa-arrow-circle-right"></i></button></a></div>
+    <div style="margin-top: 10px;"><a data-toggle="control-sidebar" href="#"><button class="pull-left btn btn-medium" style="margin-left: 90px;">Hide <i class="fa fa-arrow-circle-right"></i></button></a></div>
 
 </aside><!-- /.control-sidebar -->
 <!-- Add the sidebar's background. This div must be placed
@@ -257,7 +257,7 @@
                 Please select players for all positions before save.
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-medium" data-dismiss="modal">Close</button>
             </div>
         </div>
     </div>

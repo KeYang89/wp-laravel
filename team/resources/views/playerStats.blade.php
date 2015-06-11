@@ -123,8 +123,8 @@
                 </div>
                 <div class="form-group">
                     <ul style="margin: 0; padding: 0; list-style: none;">
-                        <li style="float: left;"><a href ng-click="addPlayer(player.widgetId);"><input type="submit" class="btn btn-default" value="Add Player"></a></li>
-                        <li style="float: left; margin-left: 4px;"><a data-toggle="control-sidebar" href><button class="pull-left btn btn-default">Hide <i class="fa fa-arrow-circle-right"></i></button></a></li>
+                        <li style="float: left;"><a href ng-click="addPlayer(player.widgetId);"><input type="submit" class="btn btn-medium" value="Add Player"></a></li>
+                        <li style="float: left; margin-left: 4px;"><a data-toggle="control-sidebar" href><button class="pull-left btn btn-medium">Hide <i class="fa fa-arrow-circle-right"></i></button></a></li>
                     </ul>
                 </div>
             </form>

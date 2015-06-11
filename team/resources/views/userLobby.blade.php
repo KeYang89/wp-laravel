@@ -83,7 +83,7 @@
     <div class="input-group">
         <input type="text" class="form-control" placeholder="Search all contests..." id="search-keyword" value="@if(!empty($input['keyword'])){{$input['keyword']}}@endif">
                 <span class="input-group-btn">
-                    <button class="btn-filter btn btn-default" type="button" id="btn-search">Go!</button>
+                    <button class="btn-filter btn btn-medium" type="button" id="btn-search">Go!</button>
                 </span>
     </div><!-- /input-group -->
 </div><!-- /.row -->
@@ -95,7 +95,7 @@
 
         <div aria-label="First group" role="group" class="btn-group" style="width: 98%;">
             <a href="{{ Config::get('app.url') }}/server.php/lobby/?allarea=true{{ $url_string['area'] }}">
-                <button class="btn-filter btn btn-default
+                <button class="btn-filter btn btn-medium
 
                             @if(empty($input['area']))
                                 active
@@ -107,7 +107,7 @@
 
         <div aria-label="First group" role="group" class="btn-group" style="width: 48%; margin-top: 10px;">
             <a href="{{ Config::get('app.url') }}/server.php/lobby/?area=spain{{ $url_string['area'] }}">
-                <button class="btn-filter btn btn-default
+                <button class="btn-filter btn btn-medium
 
                             @if(!empty($input['area']))
                                 @if($input['area'] == 'spain')
@@ -120,7 +120,7 @@
         </div>
         <div aria-label="Second group" role="group" class="btn-group" style="width: 47%; margin-top: 10px;">
             <a href="{{ Config::get('app.url') }}/server.php/lobby/?area=uk{{ $url_string['area'] }}">
-                <button class="btn-filter btn btn-default
+                <button class="btn-filter btn btn-medium
 
                             @if(!empty($input['area']))
                                 @if($input['area'] == 'uk')
@@ -134,7 +134,7 @@
 
         <div aria-label="First group" role="group" class="btn-group" style="width: 48%; margin-top: 10px;">
             <a href="{{ Config::get('app.url') }}/server.php/lobby/?area=italy{{ $url_string['area'] }}">
-                <button class="btn-filter btn btn-default
+                <button class="btn-filter btn btn-medium
 
                             @if(!empty($input['area']))
                                 @if($input['area'] == 'italy')
@@ -147,7 +147,7 @@
         </div>
         <div aria-label="Second group" role="group" class="btn-group" style="width: 47%; margin-top: 10px;">
             <a href="{{ Config::get('app.url') }}/server.php/lobby/?area=mls{{ $url_string['area'] }}">
-                <button class="btn-filter btn btn-default
+                <button class="btn-filter btn btn-medium
 
                             @if(!empty($input['area']))
                                 @if($input['area'] == 'mls')
@@ -162,7 +162,7 @@
 
         <div aria-label="First group" role="group" class="btn-group" style="width: 48%; margin-top: 10px;">
             <a href="{{ Config::get('app.url') }}/server.php/lobby/?area=cl{{ $url_string['area'] }}">
-                <button class="btn-filter btn btn-default
+                <button class="btn-filter btn btn-medium
 
                             @if(!empty($input['area']))
                                 @if($input['area'] == 'cl')
@@ -175,7 +175,7 @@
         </div>
         <div aria-label="Second group" role="group" class="btn-group" style="width: 47%; margin-top: 10px;">
             <a href="{{ Config::get('app.url') }}/server.php/lobby/?area=germany{{ $url_string['area'] }}">
-                <button class="btn-filter btn btn-default
+                <button class="btn-filter btn btn-medium
 
                             @if(!empty($input['area']))
                                 @if($input['area'] == 'germany')
@@ -199,7 +199,7 @@
         <div aria-label="First group" role="group" class="btn-group" style="width: 98%; margin-top: 10px;">
 
             <a href="{{ Config::get('app.url') }}/server.php/lobby/?allcontest_type=true{{ $url_string['contest_type'] }}">
-                <button class="btn-filter btn btn-default
+                <button class="btn-filter btn btn-medium
 
                             @if(empty($input['contest_type']))
                                 active
@@ -213,7 +213,7 @@
         <div aria-label="First group" role="group" class="btn-group" style="width: 98%; margin-top: 10px;">
 
             <a href="{{ Config::get('app.url') }}/server.php/lobby/?contest_type=1{{ $url_string['contest_type'] }}">
-                <button class="btn-filter btn btn-default
+                <button class="btn-filter btn btn-medium
 
                             @if(!empty($input['contest_type']))
                                 @if($input['contest_type'] == '1')
@@ -229,7 +229,7 @@
         <div aria-label="First group" role="group" class="btn-group" style="width: 98%; margin-top: 10px;">
 
             <a href="{{ Config::get('app.url') }}/server.php/lobby/?contest_type=2{{ $url_string['contest_type'] }}">
-                <button class="btn-filter btn btn-default
+                <button class="btn-filter btn btn-medium
 
                             @if(!empty($input['contest_type']))
                                 @if($input['contest_type'] == '2')
@@ -245,7 +245,7 @@
         <div aria-label="First group" role="group" class="btn-group" style="width: 98%; margin-top: 10px;">
 
             <a href="{{ Config::get('app.url') }}/server.php/lobby/?contest_type=3{{ $url_string['contest_type'] }}">
-                <button class="btn-filter btn btn-default
+                <button class="btn-filter btn btn-medium
 
                             @if(!empty($input['contest_type']))
                                 @if($input['contest_type'] == '3')
@@ -260,7 +260,7 @@
 
         <div aria-label="First group" role="group" class="btn-group" style="width: 98%; margin-top: 10px;">
             <a href="{{ Config::get('app.url') }}/server.php/lobby/?contest_type=4{{ $url_string['contest_type'] }}">
-                <button class="btn-filter btn btn-default
+                <button class="btn-filter btn btn-medium
 
                             @if(!empty($input['contest_type']))
                                 @if($input['contest_type'] == '4')
@@ -273,7 +273,7 @@
         </div>
     </div>
 </div>
-<div style="margin-top: 10px;"><a data-toggle="control-sidebar" href="#"><button class="pull-left btn btn-default" style="margin-left: 90px;">Hide <i class="fa fa-arrow-circle-right"></i></button></a></div>
+<div style="margin-top: 10px;"><a data-toggle="control-sidebar" href="#"><button class="pull-left btn btn-medium" style="margin-left: 90px;">Hide <i class="fa fa-arrow-circle-right"></i></button></a></div>
 </aside><!-- /.control-sidebar -->
 <!-- Add the sidebar's background. This div must be placed
      immediately after the control sidebar -->
@@ -292,7 +292,7 @@
                 Team information saved.
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-medium" data-dismiss="modal">Close</button>
             </div>
         </div>
     </div>

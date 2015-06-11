@@ -31,9 +31,9 @@
                 <!-- Logo -->
                 <a href="{{Config::get('app.url')}}/server.php/lobby" class="logo">
                     <!-- mini logo for sidebar mini 50x50 pixels -->
-                    <span class="logo-mini"><b>T</b></span>
+                    <span class="logo-mini"><b>MDH</b></span>
                     <!-- logo for regular state and mobile devices -->
-                    <span class="logo-lg"><b>Team</b></span>
+                    <span class="logo-lg"><b>MatchDayHero</b></span>
                 </a>
                 <!-- Header Navbar: style can be found in header.less -->
                 <nav class="navbar navbar-static-top" role="navigation">
@@ -53,7 +53,7 @@
                                     <!-- Menu Footer-->
                                     <li class="user-footer">
                                         <div class="pull-right">
-                                            <a href="{{ url(Config::get('url.logout')) }}" class="btn btn-default btn-flat">Sign out</a>
+                                            <a href="{{ url(Config::get('url.logout')) }}" class="btn btn-medium btn-flat">Sign out</a>
                                         </div>
                                     </li>
                                 </ul>
@@ -71,7 +71,7 @@
                 <div class="pull-right hidden-xs">
                     &nbsp;
                 </div>
-                <strong>Copyright &copy; 2014-2015</strong> All rights reserved.
+                2013-2015 MatchDayHero. All Rights Reserved.
             </footer>
         </div>
         @include('bottomAds')
