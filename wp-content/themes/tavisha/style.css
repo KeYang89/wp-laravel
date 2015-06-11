@@ -78,6 +78,15 @@ margin-top:8px;
 .darkblue {
   color:#09092B;
 }
+.registerpage-btn{
+  padding: 4px 10px;
+  text-align: center;
+  background-color: #38475F;
+  width: 60px;
+  float: right;
+  margin-right: 10px;
+  margin-top: 4px;
+}
 .Top-Logout {
   padding: 4px 10px;
   text-align: center;

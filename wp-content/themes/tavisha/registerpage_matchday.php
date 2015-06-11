@@ -41,18 +41,20 @@
                 <div class="col-xs-8">
                     <div class="checkbox icheck">
                         <label>
-                            <div class="icheckbox_square-blue" aria-checked="false" aria-disabled="false" style="position: relative;"><input type="checkbox" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div> I agree to the <a href="#">terms</a>
+                            <div class="icheckbox_square-blue" aria-checked="false" aria-disabled="false" style="position: relative;">
+                              <input type="checkbox">
+                              <ins class="iCheck-helper"></ins></div> I agree to the <a href="#" class="darkblue">terms</a>
                         </label>
                     </div>
                 </div><!-- /.col -->
                 <div class="col-xs-4">
-                    <button type="submit" class="Top-Register">Register</button>
+                    <button type="submit" class="registerpage-btn">Register</button>
                 </div><!-- /.col -->
             </div>
         </form>
 
-        <a href="http://matchday45.com/team/auth/login" class="darkblue">I already have a membership</a><br>
-        <a href="http://matchday45.com/" class="darkblue">MatchDayHero Home</a>
+        <a href="http://matchday45.com/team/auth/login" class="registerpage-btn">I already have a membership</a><br>
+        <a href="http://matchday45.com/" class="registerpage-btn">MatchDayHero Home</a>
     </div>
         <?php
 
