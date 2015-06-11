@@ -25,7 +25,7 @@
 <body class="login-page">
 <div class="login-box">
     <div class="login-logo">
-        <a href="{{Config::get('app.url')}}"><b>Team</b></a>
+        <a href="/"><b>Team</b></a>
     </div><!-- /.login-logo -->
 
     @if (count($errors) > 0)
@@ -68,6 +68,7 @@
 
         <a href="#">I forgot my password</a><br>
         <a href="{{ url(Config::get('url.register')) }}" class="text-center">Register a new membership</a>
+        <a href="/" class="text-center">MatchDayHero Home</a>
 
     </div><!-- /.login-box-body -->
 </div><!-- /.login-box -->

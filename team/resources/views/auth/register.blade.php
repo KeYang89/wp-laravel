@@ -24,7 +24,7 @@
 <body class="register-page">
 <div class="register-box">
     <div class="register-logo">
-        <a href="{{Config::get('app.url')}}"><b>Team</b></a>
+        <a href="/"><b>Team</b></a>
     </div>
 
     @if (count($errors) > 0)
@@ -71,6 +71,7 @@
             <p>- OR -</p>
             <a href="#" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-facebook"></i> Sign up using Facebook</a>
             <a href="#" class="btn btn-block btn-social btn-google-plus btn-flat"><i class="fa fa-google-plus"></i> Sign up using Google+</a>
+            <a href="/" class="text-center">MatchDayHero Home</a>
         </div>
 
         <a href="{{ url(Config::get('url.login')) }}" class="text-center">I already have a membership</a>
