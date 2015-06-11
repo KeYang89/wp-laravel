@@ -38,18 +38,18 @@
                 <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
             </div>
             
-                <div class="col8">
-                    <div class="checkbox icheck">
+              
+                    <div class="checkbox icheck col8">
                         <label>
                             <div class="icheckbox_square-blue" aria-checked="false" aria-disabled="false" style="position: relative;">
                               <input type="checkbox">
                               <ins class="iCheck-helper"></ins></div> I agree to the <a href="#" class="darkblue">terms</a>
                         </label>
                     </div>
-                </div><!-- /.col -->
-                <div class="col4">
-                    <button type="submit" class="registerpage-btn">Register</button>
-                </div><!-- /.col -->
+             
+             
+                    <button type="submit" class="registerpage-btn col4">Register</button>
+        
            
         </form>
 
