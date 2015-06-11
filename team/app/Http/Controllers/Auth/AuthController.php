@@ -29,7 +29,6 @@ class AuthController extends Controller {
 	 */
 
 	protected $redirectTo = '/lobby';
-    protected $redirectAfterLogout = '/auth/login';
 
     public function __construct(Guard $auth, Registrar $registrar)
 	{
@@ -38,5 +37,13 @@ class AuthController extends Controller {
 
 		$this->middleware('guest', ['except' => 'getLogout']);
 	}
+
+    public function getLogout()
+    {
+        $this->auth->logout();
+        return redirect('../');
+    }
+
+
 
 }

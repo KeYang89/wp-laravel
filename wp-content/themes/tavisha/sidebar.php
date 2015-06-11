@@ -3,7 +3,7 @@
   
 <div class="login-box-body" style="background-color:rgba(255,255,255,0.5);padding:10px;">
         <h3>Sign/Register</h3>
-        <form role="form" method="POST" action="http://matchday45.com/team/auth/login">
+        <form role="form" method="POST" action="team/auth/login">
             <input type="hidden" name="_token" value="<?php //echo getToken()?>">
             <div class="form-group has-feedback">
                 <input type="email" class="form-control" placeholder="Email" name="email" value="" autocomplete="off" style="cursor: auto;">
@@ -28,7 +28,7 @@
         </form>
 
         <a href="#">I forgot my password</a><br>
-        <a href="http://matchday45.com/team/auth/register" class="text-center">Register a new membership</a>
+        <a href="team/auth/register" class="text-center">Register a new membership</a>
 
     </div>
       <?php dynamic_sidebar( 'sidebar-1' ); ?>
