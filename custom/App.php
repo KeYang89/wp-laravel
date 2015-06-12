@@ -12,7 +12,8 @@ class App {
 
     static public function getToken()
     {
-        self::apiCall('getToken');
+        //self::apiCall('getToken');
+        echo "MMMM";
     }
 
     public static function apiCall($endpoint)
