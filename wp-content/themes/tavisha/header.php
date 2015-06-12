@@ -17,7 +17,7 @@
     <div class="row">
       <div class="column col3  col8-sm logo-wrapper">
         <h1 class="logo" role="banner">
-          <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+          <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img style="width: 140px;height: 66px;float: left;margin-top: -12px;" src="http://matchday45.com/wp-content/uploads/2015/06/logo.jpg"></a>
         </h1>
        
           
