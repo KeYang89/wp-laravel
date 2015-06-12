@@ -1,4 +1,4 @@
-<?php /* Template Name: Homepage for Matchday */ 
+<?php /* Template Name: Homepage for Matchday */
 get_header(); ?>
 <div class="main-content column col9 col8-sm" role="main">
   <div class="main-content-inner">
@@ -19,16 +19,16 @@ get_header(); ?>
         'include'                  => '',
         'number'                   => '',
         'taxonomy'                 => 'category',
-        'pad_counts'               => true 
+        'pad_counts'               => true
         );
       $categories = get_categories($args);
       if($categories):
       ?>
       <div class="category-list">
-        <?php 
+        <?php
         $j=1;
-        foreach ( $categories as $category ) : 
-        if ($j<3){ 
+        foreach ( $categories as $category ) :
+        if ($j<3){
           echo '<div class="category-block column col6">';
           $j++;}
 
@@ -52,7 +52,7 @@ get_header(); ?>
           <ul class="category-post-list">
             <?php
             $i = 1;
-            foreach ( $latest_posts as $post ) : 
+            foreach ( $latest_posts as $post ) :
             setup_postdata( $post ); ?>
             <li class="category-post-item">
               <?php if($i==1):?>
@@ -65,7 +65,7 @@ get_header(); ?>
               </div>
               <?php endif;?>
             </li>
-            <?php 
+            <?php
             $i++;
             endforeach;
             wp_reset_postdata(); ?>
@@ -94,7 +94,7 @@ get_header(); ?>
              </ul>
              </div><!--row-->
          </div><!--container-->
-	    
+
 </section>
 </div><!-- .main-content -->
 
