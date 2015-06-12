@@ -1,9 +1,4 @@
 <?php /* Template Name: Register page for Matchday */
-
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-
-echo dirname(dirname(dirname(__DIR__))) . '/custom/App.php';
 require dirname(dirname(dirname(__DIR__))) . '/custom/App.php';
 echo \custom\App::getToken();
 get_header();
