@@ -1,10 +1,15 @@
-<?php /* Template Name: Register page for Matchday */  get_header();?>
+<?php /* Template Name: Register page for Matchday */  get_header();
+
+echo dirname(dirname(dirname(__DIR__))) . '/team/bootstrap/autoload.php';
+
+
+?>
         
 <div class="main-content column col9 col8-sm" role="main">
   <div class="main-content-inner">
     <?php while ( have_posts() ) : the_post();?>
     <article id="post-<?php the_ID(); ?>" <?php post_class('entry-post'); ?>>
-      <?php the_title( '<h1 class="entry-title">', '11111</h1>' );?>
+      <?php the_title( '<h1 class="entry-title">', '</h1>' );?>
       <?php edit_post_link( __( 'Edit', 'tavisha' ), '<span class="edit-link">', '</span>' ); ?>
       <?php if ( has_post_thumbnail() ) :?>
       <div class="entry-image">

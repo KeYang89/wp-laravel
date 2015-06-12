@@ -1,5 +1,6 @@
 <?php
 
+/*
 function httpGet($url)
 {
     $ch = curl_init();
@@ -15,5 +16,9 @@ function httpGet($url)
 }
 
 echo httpGet("http://matchday45.com/team/api/v1/getToken");
+*/
+
+
+//echo dirname(__DIR__);
 
 ?>
