@@ -5,7 +5,7 @@ ini_set('display_errors', 1);
 
 echo dirname(dirname(dirname(__DIR__))) . '/custom/App.php';
 require dirname(dirname(dirname(__DIR__))) . '/custom/App.php';
-echo App::getToken();
+echo \custom\App::getToken();
 get_header();
 ?>
         
