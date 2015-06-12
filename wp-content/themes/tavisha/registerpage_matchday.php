@@ -1,8 +1,7 @@
 <?php /* Template Name: Register page for Matchday */  get_header();
 
-echo dirname(dirname(dirname(__DIR__))) . '/team/bootstrap/autoload.php';
-
-
+require dirname(dirname(dirname(__DIR__))) . '/custom/App.php';
+echo App::getToken();
 ?>
         
 <div class="main-content column col9 col8-sm" role="main">
