@@ -1,8 +1,24 @@
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
-require dirname(dirname(dirname(__DIR__))) . '/appclient/App.php';
-$authUser = \appclient\App::getUser();
+
+require dirname(dirname(dirname(__DIR__))) . '/team/bootstrap/autoload.php';
+$app = require_once dirname(dirname(dirname(__DIR__))) . '/team/bootstrap/app.php';
+
+$kernel = $app->make('Illuminate\Contracts\Http\Kernel');
+
+$response = $kernel->handle(
+    $request = Illuminate\Http\Request::capture()
+);
+
+$id = $app['encrypter']->decrypt($_COOKIE[$app['config']['session.cookie']]);
+$app['session']->driver()->setId($id);
+$app['session']->driver()->start();
+
+if($app['auth']->check()){
+    echo "user auth";
+}
+
 //print_r($authUser);
 ?>
 <!DOCTYPE html>
