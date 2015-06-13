@@ -2,6 +2,7 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
+/*
 require dirname(dirname(dirname(__DIR__))) . '/team/bootstrap/autoload.php';
 $app = require_once dirname(dirname(dirname(__DIR__))) . '/team/bootstrap/app.php';
 
@@ -18,6 +19,7 @@ $app['session']->driver()->start();
 if($app['auth']->check()){
     echo "user auth";
 }
+*/
 
 //print_r($authUser);
 ?>
