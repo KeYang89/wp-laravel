@@ -20,7 +20,7 @@ class App {
     public static function apiCall($endpoint)
     {
         $ch = curl_init();
-        curl_setopt($ch,CURLOPT_URL, 'http://centosserver.com/matchday/team/api/v1/' . $endpoint);
+        curl_setopt($ch,CURLOPT_URL, 'http://localhost/team/api/v1/' . $endpoint);
         curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
         curl_setopt($ch, CURLOPT_COOKIESESSION, true);
         curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
