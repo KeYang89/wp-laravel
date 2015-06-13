@@ -20,7 +20,7 @@ class UserTeamController extends Controller {
 
 	public function index()
 	{
-		return view('userTeam');
+        return redirect('lobby');
 	}
 
 	public function userTeam($teamId = null)

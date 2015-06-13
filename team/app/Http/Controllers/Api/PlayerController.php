@@ -190,5 +190,23 @@ class PlayerController extends Controller {
         return csrf_token();
     }
 
+    public function getUser()
+    {
+        if(Auth::user())
+        {
+            return Response::json([
+                    'status'    =>  'success',
+                    'auth'      =>  true,
+                    'user'      =>  ['name' => Auth::user()->name, 'email'  =>  Auth::user()->email]
+                ], 200);
 
+        }
+        else
+        {
+            return Response::json([
+                    'status'    =>  'success',
+                    'auth'      =>  false
+                ], 200);
+        }
+    }
 }

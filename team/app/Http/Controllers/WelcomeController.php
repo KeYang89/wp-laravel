@@ -1,6 +1,7 @@
 <?php namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Redirect;
+use Auth;
 
 class WelcomeController extends Controller {
 
@@ -32,8 +33,12 @@ class WelcomeController extends Controller {
 	 */
 	public function index()
 	{
+        if(Auth::user()){
+            echo "AAAA";
+        }
+
 		//return view('welcome');
-        return redirect('lobby');
+        //return redirect('lobby');
 	}
 
 }

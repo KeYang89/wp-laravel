@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'WelcomeController@index');
+Route::get('/', 'UserTeamController@index');
 Route::get('my-points', 'UserTeamController@myPoints');
 Route::get('create-team', 'UserTeamController@createTeam');
 Route::get('pick-team/{teamId?}', 'UserTeamController@userTeam');
@@ -39,5 +39,6 @@ Route::group(array('prefix' => 'api/v1'), function()
     Route::post('saveTeam', 'Api\PlayerController@saveTeam');
     Route::get('getPlayerStat/{playerId}/{leagueId}/{seasonId}', 'Api\PlayerController@getPlayerStat');
     Route::get('getToken', 'Api\PlayerController@getToken');
+    Route::get('getUser', 'Api\PlayerController@getUser');
 
 });

@@ -1,6 +1,5 @@
-<?php /* Template Name: Register page for Matchday */
-require dirname(dirname(dirname(__DIR__))) . '/custom/App.php';
-echo \custom\App::getToken();
+<?php
+/* Template Name: Register page for Matchday */
 get_header();
 ?>
         
