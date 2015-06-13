@@ -12,7 +12,9 @@ class App {
 
     static public function getUser()
     {
-        return self::apiCall('getUser');
+        $data = self::apiCall('getUser');
+        print_r($data);
+        exit();
     }
 
     public static function apiCall($endpoint)
