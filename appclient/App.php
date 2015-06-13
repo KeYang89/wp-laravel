@@ -19,7 +19,7 @@ class App {
     public static function apiCall($endpoint)
     {
         $ch = curl_init();
-        curl_setopt($ch,CURLOPT_URL, 'http://localhost/team/api/v1/' . $endpoint);
+        curl_setopt($ch,CURLOPT_URL, 'http://matchday45.com/team/api/v1/' . $endpoint);
         curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
         //curl_setopt($ch,CURLOPT_HEADER, false);
         $output=curl_exec($ch);
