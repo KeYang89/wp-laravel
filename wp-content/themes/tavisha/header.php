@@ -66,28 +66,12 @@ if($app['auth']->check()){
       </div><!-- .search-wrapper -->
       <div class="column col3  col8-sm login-wrapper">
 
-          <?php
-          if($authUser->auth == true)
-          {
-              ?>
-              <div class="Top-Logout">
-                  <a href="#">Log out</a>
-              </div> --><!--Top-Logout-->
-
-              <?php
-          }
-          else
-          {
-            ?>
-              <div class="Top-Register">
-                  <a href="#">Register</a>
-              </div><!--Top-Register-->
-              <div class="Top-Login">
-                  <a href="#">Login</a>
-              </div><!--Top-Login-->
-            <?php
-          }
-          ?>
+          <div class="Top-Register">
+              <a href="#">Register</a>
+          </div><!--Top-Register-->
+          <div class="Top-Login">
+              <a href="#">Login</a>
+          </div><!--Top-Login-->
       </div><!-- .search-wrapper -->
     </div>
   </header>
