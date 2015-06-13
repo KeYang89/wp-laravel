@@ -1,10 +1,9 @@
 <?php
-///error_reporting(E_ALL);
-//ini_set('display_errors', 1);
-//require dirname(dirname(dirname(__DIR__))) . '/appclient/App.php';
-//$authUser = \appclient\App::getUser();
-
-//print_r($authUser);
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+require dirname(dirname(dirname(__DIR__))) . '/appclient/App.php';
+$authUser = \appclient\App::getUser();
+print_r($authUser);
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7 ie" lang="en"> <![endif]-->
@@ -48,17 +47,29 @@
         <?php endif;?>
       </div><!-- .search-wrapper -->
       <div class="column col3  col8-sm login-wrapper">
-                  <div class="Top-Register">
-                      <a href="#">Register</a>
-                    </div><!--Top-Register-->
-                  <div class="Top-Login">
-                      <a href="#">Login</a>
-                    </div><!--Top-Login-->
-                 <!-- <div class="Top-Logout">
-                      <a href="#">Log out</a>
-                   </div> --><!--Top-Logout-->
-                 
-              
+
+          <?php
+          if($authUser->auth == true)
+          {
+              ?>
+              <div class="Top-Logout">
+                  <a href="#">Log out</a>
+              </div> --><!--Top-Logout-->
+
+              <?php
+          }
+          else
+          {
+            ?>
+              <div class="Top-Register">
+                  <a href="#">Register</a>
+              </div><!--Top-Register-->
+              <div class="Top-Login">
+                  <a href="#">Login</a>
+              </div><!--Top-Login-->
+            <?php
+          }
+          ?>
       </div><!-- .search-wrapper -->
     </div>
   </header>
