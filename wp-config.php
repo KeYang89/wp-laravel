@@ -99,5 +99,8 @@ if ( !defined('ABSPATH') )
 
 require( ABSPATH . 'lvl-boot.php' );
 
+echo "!!!!!";
+exit();
+
 require_once(ABSPATH . 'wp-settings.php');
 
