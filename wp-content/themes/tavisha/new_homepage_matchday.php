@@ -8,10 +8,10 @@ get_header();
 <div id="top" style="background-repeat: repeat; background-image: url(/wp-content/uploads/2015/06/grey-bg.jpg); background-attachment: scroll; background-position: top left; background-color: #c1c1c1; " data-section-bg-repeat="repeat">
 
 
-  <div class="col3">
+  <div class="col6">
 
-  <img class="alignnone size-full wp-image-50" src="/wp-content/uploads/2015/06/daily-fantasy.png" alt="daily-fantasy" width="880" height="692"></div>
-<div class="col5">
+  <img class="alignnone size-full wp-image-50" src="/wp-content/uploads/2015/06/daily-fantasy.png" alt="daily-fantasy" width="880" height="692" style="float:left;"></div>
+<div class="col6">
 <h2>DAILY FANTASY</h2>
 <h3>An entire fantasy season in one day!</h3>
 <p class="intro-text">Most fantasy sites lock you into a team for an entire season, Mondogoal’s daily play allows you to play a new “season” every day or week.</p>
@@ -26,7 +26,7 @@ get_header();
 </div>
 <style>
 .b-back-to-top-dark a {
-  background-image: url("images/b-back-to-top-dark.png");
+  background-image: url("/wp-content/uploads/2015/06/b-back-to-top-dark.png");
   background-repeat: no-repeat;
   display: block;
   height: 66px;
@@ -66,7 +66,7 @@ get_header();
 <p>Minute-by-minute updates on all matches you are playing. Find out in seconds if your favorite player scored, or completely missed that penalty kick.</p>
 </div>
 <div style="height:30px" class="hr hr-invisible "><span class="hr-inner"><span class="hr-inner-style"></span></span></div>
-<div class="flex_column av_one_full first  "><a class="btn btn-green signup" href="https://secure.mondogoal.com/signup">PLAY NOW</a></div>
+<div class="flex_column av_one_full first  "><a class="btn btn-green signup" href="#">PLAY NOW</a></div>
 </div>
 <div class="flex_column av_one_full first  ">
 <div class="b-back-to-top-dark"><a href="#top">&nbsp;</a></div>
