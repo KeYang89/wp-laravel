@@ -5,7 +5,7 @@ get_header();
   <div class="main-content-inner">
     <?php get_template_part('content','slider');?>
     <!-- /.slider-section -->
-<div id="top" style="background-repeat: repeat; background-image: url(/wp-content/uploads/2015/06/grey-bg.jpg); background-attachment: scroll; background-position: top left; background-color: #c1c1c1; " data-section-bg-repeat="repeat">
+<div id="top" style="background-repeat: repeat; background-image: url(/wp-content/uploads/2015/06/grey-bg.jpg); background-attachment: scroll; background-position: top left; background-color: #c1c1c1;padding:20px; " data-section-bg-repeat="repeat">
 
 
   <div class="col6">
