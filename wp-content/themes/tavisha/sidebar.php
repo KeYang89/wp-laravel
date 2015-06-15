@@ -1,10 +1,10 @@
 <?php
-//$userApp = getUserApp();
+$userApp = getUserApp();
 if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
   <div id="widget-area" class="sidebar column col3 col4-sm" role="complementary">
 
       <?php
-      //if(!$userApp['auth']->check()){
+      if(!$userApp['auth']->check()){
         ?>
         <div class="login-box-body" style="background-color:rgba(255,255,255,0.5);padding:10px;">
             <h3>Sign/Register</h3>
@@ -36,7 +36,7 @@ if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
             <a href="team/auth/register" class="text-center">Register a new membership</a>
         </div>
           <?php
-      //}?>
+      }?>
       <?php dynamic_sidebar( 'sidebar-1' ); ?>
 <div class="team">
                              <div class="team-header">
