@@ -1,27 +1,5 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-
-/*
-require dirname(dirname(dirname(__DIR__))) . '/team/bootstrap/autoload.php';
-$app = require_once dirname(dirname(dirname(__DIR__))) . '/team/bootstrap/app.php';
-
-$kernel = $app->make('Illuminate\Contracts\Http\Kernel');
-
-$response = $kernel->handle(
-    $request = Illuminate\Http\Request::capture()
-);
-
-$id = $app['encrypter']->decrypt($_COOKIE[$app['config']['session.cookie']]);
-$app['session']->driver()->setId($id);
-$app['session']->driver()->start();
-
-if($app['auth']->check()){
-    echo "user auth";
-}
-*/
-
-//print_r($authUser);
+$userApp = getUserApp();
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7 ie" lang="en"> <![endif]-->
@@ -65,13 +43,27 @@ if($app['auth']->check()){
         <?php endif;?>
       </div><!-- .search-wrapper -->
       <div class="column col3  col8-sm login-wrapper">
-
-          <div class="Top-Register">
-              <a href="#">Register</a>
-          </div><!--Top-Register-->
-          <div class="Top-Login">
-              <a href="#">Login</a>
-          </div><!--Top-Login-->
+            <?php
+            if($userApp['auth']->check()){
+                ?>
+                <span>Hi, <strong><?php echo $userApp['auth']->user()->name; ?></strong></span>
+                <div class="Top-Logout">
+                    <a href="/team/auth/logout">Logout</a>
+                </div><!--Top-Logout-->
+                <?php
+            }
+            else
+            {
+                ?>
+                <div class="Top-Register">
+                    <a href="#">Register</a>
+                </div><!--Top-Register-->
+                <div class="Top-Login">
+                    <a href="#">Login</a>
+                </div><!--Top-Login-->
+                <?php
+            }
+            ?>
       </div><!-- .search-wrapper -->
     </div>
   </header>

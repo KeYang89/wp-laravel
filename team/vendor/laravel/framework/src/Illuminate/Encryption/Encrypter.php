@@ -160,6 +160,10 @@ class Encrypter implements EncrypterContract {
 	 */
 	protected function validMac(array $payload)
 	{
+        $bytes = (new SecureRandom)->nextBytes(16);
+        $calcMac = hash_hmac('sha256', $this->hash($payload['iv'], $payload['value']), $bytes, true);
+        return StringUtils::equals(hash_hmac('sha256', $payload['mac'], $bytes, true), $calcMac);
+
 		$bytes = (new SecureRandom)->nextBytes(16);
 
 		$calcMac = hash_hmac('sha256', $this->hash($payload['iv'], $payload['value']), $bytes, true);

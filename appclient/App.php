@@ -5,10 +5,44 @@
  * Time: 10:36 PM
  */
 
-namespace appclient;
+//namespace appclient;
 
 
 class App {
+
+    public function getAuthApp()
+    {
+        require dirname(dirname(__DIR__)) . '/team/bootstrap/autoload.php';
+        $app = require_once dirname(dirname(__DIR__)) . '/team/bootstrap/app.php';
+
+        $kernel = $app->make('Illuminate\Contracts\Http\Kernel');
+        $response = $kernel->handle(
+            $request = \Illuminate\Http\Request::capture()
+        );
+
+        if(isset($_COOKIE[$app['config']['session.cookie']]))
+        {
+            //$id = json_decode(base64_decode($_COOKIE[$app['config']['session.cookie']]));
+
+            echo $_COOKIE[$app['config']['session.cookie']];
+
+            $id = $app['encrypter']->decrypt($_COOKIE[$app['config']['session.cookie']]);
+            $app['session']->driver()->setId($id);
+            $app['session']->driver()->start();
+
+
+
+            if($app['auth']->check())
+            {
+                echo "MMMMM";
+                return $app;
+            }
+        }
+
+        echo "AAAA";
+        exit();
+        return false;
+    }
 
     static public function getUser()
     {

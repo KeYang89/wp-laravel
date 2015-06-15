@@ -94,5 +94,8 @@ if ( !defined('ABSPATH') )
 	define('ABSPATH', dirname(__FILE__) . '/');
 
 /** Sets up WordPress vars and included files. */
+
+require( ABSPATH . 'lvl-boot.php' );
+
 require_once(ABSPATH . 'wp-settings.php');
 
