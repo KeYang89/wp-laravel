@@ -1,6 +1,4 @@
 <?php
-echo "MMM";
-exit();
 //config file
 /**
  * The base configurations of the WordPress.
@@ -97,10 +95,10 @@ if ( !defined('ABSPATH') )
 
 /** Sets up WordPress vars and included files. */
 
-//require( ABSPATH . 'lvl-boot.php' );
+require( ABSPATH . 'lvl-boot.php' );
 
-//echo "!!!!!";
-//exit();
+echo "!!!!!";
+exit();
 
 require_once(ABSPATH . 'wp-settings.php');
 
