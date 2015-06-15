@@ -86,6 +86,19 @@ table.control-sidebar-striped > tbody > tr:nth-child(odd) > td{
     color: #fff !important;
 }
 
+.main-header .logo{
+    line-height: 47px !important;
+}
+
+.sidebar-mini.sidebar-collapse .main-header .logo > .logo-mini {
+    margin-left: -18px !important;
+    margin-right: -12px !important;
+}
+
+.main-header a.logo:hover{
+    background-color: #070720 !important;
+}
+
 .btn-medium:hover{
     background-color: #09092B;
     font-size: 13px;

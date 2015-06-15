@@ -29,11 +29,15 @@
         <div class="wrapper">
             <header class="main-header">
                 <!-- Logo -->
-                <a href="{{Config::get('app.url')}}/server.php/lobby" class="logo">
+                <a href="{{Config::get('app.url')}}/lobby" class="logo">
                     <!-- mini logo for sidebar mini 50x50 pixels -->
-                    <span class="logo-mini"><b>MDH</b></span>
+                    <span class="logo-mini">
+                        <img src="{{ asset('public/images/logo_small.png') }}">
+                    </span>
                     <!-- logo for regular state and mobile devices -->
-                    <span class="logo-lg"><b>MatchDayHero</b></span>
+                    <span class="logo-lg">
+                        <img src="{{ asset('public/images/logo_with_title.png') }}">
+                    </span>
                 </a>
                 <!-- Header Navbar: style can be found in header.less -->
                 <nav class="navbar navbar-static-top" role="navigation">
