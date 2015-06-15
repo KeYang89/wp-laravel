@@ -1,5 +1,5 @@
 <?php
-$userApp = getUserApp();
+//$userApp = getUserApp();
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7 ie" lang="en"> <![endif]-->
@@ -44,16 +44,16 @@ $userApp = getUserApp();
       </div><!-- .search-wrapper -->
       <div class="column col3  col8-sm login-wrapper">
             <?php
-            if($userApp['auth']->check()){
+            //if($userApp['auth']->check()){
                 ?>
-                <span>Hi, <strong><?php echo $userApp['auth']->user()->name; ?></strong></span>
+                <span>Hi, <strong><?php //echo $userApp['auth']->user()->name; ?></strong></span>
                 <div class="Top-Logout">
                     <a href="/team/auth/logout">Logout</a>
                 </div><!--Top-Logout-->
                 <?php
-            }
-            else
-            {
+            //}
+            //else
+            //{
                 ?>
                 <div class="Top-Register">
                     <a href="#">Register</a>
@@ -62,7 +62,7 @@ $userApp = getUserApp();
                     <a href="#">Login</a>
                 </div><!--Top-Login-->
                 <?php
-            }
+            //}
             ?>
       </div><!-- .search-wrapper -->
     </div>
