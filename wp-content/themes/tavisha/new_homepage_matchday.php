@@ -23,7 +23,7 @@ get_header();
 
 
 
-<img src="/wp-content/uploads/2015/06/daily-fantasy.png" alt="daily-fantasy" class="col6">
+<img src="/wp-content/uploads/2015/06/daily-fantasy.png" alt="daily-fantasy" style="min-width:200px;max-width:250px;width:100%;">
 
 
 <div class="col6">
@@ -46,7 +46,7 @@ get_header();
 
 <h2>FEATURES</h2>
 <h3>Stats and info that actually matter to you.</h3>
-<div class="col12"><div style="height:30px" class="hr hr-invisible "><span class="hr-inner"><span class="hr-inner-style"></span></span></div><img src="https://mondogoal.com//wp-content/uploads/2014/08/features.png" alt="features" class="col6"></div><br>
+<div class="col12"><div style="height:30px" class="hr hr-invisible "><span class="hr-inner"><span class="hr-inner-style"></span></span></div><img src="https://mondogoal.com//wp-content/uploads/2014/08/features.png" alt="features" style="min-width:200px;max-width:250px;width:100%;"></div><br>
 <div class="col12">
 <div style="height:15px" class="hr hr-invisible "><span class="hr-inner"><span class="hr-inner-style"></span></span></div>
 <div class="col6">
