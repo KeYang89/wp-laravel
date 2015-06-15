@@ -56,10 +56,10 @@ $userApp = getUserApp();
             {
                 ?>
                 <div class="Top-Register">
-                    <a href="#">Register</a>
+                    <a href="/team/auth/register">Register</a>
                 </div><!--Top-Register-->
                 <div class="Top-Login">
-                    <a href="#">Login</a>
+                    <a href="/team/auth/login">Login</a>
                 </div><!--Top-Login-->
                 <?php
             }
