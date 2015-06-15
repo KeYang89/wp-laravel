@@ -9,7 +9,7 @@ get_header();
 
 
 
-<img class="alignnone size-full wp-image-50" src="/wp-content/uploads/2015/06/daily-fantasy.png" alt="daily-fantasy" width="880" height="692" style="float:left;">
+<img src="/wp-content/uploads/2015/06/daily-fantasy.png" alt="daily-fantasy" width="880" height="692" style="float:left;">
 
 
 <div class="col6">
