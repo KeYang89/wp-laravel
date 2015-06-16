@@ -31,6 +31,10 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   font-family: Arial;
   color:#23282D;
 }
+.intro-text {
+  color:black;
+  margin-bottom:28px;
+}
 .homefeature {
   min-width:240px;max-width:300px;width:100%;float:left;
 }
