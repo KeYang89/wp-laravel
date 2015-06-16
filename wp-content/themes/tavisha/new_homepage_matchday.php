@@ -6,10 +6,9 @@ get_header();
     <?php get_template_part('content','slider');?>
     <!-- /.slider-section -->
   </div><!-- .main-content-inner -->
-<div class="how-it-works">
+<div class="homepage-blog-section">
     <?php while ( have_posts() ) : the_post();?>
     <article id="post-<?php the_ID(); ?>">
-      <?php edit_post_link( __( 'Edit', 'tavisha' ), '<span class="edit-link">', '</span>' ); ?>
       <?php if ( has_post_thumbnail() ) :?>
       <div class="entry-image">
         <?php the_post_thumbnail( 'post-thumbnail', array( 'alt' => get_the_title() ) );?>
