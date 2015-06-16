@@ -20,7 +20,8 @@ $userApp = getUserApp();
     <div class="row">
       <div class="column col3  col8-sm logo-wrapper">
         <h1 class="logo" role="banner">
-          <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img style="width: 140px;height: 66px;float: left;margin-top: -12px;" src="http://matchday45.com/wp-content/uploads/2015/06/logo.jpg"></a>
+          <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+            <img style="width: 140px;height: 66px;float: left;margin-top: -12px;" src="http://matchday45.com/wp-content/uploads/2015/06/logo.jpg"></a>
         </h1>
        
           
@@ -55,6 +56,11 @@ $userApp = getUserApp();
             else
             {
                 ?>
+                <div class="social-links">
+                   <a href="#"><img src="/wp-content/uploads/2015/06/facebook3.jpg" alt="fb" style="float:left;"></a>
+                    <a href="#"><img src="/wp-content/uploads/2015/06/logo22.png" alt="tw" style="float:left;"></a>
+                     <a href="#"><img src="/wp-content/uploads/2015/06/google2.png" alt="g+" style="float:left;"></a>
+                </div>
                 <div class="Top-Register">
                     <a href="/team/auth/register">Register</a>
                 </div><!--Top-Register-->

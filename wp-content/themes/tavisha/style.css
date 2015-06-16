@@ -68,7 +68,8 @@ float:left;
 
 body {
   color: #111;
-  background: url("/wp-content/uploads/2015/06/bg.jpg");
+  /*background: url("/wp-content/uploads/2015/06/bg.jpg");*/
+  background-color: #1B1B1B;
   font-family: 'Roboto', sans-serif;
 }
 .how-it-works{
