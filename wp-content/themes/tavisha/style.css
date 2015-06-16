@@ -12,6 +12,14 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 /* ===================================================================
   STRUCTURAL LAYOUT
 =================================================================== */
+.b-back-to-top-dark a {
+  background-image: url("/wp-content/uploads/2015/06/b-back-to-top-dark.png");
+  background-repeat: no-repeat;
+  display: block;
+  height: 66px;
+  margin: 0 auto;
+  width: 131px;
+}
 body {
   color: #111;
   background: url("/wp-content/uploads/2015/06/bg.jpg");
