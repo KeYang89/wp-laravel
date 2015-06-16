@@ -1,5 +1,5 @@
 <?php get_header();?>  
-<div class="main-content column col9 col8-sm" role="main">
+<div class="main-content column col12" role="main">
   <div class="main-content-inner">
     <?php if ( have_posts() ) : ?>
     <div class="archive-heading">
@@ -27,6 +27,4 @@
   <div class="content-overflow"></div>
 </div><!-- .main-content -->
 
-<?php get_sidebar();?>
-<!-- .sidebar -->
 <?php get_footer();?>

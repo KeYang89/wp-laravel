@@ -1,6 +1,6 @@
 <?php get_header();?>
         
-<div class="main-content column col9 col8-sm" role="main">
+<div class="main-content column col12" role="main">
   <div class="main-content-inner">
     <?php while ( have_posts() ) : the_post();?>
     <article id="post-<?php the_ID(); ?>" <?php post_class('entry-post'); ?>>
@@ -52,6 +52,4 @@
   <div class="content-overflow"></div>
 </div><!-- .main-content -->
 
-<?php get_sidebar();?>
-<!-- .sidebar -->
 <?php get_footer();?>
