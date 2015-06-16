@@ -1,7 +1,7 @@
 <?php /* Template Name: New Homepage for Matchday */
 get_header();
 ?>
-<div class="main-content column col12 col12-sm" role="main">
+<div class="main-content column col12" role="main">
   <div class="main-content-inner">
     <?php get_template_part('content','slider');?>
     <!-- /.slider-section -->
@@ -35,6 +35,7 @@ get_header();
     <?php endwhile;?>
 </div>
 </div><!-- .main-content -->
+
 
 <!-- .sidebar -->
 <?php get_footer(); ?>
