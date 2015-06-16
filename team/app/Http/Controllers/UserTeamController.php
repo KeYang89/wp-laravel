@@ -203,8 +203,9 @@ class UserTeamController extends Controller {
 
     public function createTeam()
     {
-        $allPlayers = \DB::table('players')->get();
-        return view('createTeam', compact('allPlayers'));
+        //$allPlayers = \DB::table('players')->get();
+        $allPositions = \DB::table('positions')->get();
+        return view('createTeam', compact('allPositions'));
     }
 
     public function scout()

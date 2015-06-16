@@ -43,8 +43,45 @@ class PlayerController extends Controller {
      */
     public function getAllPlayers()
     {
+        $position = Request::input('position');
+        $order = Request::input('order');
+        $priceLimit = Request::input('priceLimit');
 
-        $respone = \DB::table('players')->get();
+        $dbQuery =  \DB::table('players');
+
+        if(!empty($position))
+        {
+            $dbQuery = $dbQuery->where('position_id', $position);
+        }
+        if(!empty($priceLimit))
+        {
+            $dbQuery = $dbQuery->where('price', '<=', $priceLimit);
+        }
+        if(!empty($order))
+        {
+            $dbQuery = $dbQuery->orderBy($order, 'ASC');
+        }
+
+        $respone = $dbQuery->get();
+
+        if(!empty($respone)){
+            // success
+            return Response::json([
+                    'status'    =>  200,
+                    'result'    =>  $respone
+                ], 200);
+        }
+        else{
+            // no result found
+            return Response::json([
+                    'status'    =>  204
+                ], 204);
+        }
+    }
+
+    public function getAllPositions()
+    {
+        $respone = \DB::table('positions')->get();
 
         if(!empty($respone)){
             // success

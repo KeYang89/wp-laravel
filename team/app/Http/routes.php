@@ -30,15 +30,14 @@ Route::controllers([
 
 Route::group(array('prefix' => 'api/v1'), function()
 {
+    Route::get('getAllPositions', 'Api\PlayerController@getAllPositions');
     Route::get('getAllPlayers', 'Api\PlayerController@getAllPlayers');
     Route::get('getAllTeams', 'Api\PlayerController@getAllTeams');
     Route::get('getAllLeagues', 'Api\PlayerController@getAllLeagues');
     Route::get('getAllSeasons', 'Api\PlayerController@getAllSeasons');
-
     Route::get('getUserTeam/{teamId}', 'Api\PlayerController@getUserTeam');
     Route::post('saveTeam', 'Api\PlayerController@saveTeam');
     Route::get('getPlayerStat/{playerId}/{leagueId}/{seasonId}', 'Api\PlayerController@getPlayerStat');
     Route::get('getToken', 'Api\PlayerController@getToken');
     Route::get('getUser', 'Api\PlayerController@getUser');
-
 });

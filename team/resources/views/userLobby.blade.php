@@ -16,7 +16,7 @@
                     <h3 class="box-title">&nbsp;</h3>
 
                     <div class="box-tools pull-right">
-                        <button data-toggle="control-sidebar" class="btn btn-box-tool"><i class="fa fa-wrench"></i></button>
+                        <a data-toggle="control-sidebar" style="font-size: 32px; color: #3F8313;  line-height: 46px;" class="button button-icon icon ion-search" href></a>
                     </div>
 
                 </div><!-- /.box-header -->
@@ -101,7 +101,7 @@
                                 active
                             @endif
 
-                        " type="button" style="width: 100%;">Supported Areas</button>
+                        " type="button" style="width: 100%;">Supported Leagues</button>
             </a>
         </div>
 
@@ -115,7 +115,7 @@
                                 @endif
                             @endif
 
-                        " type="button" style="width: 100%;">Spain</button>
+                        " type="button" style="width: 100%;">La Liga</button>
             </a>
         </div>
         <div aria-label="Second group" role="group" class="btn-group" style="width: 47%; margin-top: 10px;">
@@ -128,7 +128,7 @@
                                 @endif
                             @endif
 
-                        " type="button" style="width: 100%;">UK</button>
+                        " type="button" style="width: 100%;">EPL</button>
             </a>
         </div>
 
@@ -142,7 +142,7 @@
                                 @endif
                             @endif
 
-                        " type="button" style="width: 100%;">Italy</button>
+                        " type="button" style="width: 100%;">Serie A</button>
             </a>
         </div>
         <div aria-label="Second group" role="group" class="btn-group" style="width: 47%; margin-top: 10px;">
@@ -170,7 +170,7 @@
                                 @endif
                             @endif
 
-                        " type="button" style="width: 100%;">CL</button>
+                        " type="button" style="width: 100%;">UEFA</button>
             </a>
         </div>
         <div aria-label="Second group" role="group" class="btn-group" style="width: 47%; margin-top: 10px;">
@@ -183,7 +183,7 @@
                                 @endif
                             @endif
 
-                        " type="button" style="width: 100%;">Germany</button>
+                        " type="button" style="width: 100%;">GFL</button>
             </a>
         </div>
 

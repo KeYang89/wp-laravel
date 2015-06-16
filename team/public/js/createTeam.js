@@ -175,11 +175,27 @@ var loadPitch = function()
                     }
 
                     btn[player].on("click", function(){
-                        selectedPlayerPosition = this.id;
-                        //$('.control-sidebar-bg').collapse('toggle');
 
-                        $('#tsf').addClass('control-sidebar-open');
-                        //$('#tsf').collapse('toggle');
+                        //angular.element('#controller').scope().rightSlider.selectedPosition = '1';
+                        selectedPlayerPosition = this.id;
+
+                        var dbPositionId = selectedPlayerPosition;
+                        if(selectedPlayerPosition > 1 && selectedPlayerPosition <= 5)
+                        {
+                            var dbPositionId = 2;
+                        }
+                        else if(selectedPlayerPosition > 5 && selectedPlayerPosition <= 9)
+                        {
+                            var dbPositionId = 3;
+                        }
+                        else if(selectedPlayerPosition > 9 && selectedPlayerPosition <= 11)
+                        {
+                            var dbPositionId = 4;
+                        }
+                        angular.element('#controller').scope().openSlider(dbPositionId);
+
+                        ///$('#tsf').addClass('control-sidebar-open');
+
 
                     }, null, false, {count:3});
 
@@ -242,7 +258,8 @@ var loadPitch = function()
                 btn[subPlayer].on("click", function()
                 {
                     selectedPlayerPosition = this.id;
-                    $('#tsf').addClass('control-sidebar-open');
+                    var dbPositionId = '';
+                    angular.element('#controller').scope().openSlider(dbPositionId);
 
                 }, null, false, {count:3});
                 btn[subPlayer].shadow = new createjs.Shadow("#303131", 3, 3, 8);
@@ -318,84 +335,93 @@ var loadPitch = function()
 };
 
 var chooseTeamPlayer = function(index){
-    console.log(selectedPlayerPosition);
+    console.log(index);
 
-    var playerInfo = playerData[index];
+    $.each(playerData, function(playerIndex, singlePlayer){
+        if(singlePlayer.id == index)
+        {
+            var playerInfo = singlePlayer;
+            teamPlayers.push({
+                playerPosition  :   selectedPlayerPosition,
+                playerId        :   singlePlayer.id
+            });
 
-    teamPlayers.push({
-        playerPosition  :   selectedPlayerPosition,
-        playerId        :   playerData[index].id
+
+            playerInfoContainer[selectedPlayerPosition] = new createjs.Container();
+            playerInfoContainer[selectedPlayerPosition].x = btn[selectedPlayerPosition].x - 16;
+            playerInfoContainer[selectedPlayerPosition].y = btn[selectedPlayerPosition].y + 70;
+            playerInfoContainer[selectedPlayerPosition].setBounds(0, 0, 80, 22);
+
+
+            var rect = new createjs.Shape();
+            //rect.graphics.beginFill('#6e7e8e').drawRect(0, 0, 80, 22);
+            rect.graphics.drawRect(0, 0, 80, 22);
+            playerInfoContainer[selectedPlayerPosition].addChild(rect);
+
+            playerInfoName[selectedPlayerPosition] = new createjs.Text();
+            playerInfoName[selectedPlayerPosition].set({
+                text: playerInfo.lastName,
+                color: '#ffffff'
+            });
+
+            var playerInfoNameBound = playerInfoName[selectedPlayerPosition].getBounds();
+
+            playerInfoName[selectedPlayerPosition].x = (80 - playerInfoNameBound.width) / 2;
+            playerInfoContainer[selectedPlayerPosition].addChild(playerInfoName[selectedPlayerPosition]);
+
+            if(selectedPlayerPosition <= 11)
+            {
+                stage.addChild(playerInfoContainer[selectedPlayerPosition]);
+                var tempPlayerConfig = btn[selectedPlayerPosition];
+                stage.removeChild(btn[selectedPlayerPosition]);
+            }
+            else
+            {
+                bnhStage.addChild(playerInfoContainer[selectedPlayerPosition]);
+                var tempPlayerConfig = btn[selectedPlayerPosition];
+                bnhStage.removeChild(btn[selectedPlayerPosition]);
+            }
+
+            var newSrc = new Image();
+            newSrc.src = '/team/public/images/shirt_' + playerInfo.teamId + '.png';
+            newSrc.name = 'button';
+            newSrc.onload = createjs.loadGfx;
+            btn[selectedPlayerPosition] = new createjs.Bitmap(newSrc);
+            if(selectedPlayerPosition <= 11)
+            {
+                btn[selectedPlayerPosition].image.onload = function() { stage.update(); }
+            }
+            else
+            {
+                btn[selectedPlayerPosition].image.onload = function() { bnhStage.update(); }
+            }
+            btn[selectedPlayerPosition].shadow = new createjs.Shadow("#303131", 3, 3, 8);
+            btn[selectedPlayerPosition].x = tempPlayerConfig.x;
+            btn[selectedPlayerPosition].y = tempPlayerConfig.y;
+            btn[selectedPlayerPosition].scaleX = tempPlayerConfig.scaleX;
+            btn[selectedPlayerPosition].scaleY = tempPlayerConfig.scaleY;
+            btn[selectedPlayerPosition].id = tempPlayerConfig.id;
+
+            if(selectedPlayerPosition <= 11)
+            {
+                stage.addChild(btn[selectedPlayerPosition]);
+                stage.update();
+            }
+            else
+            {
+                bnhStage.addChild(btn[selectedPlayerPosition]);
+                bnhStage.update();
+            }
+
+            $('#tsf').removeClass('control-sidebar-open');
+            selectedPlayerPosition = '';
+        }
     });
 
 
-    playerInfoContainer[selectedPlayerPosition] = new createjs.Container();
-    playerInfoContainer[selectedPlayerPosition].x = btn[selectedPlayerPosition].x - 16;
-    playerInfoContainer[selectedPlayerPosition].y = btn[selectedPlayerPosition].y + 70;
-    playerInfoContainer[selectedPlayerPosition].setBounds(0, 0, 80, 22);
+    //var playerInfo = playerData[index];
 
 
-    var rect = new createjs.Shape();
-    //rect.graphics.beginFill('#6e7e8e').drawRect(0, 0, 80, 22);
-    rect.graphics.drawRect(0, 0, 80, 22);
-    playerInfoContainer[selectedPlayerPosition].addChild(rect);
-
-    playerInfoName[selectedPlayerPosition] = new createjs.Text();
-    playerInfoName[selectedPlayerPosition].set({
-        text: playerInfo.lastName,
-        color: '#ffffff'
-    });
-
-    var playerInfoNameBound = playerInfoName[selectedPlayerPosition].getBounds();
-
-    playerInfoName[selectedPlayerPosition].x = (80 - playerInfoNameBound.width) / 2;
-    playerInfoContainer[selectedPlayerPosition].addChild(playerInfoName[selectedPlayerPosition]);
-
-    if(selectedPlayerPosition <= 11)
-    {
-        stage.addChild(playerInfoContainer[selectedPlayerPosition]);
-        var tempPlayerConfig = btn[selectedPlayerPosition];
-        stage.removeChild(btn[selectedPlayerPosition]);
-    }
-    else
-    {
-        bnhStage.addChild(playerInfoContainer[selectedPlayerPosition]);
-        var tempPlayerConfig = btn[selectedPlayerPosition];
-        bnhStage.removeChild(btn[selectedPlayerPosition]);
-    }
-
-    var newSrc = new Image();
-    newSrc.src = '/team/public/images/shirt_' + playerInfo.teamId + '.png';
-    newSrc.name = 'button';
-    newSrc.onload = createjs.loadGfx;
-    btn[selectedPlayerPosition] = new createjs.Bitmap(newSrc);
-    if(selectedPlayerPosition <= 11)
-    {
-        btn[selectedPlayerPosition].image.onload = function() { stage.update(); }
-    }
-    else
-    {
-        btn[selectedPlayerPosition].image.onload = function() { bnhStage.update(); }
-    }
-    btn[selectedPlayerPosition].shadow = new createjs.Shadow("#303131", 3, 3, 8);
-    btn[selectedPlayerPosition].x = tempPlayerConfig.x;
-    btn[selectedPlayerPosition].y = tempPlayerConfig.y;
-    btn[selectedPlayerPosition].scaleX = tempPlayerConfig.scaleX;
-    btn[selectedPlayerPosition].scaleY = tempPlayerConfig.scaleY;
-    btn[selectedPlayerPosition].id = tempPlayerConfig.id;
-
-    if(selectedPlayerPosition <= 11)
-    {
-        stage.addChild(btn[selectedPlayerPosition]);
-        stage.update();
-    }
-    else
-    {
-        bnhStage.addChild(btn[selectedPlayerPosition]);
-        bnhStage.update();
-    }
-
-    $('#tsf').removeClass('control-sidebar-open');
-    selectedPlayerPosition = '';
 };
 
 $(document).ready(function(){
@@ -431,6 +457,13 @@ $(document).ready(function(){
             $("#create-team-model").modal('show');
         }
     });
+
+    $(document).delegate('.add-player', 'click', function(e){
+        e.preventDefault();
+        //console.log('hehaha');
+        chooseTeamPlayer($(this).attr('data-id'));
+    });
+
 
     /*
      $('#tbl-gameweek').dataTable({
