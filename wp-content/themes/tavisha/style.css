@@ -12,6 +12,34 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 /* ===================================================================
   STRUCTURAL LAYOUT
 =================================================================== */
+.b-back-to-top-dark a {
+  background-image: url("/wp-content/uploads/2015/06/b-back-to-top-dark.png");
+  background-repeat: no-repeat;
+  display: block;
+  height: 66px;
+  margin: 0 auto;
+  width: 131px;
+}
+.homefeature {
+  min-width:240px;max-width:300px;width:100%;float:left;
+}
+.grey-section {
+  background-repeat: repeat; 
+  background-image: url(/wp-content/uploads/2015/06/grey-bg.jpg); 
+  background-attachment: scroll; background-position: top left; 
+  background-color: #c1c1c1;padding:20px;
+}
+.yellow-section{
+  background-repeat: repeat; 
+  background-image: url(/wp-content/uploads/2015/06/yellow-bg.jpg); 
+  background-attachment: scroll; background-position: top left; 
+  background-color: #c1c1c1;padding:20px;
+}
+
+.sub-yellow{
+float:left;
+}
+
 body {
   color: #111;
   background: url("/wp-content/uploads/2015/06/bg.jpg");
@@ -58,6 +86,10 @@ h1, h2, h3, h4, h5, h6 {
 /* ===================================================================
   HEADER SECTION
 =================================================================== */
+#mm-0 > div.main-wrapper > header > div > div.column.col3.col8-sm.login-wrapper > span {
+  position: absolute; 
+  top: 8px;
+}
 .header-section,
 .footer-section {
   color: #fff;
