@@ -16,14 +16,14 @@ get_header();
 }
 </style>
 <div class="main-content column col9 col8-sm" role="main">
-  <div class="main-content-inner">
+  <div class="main-content-inner" id="top">
     <?php get_template_part('content','slider');?>
     <!-- /.slider-section -->
-<div id="top" style="background-repeat: repeat; background-image: url(/wp-content/uploads/2015/06/grey-bg.jpg); background-attachment: scroll; background-position: top left; background-color: #c1c1c1;padding:20px; " data-section-bg-repeat="repeat">
+<div  style="background-repeat: repeat; background-image: url(/wp-content/uploads/2015/06/grey-bg.jpg); background-attachment: scroll; background-position: top left; background-color: #c1c1c1;padding:20px;">
 
 
 
-<img src="/wp-content/uploads/2015/06/daily-fantasy.png" alt="daily-fantasy" style="min-width:200px;max-width:250px;width:100%;">
+<img src="/wp-content/uploads/2015/06/daily-fantasy.png" alt="daily-fantasy" style="min-width:240px;max-width:300px;width:100%;">
 
 
 <div class="col6">
@@ -42,7 +42,7 @@ get_header();
 
 
 
-<div id="homefeatures" class="avia-section main_color avia-section-default avia-no-shadow avia-bg-style-scroll  avia-builder-el-9  el_after_av_section  el_before_av_section  container_wrap fullsize" style="background-color:#E3B013;padding:20px;" data-section-bg-repeat="repeat">
+<div style="background-color:#E3B013;padding:20px;">
 
 <h2>FEATURES</h2>
 <h3>Stats and info that actually matter to you.</h3>
