@@ -9,7 +9,6 @@ get_header();
 <div class="how-it-works">
     <?php while ( have_posts() ) : the_post();?>
     <article id="post-<?php the_ID(); ?>" <?php post_class('entry-post'); ?>>
-      <?php the_title( '<h1 class="entry-title">', '</h1>' );?>
       <?php edit_post_link( __( 'Edit', 'tavisha' ), '<span class="edit-link">', '</span>' ); ?>
       <?php if ( has_post_thumbnail() ) :?>
       <div class="entry-image">
@@ -34,14 +33,6 @@ get_header();
       </div><!-- .entry-content -->
     </article>
     <!-- /.entry-post -->
-    
-    <?php
-    // If comments are open or we have at least one comment, load up the comment template.
-    if ( comments_open() || get_comments_number() ) :
-      comments_template();
-    endif;
-    ?>
-    <!-- #comments -->
     <?php endwhile;?>
 </div>
 </div><!-- .main-content -->

@@ -20,6 +20,23 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   margin: 0 auto;
   width: 131px;
 }
+.grey-section {
+  background-repeat: repeat; 
+  background-image: url(/wp-content/uploads/2015/06/grey-bg.jpg); 
+  background-attachment: scroll; background-position: top left; 
+  background-color: #c1c1c1;padding:20px;
+}
+.yellow-section{
+  background-repeat: repeat; 
+  background-image: url(/wp-content/uploads/2015/06/yellow-bg.jpg); 
+  background-attachment: scroll; background-position: top left; 
+  background-color: #c1c1c1;padding:20px;
+}
+
+.sub-yellow{
+float:left;
+}
+
 body {
   color: #111;
   background: url("/wp-content/uploads/2015/06/bg.jpg");
