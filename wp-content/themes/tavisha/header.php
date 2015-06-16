@@ -66,6 +66,8 @@ $userApp = getUserApp();
             ?>
       </div><!-- .search-wrapper -->
     </div>
+      <div class="count-down">
+  </div>
   </header>
   <!-- .header-section -->
   
