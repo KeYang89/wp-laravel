@@ -18,7 +18,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 .codeboxrflexiblecountdown-widget {
   width: 15%;
   float: left;
-  margin: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 .b-back-to-top-dark a {
   background-image: url("/wp-content/uploads/2015/06/b-back-to-top-dark.png");
@@ -1688,8 +1689,10 @@ p .alignnone {
 }
 
 .widget-title {
-  margin: 0 0 25px 0;
+  margin: 0 0 15px 0;
   font-size: 20px;
+  text-align: center;
+  color:white;
 }
 
 .widget-title a,
