@@ -72,7 +72,7 @@ $userApp = getUserApp();
             ?>
       </div><!-- .search-wrapper -->
     </div>
-<div class="count-down">
+<div class="count-down row">
         <?php get_sidebar();?>
 </div>
   </header>

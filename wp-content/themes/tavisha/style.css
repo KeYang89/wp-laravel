@@ -17,6 +17,11 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   height:80px;
   width: 100%;
 }
+.codeboxrflexiblecountdown-widget {
+  width: 20%;
+  float: left;
+  margin: 2.5%;
+}
 .b-back-to-top-dark a {
   background-image: url("/wp-content/uploads/2015/06/b-back-to-top-dark.png");
   background-repeat: no-repeat;
@@ -188,7 +193,7 @@ margin-top:4px;
 margin-top:4px;
 }
 .header-section {
-  background: #09092B;
+  background: #1758AE;
   padding: 20px 0px 0px 0px;
 }
 .promo {
