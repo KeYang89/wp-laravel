@@ -23,7 +23,7 @@ var playerStatsApp = angular.module('CreateTeam', [], function($interpolateProvi
 
         //$scope.rightSlider.playerListPositions = new Array();
 
-        $http.get('/matchday/team/api/v1/getAllPositions').
+        $http.get('/team/api/v1/getAllPositions').
             success(function(data, status, headers, config) {
                 $scope.rightSlider.allPositions = data.result;
                 /*
@@ -59,7 +59,7 @@ var playerStatsApp = angular.module('CreateTeam', [], function($interpolateProvi
         $scope.getPlayers = function() {
             $scope.emptyPlayerPositionList();
             $scope.rightSlider.playerSearch = 1;
-            $http.get('/matchday/team/api/v1/getAllPlayers?position=' + $scope.rightSlider.selectedPosition + '&order=' + $scope.rightSlider.selectedOrder + '&priceLimit=' + $scope.rightSlider.selectedPriceLimit).
+            $http.get('/team/api/v1/getAllPlayers?position=' + $scope.rightSlider.selectedPosition + '&order=' + $scope.rightSlider.selectedOrder + '&priceLimit=' + $scope.rightSlider.selectedPriceLimit).
                 success(function(data, status, headers, config) {
                     angular.forEach(data.result, function(value, key) {
                         //console.log(value.position_id);
