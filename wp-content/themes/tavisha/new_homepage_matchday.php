@@ -36,6 +36,5 @@ get_header();
 </div>
 </div><!-- .main-content -->
 
-<?php get_sidebar();?>
 <!-- .sidebar -->
 <?php get_footer(); ?>
