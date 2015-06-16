@@ -43,6 +43,7 @@
             >
                 <a href="{{ url(Config::get('url.create_team')) }}"><span>Create Team</span></a>
             </li>
+            <!--
             <li
             @if ($routePath == Config::get('url.players') || $routePath == Config::get('url.player_profile'))
                  class="active"
@@ -57,6 +58,7 @@
             >
             <a href="{{ url(Config::get('url.fixtures')) }}"><span>Fixtures</span></a>
             </li>
+            -->
             <li
             @if ($routePath == Config::get('url.statistics'))
                  class="active"
