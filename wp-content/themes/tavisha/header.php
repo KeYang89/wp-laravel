@@ -37,6 +37,11 @@ $userApp = getUserApp();
 
 
       <div class="column col4  col8-sm slogan-wrapper">
+        <div class="social-links">
+                   <a href="#"><img src="/wp-content/uploads/2015/06/facebook3.png" alt="fb" style="float:left;  width: 45px;"></a>
+                    <a href="#"><img src="/wp-content/uploads/2015/06/logo22.png" alt="tw" style="float:left;  width: 45px;"></a>
+                     <a href="#"><img src="/wp-content/uploads/2015/06/google2.png" alt="g+" style="float:left;  width: 45px;"></a>
+        </div>
          <?php
         $description = get_bloginfo( 'description', 'display' );
         if ( $description || is_customize_preview() ) : ?>
@@ -44,11 +49,7 @@ $userApp = getUserApp();
         <?php endif;?>
       </div><!-- .search-wrapper -->
       <div class="column col5  col8-sm login-wrapper">
-        <div class="social-links">
-                   <a href="#"><img src="/wp-content/uploads/2015/06/facebook3.png" alt="fb" style="float:left;  width: 45px;"></a>
-                    <a href="#"><img src="/wp-content/uploads/2015/06/logo22.png" alt="tw" style="float:left;  width: 45px;"></a>
-                     <a href="#"><img src="/wp-content/uploads/2015/06/google2.png" alt="g+" style="float:left;  width: 45px;"></a>
-        </div>
+        
             <?php
             if($userApp['auth']->check()){
                 ?>
