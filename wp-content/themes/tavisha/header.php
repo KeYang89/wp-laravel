@@ -54,10 +54,10 @@ $userApp = getUserApp();
             if($userApp['auth']->check()){
                 ?>
                 <select class="logout">
-                <option class="hello" disabled selected>
+                <option class="hello"style="display:none;" disabled selected>
                  <span> Hi, <strong><?php echo $userApp['auth']->user()->name; ?></strong></span>
                 </option>
-                <option id="Top-Logout">
+                <option id="Top-Logout" onclick="location.href = 'http://matchday45.com/team/auth/logout';">
                     Logout
                   </option>
                 </select><!--Top-Logout-->
