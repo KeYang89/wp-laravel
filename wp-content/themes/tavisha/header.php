@@ -53,9 +53,13 @@ $userApp = getUserApp();
             <?php
             if($userApp['auth']->check()){
                 ?>
-                <select class="logout">Hi, <strong><?php echo $userApp['auth']->user()->name; ?></strong></span>
+                <select>
+                <option class="logout">
+                  Hi, <strong><?php echo $userApp['auth']->user()->name; ?></strong></span>
+                </option>
                 <option class="Top-Logout">
-                    <a href="/team/auth/logout">Logout</option>
+                    <a href="/team/auth/logout">Logout</a>
+                  </option>
                 </select><!--Top-Logout-->
                 <?php
             }
