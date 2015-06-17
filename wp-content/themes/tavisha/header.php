@@ -40,14 +40,19 @@ $userApp = getUserApp();
          <?php
         $description = get_bloginfo( 'description', 'display' );
         if ( $description || is_customize_preview() ) : ?>
-          <div class="site-description">FANTASY SOCCER<br/>We put the <span style="color:#25B298;">FAN</span> back in Fantasy</div>
+          <div class="site-description" style="display:none;">FANTASY SOCCER<br/>We put the <span style="color:#25B298;">FAN</span> back in Fantasy</div>
         <?php endif;?>
       </div><!-- .search-wrapper -->
       <div class="column col5  col8-sm login-wrapper">
+        <div class="social-links">
+                   <a href="#"><img src="/wp-content/uploads/2015/06/facebook3.png" alt="fb" style="float:left;  width: 45px;"></a>
+                    <a href="#"><img src="/wp-content/uploads/2015/06/logo22.png" alt="tw" style="float:left;  width: 45px;"></a>
+                     <a href="#"><img src="/wp-content/uploads/2015/06/google2.png" alt="g+" style="float:left;  width: 45px;"></a>
+        </div>
             <?php
             if($userApp['auth']->check()){
                 ?>
-                <span>Hi, <strong><?php echo $userApp['auth']->user()->name; ?></strong></span>
+                <span class="logout">Hi, <strong><?php echo $userApp['auth']->user()->name; ?></strong></span>
                 <div class="Top-Logout">
                     <a href="/team/auth/logout">Logout</a>
                 </div><!--Top-Logout-->
@@ -56,11 +61,7 @@ $userApp = getUserApp();
             else
             {
                 ?>
-                <div class="social-links">
-                   <a href="#"><img src="/wp-content/uploads/2015/06/facebook3.png" alt="fb" style="float:left;  width: 45px;"></a>
-                    <a href="#"><img src="/wp-content/uploads/2015/06/logo22.png" alt="tw" style="float:left;  width: 45px;"></a>
-                     <a href="#"><img src="/wp-content/uploads/2015/06/google2.png" alt="g+" style="float:left;  width: 45px;"></a>
-                </div>
+                
                 <div class="Top-Register">
                     <a href="/team/auth/register">Register</a>
                 </div><!--Top-Register-->

@@ -51,7 +51,7 @@
 
                     <div class="cbfc-circular-text cbfc-circular-text<?php echo $id_counter; ?>">
                         <div class="cbfc-circular-val">0</div>
-                        <div class="cbfc-circular-type-hours cbfc-circular-type-time"><?php _e( 'Hours', $this->get_plugin_slug() ); ?></div>
+                        <div class="cbfc-circular-type-hours cbfc-circular-type-time"><?php _e( 'Hr', $this->get_plugin_slug() ); ?></div>
                     </div><!-- /.text -->
                 </div><!-- /.inner -->
             </div><!-- /.cbfc-wrap -->
@@ -64,7 +64,7 @@
 
                     <div class="cbfc-circular-text cbfc-circular-text<?php echo $id_counter; ?>">
                         <div class="cbfc-circular-val">0</div>
-                        <div class="cbfc-circular-type-minutes cbfc-circular-type-time"><?php _e( 'Minutes', $this->get_plugin_slug() ); ?></div>
+                        <div class="cbfc-circular-type-minutes cbfc-circular-type-time"><?php _e( 'Min', $this->get_plugin_slug() ); ?></div>
                     </div><!-- /.text -->
                 </div><!-- /.inner -->
             </div><!-- /.cbfc-wrap -->
@@ -77,7 +77,7 @@
 
                     <div class="cbfc-circular-text cbfc-circular-text<?php echo $id_counter; ?>">
                         <div class="cbfc-circular-val">0</div>
-                        <div class="cbfc-circular-type-seconds cbfc-circular-type-time"><?php _e( 'Seconds', $this->get_plugin_slug() ); ?></div>
+                        <div class="cbfc-circular-type-seconds cbfc-circular-type-time"><?php _e( 'Sec', $this->get_plugin_slug() ); ?></div>
                     </div><!-- /.text -->
                 </div><!-- /.inner -->
             </div><!-- /.cbfc-wrap -->
