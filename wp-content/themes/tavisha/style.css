@@ -14,6 +14,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 =================================================================== */
 .count-down{
   width: 100%;
+  margin-top:40px;
 }
 .codeboxrflexiblecountdown-widget {
   width: 15%;
@@ -129,8 +130,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 .site-description {
 font-size:1.5em;
-text-transform:uppercase;
 margin-top:8px;
+text-align: center;
 }
 
 .register-box-body {
@@ -1819,6 +1820,9 @@ p .alignnone {
   RESPONSIVE: TABLET PORTRAIT
 =================================================================== */
 @media (max-width: 768px) {
+  .count-down {
+    display:none;
+  }
 
   .main-content-inner {
     padding-right: 22px;
