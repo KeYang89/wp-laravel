@@ -53,10 +53,10 @@ $userApp = getUserApp();
             <?php
             if($userApp['auth']->check()){
                 ?>
-                <span class="logout">Hi, <strong><?php echo $userApp['auth']->user()->name; ?></strong></span>
-                <div class="Top-Logout">
-                    <a href="/team/auth/logout">Logout</a>
-                </div><!--Top-Logout-->
+                <select class="logout">Hi, <strong><?php echo $userApp['auth']->user()->name; ?></strong></span>
+                <option class="Top-Logout">
+                    <a href="/team/auth/logout">Logout</option>
+                </select><!--Top-Logout-->
                 <?php
             }
             else
