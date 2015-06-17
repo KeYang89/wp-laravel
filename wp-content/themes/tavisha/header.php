@@ -53,7 +53,7 @@ $userApp = getUserApp();
             <?php
             if($userApp['auth']->check()){
                 ?>
-                <select>
+                <select onchange="window.location.href= this.form.URL.options[this.form.URL.selectedIndex].value">
                 <option class="logout">
                   Hi, <strong><?php echo $userApp['auth']->user()->name; ?></strong></span>
                 </option>
