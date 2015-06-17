@@ -53,14 +53,19 @@ $userApp = getUserApp();
             <?php
             if($userApp['auth']->check()){
                 ?>
-                <select name="URL" class="logout" onchange="window.location.href= this.form.URL.options[this.form.URL.selectedIndex].value">
-                <option class="hello" >
+                <select class="logout">
+                <option class="hello" disabled selected>
                  <span> Hi, <strong><?php echo $userApp['auth']->user()->name; ?></strong></span>
                 </option>
-                <option value="http://matchday45.com/team/auth/logout">
+                <option id="Top-Logout">
                     Logout
                   </option>
                 </select><!--Top-Logout-->
+                <script type="text/javascript">
+              document.getElementById("Top-Logout").onclick = function () {
+        location.href = "http://matchday45.com/team/auth/logout";
+    };
+</script>
                 <?php
             }
             else
