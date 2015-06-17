@@ -57,9 +57,9 @@ $userApp = getUserApp();
             {
                 ?>
                 <div class="social-links">
-                   <a href="#"><img src="/wp-content/uploads/2015/06/facebook3.jpg" alt="fb" style="float:left;"></a>
-                    <a href="#"><img src="/wp-content/uploads/2015/06/logo22.png" alt="tw" style="float:left;"></a>
-                     <a href="#"><img src="/wp-content/uploads/2015/06/google2.png" alt="g+" style="float:left;"></a>
+                   <a href="#"><img src="/wp-content/uploads/2015/06/facebook3.png" alt="fb" style="float:left;  width: 45px;"></a>
+                    <a href="#"><img src="/wp-content/uploads/2015/06/logo22.png" alt="tw" style="float:left;  width: 45px;"></a>
+                     <a href="#"><img src="/wp-content/uploads/2015/06/google2.png" alt="g+" style="float:left;  width: 45px;"></a>
                 </div>
                 <div class="Top-Register">
                     <a href="/team/auth/register">Register</a>
