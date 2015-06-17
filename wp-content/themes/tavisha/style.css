@@ -197,6 +197,9 @@ display:none;
   float:right;
 margin-top:4px;
 }
+.social-links {
+  float:right;
+}
 .header-section {
   background: #1758AE;
   padding: 20px 0px 0px 0px;
