@@ -36,14 +36,14 @@ $userApp = getUserApp();
       </div><!-- .logo-wrapper -->
 
 
-      <div class="column col6  col8-sm slogan-wrapper">
+      <div class="column col4  col8-sm slogan-wrapper">
          <?php
         $description = get_bloginfo( 'description', 'display' );
         if ( $description || is_customize_preview() ) : ?>
-          <div class="site-description"><?php echo $description; ?></div>
+          <div class="site-description">FANTASY SOCCER<br/>We put the <span style="color:#25B298;">FAN</span> back in Fantasy</div>
         <?php endif;?>
       </div><!-- .search-wrapper -->
-      <div class="column col3  col8-sm login-wrapper">
+      <div class="column col5  col8-sm login-wrapper">
             <?php
             if($userApp['auth']->check()){
                 ?>
