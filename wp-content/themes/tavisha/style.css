@@ -1136,6 +1136,7 @@ margin-left:20px;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  text-align: center;
 }
 
 .flexbox .post-item-inner,
