@@ -60,6 +60,9 @@ $userApp = getUserApp();
                 <option id="Top-Logout" value="http://matchday45.com/team/auth/logout">
                     Logout
                   </option>
+                 <option id="Top-Account" value="#">
+                    My Account
+                  </option>
                 </select><!--Top-Logout-->
                
                 <?php
