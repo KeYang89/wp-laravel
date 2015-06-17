@@ -57,7 +57,7 @@ $userApp = getUserApp();
                 <option class="logout">
                   Hi, <strong><?php echo $userApp['auth']->user()->name; ?></strong></span>
                 </option>
-                <option value="/team/auth/logout">
+                <option value="http://matchday45.com/team/auth/logout">
                     Logout
                   </option>
                 </select><!--Top-Logout-->
