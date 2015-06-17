@@ -165,21 +165,20 @@ input {
   margin: 10px auto;
   font-size: 14px;
 }
-span.logout {
+.logout {
   float:right;
+  border:none;
+  background-color: #09092B;
+  color:white;
 }
-span.logout:hover {
+.logout:hover {
   float:right;
   color:#d9d9d9;
 }
-span.logout:hover + div {
-  display:block;
-  background-color:#38475F;
+.hello {
+  background-color: #09092B;
+  color:white;
 }
-.Top-Logout {
-display:none;
-}
-
 .Top-Login {
   padding: 4px 10px;
   text-align: center;

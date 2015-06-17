@@ -53,10 +53,10 @@ $userApp = getUserApp();
             <?php
             if($userApp['auth']->check()){
                 ?>
-                <select onchange="window.location.href= this.form.URL.options[this.form.URL.selectedIndex].value">
-                <option class="logout">
-                  Hi, <strong><?php echo $userApp['auth']->user()->name; ?></strong></span>
-                </option>
+                <select name="URL" class="logout" onchange="window.location.href= this.form.URL.options[this.form.URL.selectedIndex].value">
+             
+                 <span class="hello"> Hi, <strong><?php echo $userApp['auth']->user()->name; ?></strong></span>
+      
                 <option value="http://matchday45.com/team/auth/logout">
                     Logout
                   </option>
