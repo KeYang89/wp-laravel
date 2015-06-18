@@ -132,6 +132,7 @@
             </a>
         </div>
 
+        <!--
         <div aria-label="First group" role="group" class="btn-group" style="width: 48%; margin-top: 10px;">
             <a href="{{ Config::get('app.url') }}/server.php/lobby/?area=italy{{ $url_string['area'] }}">
                 <button class="btn-filter btn btn-medium
@@ -145,6 +146,7 @@
                         " type="button" style="width: 100%;">Serie A</button>
             </a>
         </div>
+        -->
         <div aria-label="Second group" role="group" class="btn-group" style="width: 47%; margin-top: 10px;">
             <a href="{{ Config::get('app.url') }}/server.php/lobby/?area=mls{{ $url_string['area'] }}">
                 <button class="btn-filter btn btn-medium
@@ -170,9 +172,10 @@
                                 @endif
                             @endif
 
-                        " type="button" style="width: 100%;">UEFA</button>
+                        " type="button" style="width: 100%;">CL</button>
             </a>
         </div>
+        <!--
         <div aria-label="Second group" role="group" class="btn-group" style="width: 47%; margin-top: 10px;">
             <a href="{{ Config::get('app.url') }}/server.php/lobby/?area=germany{{ $url_string['area'] }}">
                 <button class="btn-filter btn btn-medium
@@ -186,6 +189,7 @@
                         " type="button" style="width: 100%;">GFL</button>
             </a>
         </div>
+        -->
 
     </div>
 
