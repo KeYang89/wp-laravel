@@ -12,6 +12,35 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 /* ===================================================================
   STRUCTURAL LAYOUT
 =================================================================== */
+.count-down{
+  width: 100%;
+}
+.widget_cplugin{
+  float: left;
+  width: 25%;
+  text-align: center; 
+}
+.cwidget_plugin_box {
+  width:80%;
+  margin:auto;
+}
+.countdown-styled.hasCountdown {
+  text-align: center;
+  border: 1px solid white;
+  height: 60px;
+  width: 80%;
+  margin: auto;
+}
+.countdown-styled.hasCountdown div {
+  text-align: center;
+  color:orange;
+}
+.codeboxrflexiblecountdown-widget {
+  width: 15%;
+  float: left;
+  margin-left: 5%;
+  margin-right: 5%;
+}
 .b-back-to-top-dark a {
   background-image: url("/wp-content/uploads/2015/06/b-back-to-top-dark.png");
   background-repeat: no-repeat;
@@ -22,14 +51,18 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 }
 .btn-green {  
   padding: 10px;
+  border: 2px solid white;
+  font-family: Arial;
+}
+.btn-green:hover {  
+  padding: 10px;
   border: 2px solid #23282D;
   font-family: Arial;
   color:#23282D;
 }
-.btn-green:hover {  
-  padding: 10px;
-  border: 2px solid white;
-  font-family: Arial;
+.intro-text {
+  color:black;
+  margin-bottom:28px;
 }
 .homefeature {
   min-width:240px;max-width:300px;width:100%;float:left;
@@ -47,15 +80,20 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   background-attachment: scroll; background-position: top left; 
   background-color: #D6A815;
   padding:20px 20px 0px 20px;
+  text-align: center;
 }
-
+.play{
+  text-align: center;
+  margin:50px 0px;
+}
 .sub-yellow{
 float:left;
 }
 
 body {
   color: #111;
-  background: url("/wp-content/uploads/2015/06/bg.jpg");
+  /*background: url("/wp-content/uploads/2015/06/bg.jpg");*/
+  background-color: #1B1B1B;
   font-family: 'Roboto', sans-serif;
 }
 .how-it-works{
@@ -111,8 +149,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 .site-description {
 font-size:1.5em;
-text-transform:uppercase;
 margin-top:8px;
+text-align: center;
 }
 
 .register-box-body {
@@ -146,16 +184,20 @@ input {
   margin: 10px auto;
   font-size: 14px;
 }
-.Top-Logout {
-  padding: 4px 10px;
-  text-align: center;
-  background-color: #38475F;
-  width: 60px;
-  float: right;
-  margin-right: 10px;
-  margin-top: 4px;
+.logout {
+  float:right;
+  border:none;
+  background-color: #09092B;
+  color:white;
 }
-
+.logout:hover {
+  float:right;
+  color:#d9d9d9;
+}
+.hello {
+  background-color: #09092B;
+  color:white;
+}
 .Top-Login {
   padding: 4px 10px;
   text-align: center;
@@ -163,7 +205,7 @@ input {
   width: 60px;
   float:right;
   margin-right:10px;
-margin-top:4px;
+  margin-top:4px;
 }
 .Top-Register {
   padding: 4px 10px;
@@ -173,10 +215,17 @@ margin-top:4px;
   float:right;
 margin-top:4px;
 }
+.social-links {
+  float:right;
+}
 .header-section {
-  background: #09092B;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  background: #1758AE;
+  padding: 20px 0px 0px 0px;
+  position: fixed;
+  z-index: 99999;
+  height: 200px;
+  top:0px;
+  width: 100%;
 }
 .promo {
 margin-left: 0%;
@@ -605,13 +654,14 @@ margin-left:20px;
 
 .main-content-inner,
 .sidebar {
-  padding-top: 40px;
+  padding-top: 20px;
 }
 .teambox {
   background-color:#070720;
   padding: 20px;
 }
 .team-header {
+  color: white;
   text-align: center;
   background-color: #1D1F1C;
   padding: 5px;
@@ -839,7 +889,6 @@ margin-left:20px;
 .big-slider-title a {
   display: block;
   color: #fff;
-  background-color: rgba(0,0,0,.5);
   padding: 10px;
 }
 
@@ -852,11 +901,8 @@ margin-left:20px;
 }
 
 .big-slider-image img {
-  opacity: 0.8;
-  width:100%;
-}
-.big-slider-image img:hover {
   opacity: 1;
+  width:100%;
 }
 .big-slider-item .readmore-link {
   font-size: 11px;
@@ -1115,6 +1161,7 @@ margin-left:20px;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  text-align: center;
 }
 
 .flexbox .post-item-inner,
@@ -1667,12 +1714,13 @@ p .alignnone {
 =================================================================== */
 .widget {
   color: #7d7d7d;
-  margin-bottom: 50px
 }
 
 .widget-title {
-  margin: 0 0 25px 0;
+  margin: 0 0 15px 0;
   font-size: 20px;
+  text-align: center;
+  color:white;
 }
 
 .widget-title a,
@@ -1800,6 +1848,9 @@ p .alignnone {
   RESPONSIVE: TABLET PORTRAIT
 =================================================================== */
 @media (max-width: 768px) {
+  .count-down {
+    display:none;
+  }
 
   .main-content-inner {
     padding-right: 22px;

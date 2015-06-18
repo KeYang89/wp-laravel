@@ -1,15 +1,14 @@
 <?php /* Template Name: New Homepage for Matchday */
 get_header();
 ?>
-<div class="main-content column col9 col8-sm" role="main">
+<div class="main-content column col12" role="main" style="padding-top:200px;">
   <div class="main-content-inner">
     <?php get_template_part('content','slider');?>
     <!-- /.slider-section -->
   </div><!-- .main-content-inner -->
-<div class="how-it-works">
+<div class="homepage-blog-section">
     <?php while ( have_posts() ) : the_post();?>
-    <article id="post-<?php the_ID(); ?>" <?php post_class('entry-post'); ?>>
-      <?php edit_post_link( __( 'Edit', 'tavisha' ), '<span class="edit-link">', '</span>' ); ?>
+    <article id="post-<?php the_ID(); ?>">
       <?php if ( has_post_thumbnail() ) :?>
       <div class="entry-image">
         <?php the_post_thumbnail( 'post-thumbnail', array( 'alt' => get_the_title() ) );?>
@@ -37,6 +36,6 @@ get_header();
 </div>
 </div><!-- .main-content -->
 
-<?php get_sidebar();?>
+
 <!-- .sidebar -->
 <?php get_footer(); ?>

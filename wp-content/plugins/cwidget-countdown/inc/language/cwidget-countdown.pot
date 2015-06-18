@@ -1,0 +1,33 @@
+# Copyright (C) 2013 
+# This file is distributed under the same license as the  package.
+msgid ""
+msgstr ""
+"Project-Id-Version:  \n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/cwidget-countdown\n"
+"POT-Creation-Date: 2013-11-17 19:27:57+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2013-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: cwidget.php:16
+msgid "CWidget Countdown"
+msgstr ""
+
+#: cwidget.php:35
+msgid "Widget Title"
+msgstr ""
+
+#: cwidget.php:39
+msgid "End Date (Y.M.D):"
+msgstr ""
+
+#: cwidget.php:43
+msgid "Language"
+msgstr ""
+
+#: cwidget.php:45
+msgid "Select Language"
+msgstr ""
