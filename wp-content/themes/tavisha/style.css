@@ -16,7 +16,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   width: 100%;
 }
 .carbonlite-dash {
-  width: 58px;
+  width: 58px !important;
 }
 .widget_cplugin{
   float: left;
