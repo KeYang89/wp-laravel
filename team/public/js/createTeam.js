@@ -343,7 +343,7 @@ var chooseTeamPlayer = function(index){
         if(singlePlayer.id == index)
         {
             var newTeamBudget = parseFloat(angular.element('#controller').scope().team.teamBudget) - parseFloat(singlePlayer.price);
-            newTeamBudget = parseFloat(angular.element('#controller').scope().team.teamBudget).toFixed(1);
+            newTeamBudget = parseFloat(newTeamBudget).toFixed(1);
 
             if(angular.element('#controller').scope().team.teamBudget > 0)
             {
