@@ -1,7 +1,7 @@
 <?php /* Template Name: New Homepage for Matchday */
 get_header();
 ?>
-<div class="main-content column col12" role="main">
+<div class="main-content column col12" role="main" style="padding-top:200px;">
   <div class="main-content-inner">
     <?php get_template_part('content','slider');?>
     <!-- /.slider-section -->
