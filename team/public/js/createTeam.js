@@ -452,7 +452,19 @@ var chooseTeamPlayer = function(index){
                                 btn[removePlayer.playerPosition].on("click", function()
                                 {
                                     selectedPlayerPosition = this.id;
-                                    var dbPositionId = '';
+                                    var dbPositionId = selectedPlayerPosition;
+                                    if(selectedPlayerPosition > 1 && selectedPlayerPosition <= 5)
+                                    {
+                                        var dbPositionId = 2;
+                                    }
+                                    else if(selectedPlayerPosition > 5 && selectedPlayerPosition <= 9)
+                                    {
+                                        var dbPositionId = 3;
+                                    }
+                                    else if(selectedPlayerPosition > 9 && selectedPlayerPosition <= 11)
+                                    {
+                                        var dbPositionId = 4;
+                                    }
                                     angular.element('#controller').scope().openSlider(dbPositionId);
 
                                 }, null, false, {count:3});
