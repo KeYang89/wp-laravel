@@ -346,7 +346,7 @@ var loadPitch = function()
 
                     /* info box */
                     var infoIconSrc = new Image();
-                    infoIconSrc.src = '/matchday/team/public/images/info.png';
+                    infoIconSrc.src = '/team/public/images/info.png';
                     console.log(infoIconSrc.src);
                     infoIconSrc.name = 'button';
                     infoIconSrc.onload = createjs.loadGfx;
