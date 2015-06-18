@@ -342,11 +342,12 @@ var chooseTeamPlayer = function(index){
     $.each(playerData, function(playerIndex, singlePlayer){
         if(singlePlayer.id == index)
         {
-            angular.element('#controller').scope().team.teamBudget = parseFloat(angular.element('#controller').scope().team.teamBudget) - parseFloat(singlePlayer.price);
-            angular.element('#controller').scope().team.teamBudget = parseFloat(angular.element('#controller').scope().team.teamBudget).toFixed(1);
+            var newTeamBudget = parseFloat(angular.element('#controller').scope().team.teamBudget) - parseFloat(singlePlayer.price);
+            newTeamBudget = parseFloat(angular.element('#controller').scope().team.teamBudget).toFixed(1);
 
             if(angular.element('#controller').scope().team.teamBudget > 0)
             {
+                angular.element('#controller').scope().team.teamBudget = newTeamBudget;
                 angular.element('#controller').scope().$apply();
 
                 var playerInfo = singlePlayer;
