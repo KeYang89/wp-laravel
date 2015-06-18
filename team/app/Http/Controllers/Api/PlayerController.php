@@ -144,9 +144,35 @@ class PlayerController extends Controller {
         }
     }
 
+    public function getPlayerInfo($playerId)
+    {
+        $respone = \DB::table('players')->where('id', $playerId)->first();
+        $teamRespone = \DB::table('teams')->where('id', $respone->team_id)->first();
+        $respone->team = $teamRespone->name;
+
+        if(!empty($respone))
+        {
+            // success
+            return Response::json([
+                    'status'    =>  200,
+                    'result'    =>  $respone
+                ], 200);
+        }
+        else{
+            // no result found
+            return Response::json([
+                    'status'    =>  204
+                ], 204);
+        }
+    }
+
+
+
     public function saveTeam()
     {
         $teamName = Request::input('teamName');
+        $coachId = Request::input('coachId');
+
         $teamPlayers = Request::input('teamPlayers');
 
         $array =  (array) $teamPlayers;
@@ -155,7 +181,7 @@ class PlayerController extends Controller {
         $teanPoint = rand(30, 80);
         $teamRank = 1511123 + $teanPoint;
 
-        \DB::insert('insert into user_teams set user_id = "' . Auth::user()->id . '", team_name = "' . $teamName . '", team_players = "' . $teamPlayers . '", team_points = "' . $teanPoint . '", team_rank = "' . $teamRank . '"');
+        \DB::insert('insert into user_teams set user_id = "' . Auth::user()->id . '", team_name = "' . $teamName . '", coach_id = "' . $coachId . '", team_players = "' . $teamPlayers . '", team_points = "' . $teanPoint . '", team_rank = "' . $teamRank . '"');
         $teamId = \DB::getPdo()->lastInsertId();
 
         // success

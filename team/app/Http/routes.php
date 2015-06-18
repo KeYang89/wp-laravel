@@ -38,6 +38,7 @@ Route::group(array('prefix' => 'api/v1'), function()
     Route::get('getUserTeam/{teamId}', 'Api\PlayerController@getUserTeam');
     Route::post('saveTeam', 'Api\PlayerController@saveTeam');
     Route::get('getPlayerStat/{playerId}/{leagueId}/{seasonId}', 'Api\PlayerController@getPlayerStat');
+    Route::get('getPlayerInfo/{playerId}', 'Api\PlayerController@getPlayerInfo');
     Route::get('getToken', 'Api\PlayerController@getToken');
     Route::get('getUser', 'Api\PlayerController@getUser');
 });

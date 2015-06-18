@@ -307,6 +307,24 @@ a.lnk-blue{
     color: #0178bc;
 }
 
+section.left-counter{
+    padding: 0px 20px;
+    color: #fff;
+}
+
+section.left-counter div.league{
+    margin-top: 10px;
+}
+
+section.left-counter h3{
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0px;
+}
+section.left-counter .left-match-counter{
+    background-color: #000; color: #D49306; font-size: 24px; text-align: center; border: #fff solid 2px;
+}
+
 /* #### Mobile Phones Portrait or Landscape #### */
 @media screen and (max-device-width: 640px){
     .bottom-ads img{
