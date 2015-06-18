@@ -22,6 +22,8 @@ var rowPostions = [0, 24, 51, 75];
 
 var playerInfoContainer = new Array();
 var playerInfoName = new Array();
+var playerInfoIcon = new Array();
+var playerRemoveIcon = new Array();
 var selectedPlayerPosition = '';
 
 var teamPlayers = [];
@@ -71,7 +73,7 @@ var loadPitch = function()
             console.log('got');
             $.each(data.result, function(playerIndex, playerValue)
             {
-                playerData.push({id: playerValue.id, firstName: playerValue.first_name, lastName: playerValue.last_name, teamId: playerValue.team_id});
+                playerData.push({id: playerValue.id, firstName: playerValue.first_name, lastName: playerValue.last_name, teamId: playerValue.team_id, price: playerValue.price});
                 console.log(playerValue.id);
             });
         }
@@ -340,81 +342,227 @@ var chooseTeamPlayer = function(index){
     $.each(playerData, function(playerIndex, singlePlayer){
         if(singlePlayer.id == index)
         {
-            var playerInfo = singlePlayer;
-            teamPlayers.push({
-                playerPosition  :   selectedPlayerPosition,
-                playerId        :   singlePlayer.id
-            });
+            angular.element('#controller').scope().team.teamBudget = parseFloat(angular.element('#controller').scope().team.teamBudget) - parseFloat(singlePlayer.price);
+            angular.element('#controller').scope().team.teamBudget = parseFloat(angular.element('#controller').scope().team.teamBudget).toFixed(1);
 
-
-            playerInfoContainer[selectedPlayerPosition] = new createjs.Container();
-            playerInfoContainer[selectedPlayerPosition].x = btn[selectedPlayerPosition].x - 16;
-            playerInfoContainer[selectedPlayerPosition].y = btn[selectedPlayerPosition].y + 70;
-            playerInfoContainer[selectedPlayerPosition].setBounds(0, 0, 80, 22);
-
-
-            var rect = new createjs.Shape();
-            //rect.graphics.beginFill('#6e7e8e').drawRect(0, 0, 80, 22);
-            rect.graphics.drawRect(0, 0, 80, 22);
-            playerInfoContainer[selectedPlayerPosition].addChild(rect);
-
-            playerInfoName[selectedPlayerPosition] = new createjs.Text();
-            playerInfoName[selectedPlayerPosition].set({
-                text: playerInfo.lastName,
-                color: '#ffffff'
-            });
-
-            var playerInfoNameBound = playerInfoName[selectedPlayerPosition].getBounds();
-
-            playerInfoName[selectedPlayerPosition].x = (80 - playerInfoNameBound.width) / 2;
-            playerInfoContainer[selectedPlayerPosition].addChild(playerInfoName[selectedPlayerPosition]);
-
-            if(selectedPlayerPosition <= 11)
+            if(angular.element('#controller').scope().team.teamBudget > 0)
             {
-                stage.addChild(playerInfoContainer[selectedPlayerPosition]);
-                var tempPlayerConfig = btn[selectedPlayerPosition];
-                stage.removeChild(btn[selectedPlayerPosition]);
+                angular.element('#controller').scope().$apply();
+
+                var playerInfo = singlePlayer;
+                teamPlayers.push({
+                    playerPosition  :   selectedPlayerPosition,
+                    playerId        :   singlePlayer.id
+                });
+
+
+                playerInfoContainer[selectedPlayerPosition] = new createjs.Container();
+                playerInfoContainer[selectedPlayerPosition].x = btn[selectedPlayerPosition].x - 16;
+                playerInfoContainer[selectedPlayerPosition].y = btn[selectedPlayerPosition].y + 70;
+                playerInfoContainer[selectedPlayerPosition].setBounds(0, 0, 80, 22);
+
+
+                var rect = new createjs.Shape();
+                //rect.graphics.beginFill('#6e7e8e').drawRect(0, 0, 80, 22);
+                rect.graphics.drawRect(0, 0, 80, 22);
+                playerInfoContainer[selectedPlayerPosition].addChild(rect);
+
+                /* info box */
+                var infoIconSrc = new Image();
+                infoIconSrc.src = '/team/public/images/info.png';
+                console.log(infoIconSrc.src);
+                infoIconSrc.name = 'button';
+                infoIconSrc.onload = createjs.loadGfx;
+                playerInfoIcon[selectedPlayerPosition] = new createjs.Bitmap(infoIconSrc);
+                playerInfoIcon[selectedPlayerPosition].image.onload = function(){
+                    bnhStage.update();
+                }
+
+                playerInfoIcon[selectedPlayerPosition].x = (80 - 30) / 2;
+                playerInfoIcon[selectedPlayerPosition].y = 0;
+                playerInfoIcon[selectedPlayerPosition].scaleX = 0.7;
+                playerInfoIcon[selectedPlayerPosition].scaleY = 0.7;
+                playerInfoIcon[selectedPlayerPosition].on("click", function()
+                {
+                    angular.element('#controller').scope().loadPlayerInfo(singlePlayer.id);
+
+                }, null, false, {count:3});
+
+                playerInfoContainer[selectedPlayerPosition].addChild(playerInfoIcon[selectedPlayerPosition]);
+                /* info box */
+
+                /* remove box */
+                var removeIconSrc = new Image();
+                removeIconSrc.src = '/team/public/images/remove.png';
+                removeIconSrc.name = 'button';
+                removeIconSrc.onload = createjs.loadGfx;
+                playerRemoveIcon[selectedPlayerPosition] = new createjs.Bitmap(removeIconSrc);
+                playerRemoveIcon[selectedPlayerPosition].image.onload = function(){
+                    bnhStage.update();
+                }
+
+                playerRemoveIcon[selectedPlayerPosition].x = (80) / 2;
+                playerRemoveIcon[selectedPlayerPosition].y = 0;
+                playerRemoveIcon[selectedPlayerPosition].scaleX = 0.7;
+                playerRemoveIcon[selectedPlayerPosition].scaleY = 0.7;
+                playerRemoveIcon[selectedPlayerPosition].on("click", function()
+                {
+                    $("#confirmation-model #modal-title").html('Confirm');
+                    $("#confirmation-model #modal-body").html('Remove this player?');
+                    $("#confirmation-model").modal('show').one('click', '#confirmed', function() {
+
+
+
+                        var tempPlayers = [];
+
+                        $.each(teamPlayers, function(removeIndex, removePlayer){
+                            if(removePlayer.playerId != singlePlayer.id)
+                            {
+                                tempPlayers.push(removePlayer);
+                            }
+                            else
+                            {
+                                playerInfoContainer[removePlayer.playerPosition].removeChild(playerInfoIcon[removePlayer.playerPosition]);
+                                playerInfoContainer[removePlayer.playerPosition].removeChild(playerRemoveIcon[removePlayer.playerPosition]);
+                                playerInfoContainer[removePlayer.playerPosition].removeChild(playerInfoName[removePlayer.playerPosition]);
+
+                                var tempPlayerConfig = btn[removePlayer.playerPosition];
+
+
+
+                                if(removePlayer.playerPosition <= 11)
+                                {
+                                    stage.removeChild(playerInfoContainer[removePlayer.playerPosition]);
+                                    stage.removeChild(btn[removePlayer.playerPosition]);
+                                    stage.update();
+                                }
+                                else
+                                {
+                                    bnhStage.removeChild(playerInfoContainer[removePlayer.playerPosition]);
+                                    bnhStage.removeChild(btn[removePlayer.playerPosition]);
+                                    bnhStage.update();
+                                }
+
+                                /* add new add icon */
+                                var btnSrc = new Image();
+                                btnSrc.src = '/team/public/images/shirt_0.png';
+                                btnSrc.name = 'button';
+                                btnSrc.onload = createjs.loadGfx;
+                                btn[removePlayer.playerPosition] = new createjs.Bitmap(btnSrc);
+                                btn[removePlayer.playerPosition].on("click", function()
+                                {
+                                    selectedPlayerPosition = this.id;
+                                    var dbPositionId = '';
+                                    angular.element('#controller').scope().openSlider(dbPositionId);
+
+                                }, null, false, {count:3});
+                                btn[removePlayer.playerPosition].shadow = new createjs.Shadow("#303131", 3, 3, 8);
+                                btn[removePlayer.playerPosition].x = tempPlayerConfig.x;
+                                btn[removePlayer.playerPosition].y = tempPlayerConfig.y;
+                                btn[removePlayer.playerPosition].scaleX = tempPlayerConfig.scaleX;
+                                btn[removePlayer.playerPosition].scaleY = tempPlayerConfig.scaleY;
+                                btn[removePlayer.playerPosition].id = tempPlayerConfig.id;
+                                if(removePlayer.playerPosition <= 11)
+                                {
+                                    btn[removePlayer.playerPosition].image.onload = function(){
+                                        stage.update();
+                                    }
+                                    stage.addChild(btn[removePlayer.playerPosition]);
+                                    stage.update();
+                                }
+                                else
+                                {
+                                    btn[removePlayer.playerPosition].image.onload = function(){
+                                        bnhStage.update();
+                                    }
+                                    bnhStage.addChild(btn[removePlayer.playerPosition]);
+                                    bnhStage.update();
+                                }
+                                /* add new add icon */
+
+                                angular.element('#controller').scope().team.teamBudget = parseFloat(angular.element('#controller').scope().team.teamBudget) + parseFloat(singlePlayer.price);
+                                angular.element('#controller').scope().team.teamBudget = parseFloat(angular.element('#controller').scope().team.teamBudget).toFixed(1);
+                                angular.element('#controller').scope().$apply();
+                                $("#confirmation-model").modal('hide');
+                            }
+                        });
+
+                        teamPlayers = tempPlayers;
+
+
+                    });
+
+
+                }, null, false, {count:3});
+
+                playerInfoContainer[selectedPlayerPosition].addChild(playerRemoveIcon[selectedPlayerPosition]);
+                /* remove box */
+
+                playerInfoName[selectedPlayerPosition] = new createjs.Text();
+                playerInfoName[selectedPlayerPosition].set({
+                    text: playerInfo.lastName,
+                    color: '#ffffff'
+                });
+
+                var playerInfoNameBound = playerInfoName[selectedPlayerPosition].getBounds();
+
+                playerInfoName[selectedPlayerPosition].x = (80 - playerInfoNameBound.width) / 2;
+                playerInfoName[selectedPlayerPosition].y = 12;
+                playerInfoContainer[selectedPlayerPosition].addChild(playerInfoName[selectedPlayerPosition]);
+
+                if(selectedPlayerPosition <= 11)
+                {
+                    stage.addChild(playerInfoContainer[selectedPlayerPosition]);
+                    var tempPlayerConfig = btn[selectedPlayerPosition];
+                    stage.removeChild(btn[selectedPlayerPosition]);
+                }
+                else
+                {
+                    bnhStage.addChild(playerInfoContainer[selectedPlayerPosition]);
+                    var tempPlayerConfig = btn[selectedPlayerPosition];
+                    bnhStage.removeChild(btn[selectedPlayerPosition]);
+                }
+
+                var newSrc = new Image();
+                newSrc.src = '/team/public/images/shirt_' + playerInfo.teamId + '.png';
+                newSrc.name = 'button';
+                newSrc.onload = createjs.loadGfx;
+                btn[selectedPlayerPosition] = new createjs.Bitmap(newSrc);
+                if(selectedPlayerPosition <= 11)
+                {
+                    btn[selectedPlayerPosition].image.onload = function() { stage.update(); }
+                }
+                else
+                {
+                    btn[selectedPlayerPosition].image.onload = function() { bnhStage.update(); }
+                }
+                btn[selectedPlayerPosition].shadow = new createjs.Shadow("#303131", 3, 3, 8);
+                btn[selectedPlayerPosition].x = tempPlayerConfig.x;
+                btn[selectedPlayerPosition].y = tempPlayerConfig.y;
+                btn[selectedPlayerPosition].scaleX = tempPlayerConfig.scaleX;
+                btn[selectedPlayerPosition].scaleY = tempPlayerConfig.scaleY;
+                btn[selectedPlayerPosition].id = tempPlayerConfig.id;
+
+                if(selectedPlayerPosition <= 11)
+                {
+                    stage.addChild(btn[selectedPlayerPosition]);
+                    stage.update();
+                }
+                else
+                {
+                    bnhStage.addChild(btn[selectedPlayerPosition]);
+                    bnhStage.update();
+                }
+
+                $('#tsf').removeClass('control-sidebar-open');
+                selectedPlayerPosition = '';
             }
             else
             {
-                bnhStage.addChild(playerInfoContainer[selectedPlayerPosition]);
-                var tempPlayerConfig = btn[selectedPlayerPosition];
-                bnhStage.removeChild(btn[selectedPlayerPosition]);
+                $("#create-team-model #modal-title").html('Alert');
+                $("#create-team-model #modal-body").html('Insufficient budget');
+                $("#create-team-model").modal('show');
             }
-
-            var newSrc = new Image();
-            newSrc.src = '/team/public/images/shirt_' + playerInfo.teamId + '.png';
-            newSrc.name = 'button';
-            newSrc.onload = createjs.loadGfx;
-            btn[selectedPlayerPosition] = new createjs.Bitmap(newSrc);
-            if(selectedPlayerPosition <= 11)
-            {
-                btn[selectedPlayerPosition].image.onload = function() { stage.update(); }
-            }
-            else
-            {
-                btn[selectedPlayerPosition].image.onload = function() { bnhStage.update(); }
-            }
-            btn[selectedPlayerPosition].shadow = new createjs.Shadow("#303131", 3, 3, 8);
-            btn[selectedPlayerPosition].x = tempPlayerConfig.x;
-            btn[selectedPlayerPosition].y = tempPlayerConfig.y;
-            btn[selectedPlayerPosition].scaleX = tempPlayerConfig.scaleX;
-            btn[selectedPlayerPosition].scaleY = tempPlayerConfig.scaleY;
-            btn[selectedPlayerPosition].id = tempPlayerConfig.id;
-
-            if(selectedPlayerPosition <= 11)
-            {
-                stage.addChild(btn[selectedPlayerPosition]);
-                stage.update();
-            }
-            else
-            {
-                bnhStage.addChild(btn[selectedPlayerPosition]);
-                bnhStage.update();
-            }
-
-            $('#tsf').removeClass('control-sidebar-open');
-            selectedPlayerPosition = '';
         }
     });
 
@@ -434,19 +582,30 @@ $(document).ready(function(){
         var teamName = $('#team-name').val();
         if(teamName != '')
         {
-            if(teamPlayers.length >= 15)
+            var coachId = $('#team-coach').val();
+            if(coachId != '')
             {
-                $.post('api/v1/saveTeam', {
-                    teamName    :   teamName,
-                    teamPlayers :   teamPlayers
-                }, function(result){
-                    location.href = '/team/pick-team/' + result.teamId;
-                });
+                if(teamPlayers.length >= 15)
+                {
+                    $.post('api/v1/saveTeam', {
+                        teamName    :   teamName,
+                        coachId     :   coachId,
+                        teamPlayers :   teamPlayers
+                    }, function(result){
+                        location.href = '/team/pick-team/' + result.teamId;
+                    });
+                }
+                else
+                {
+                    $("#create-team-model #modal-title").html('Alert');
+                    $("#create-team-model #modal-body").html('Select players for all positions before save');
+                    $("#create-team-model").modal('show');
+                }
             }
             else
             {
                 $("#create-team-model #modal-title").html('Alert');
-                $("#create-team-model #modal-body").html('Select players for all positions before save');
+                $("#create-team-model #modal-body").html('Select team coach');
                 $("#create-team-model").modal('show');
             }
         }
@@ -462,6 +621,11 @@ $(document).ready(function(){
         e.preventDefault();
         //console.log('hehaha');
         chooseTeamPlayer($(this).attr('data-id'));
+    });
+
+    $(document).delegate('.view-player', 'click', function(e){
+        e.preventDefault();
+        angular.element('#controller').scope().loadPlayerInfo($(this).attr('data-id'));
     });
 
 

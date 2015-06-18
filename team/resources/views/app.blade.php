@@ -95,6 +95,8 @@
         <script src="{{Config::get('app.url')}}/public/plugins/slimScroll/jquery.slimscroll.min.js" type="text/javascript"></script>
         <!-- FastClick -->
         <script src="{{Config::get('app.url')}}/public/plugins/fastclick/fastclick.min.js"></script>
+        <!-- Jquery Time Count -->
+        <script src="{{Config::get('app.url')}}/public/js/jquery.countdown.js" type="text/javascript"></script>
         <!-- App -->
         <script src="{{Config::get('app.url')}}/public/dist/js/app.min.js" type="text/javascript"></script>
         <script src="{{Config::get('app.url')}}/public/dist/js/demo.js" type="text/javascript"></script>

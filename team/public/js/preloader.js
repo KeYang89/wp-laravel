@@ -23,5 +23,7 @@ $(document).ready(function(){
     preload.loadFile('/team/public/images/shirt_12.png');
     preload.loadFile('/team/public/images/shirt_13.png');
     preload.loadFile('/team/public/images/shirt_14.png');
+    preload.loadFile('/team/public/images/info.png');
+    preload.loadFile('/team/public/images/remove.png');
 });
 

@@ -22,6 +22,7 @@ var rowPostions = [0, 24, 51, 75];
 
 var playerInfoContainer = new Array();
 var playerInfoName = new Array();
+var playerInfoIcon = new Array();
 var selectedPlayerPosition = '';
 
 var teamName = '';
@@ -149,6 +150,32 @@ var loadPitch = function()
                                 rect.graphics.drawRect(0, 0, 80, 22);
                                 playerInfoContainer[player].addChild(rect);
 
+
+                                /* info box */
+                                var infoIconSrc = new Image();
+                                infoIconSrc.src = '/matchday/team/public/images/info.png';
+                                console.log(infoIconSrc.src);
+                                infoIconSrc.name = 'button';
+                                infoIconSrc.onload = createjs.loadGfx;
+                                playerInfoIcon[player] = new createjs.Bitmap(infoIconSrc);
+                                playerInfoIcon[player].image.onload = function(){
+                                    bnhStage.update();
+                                }
+
+                                playerInfoIcon[player].x = (80 - 12) / 2;
+                                playerInfoIcon[player].y = 0;
+                                playerInfoIcon[player].scaleX = 0.7;
+                                playerInfoIcon[player].scaleY = 0.7;
+                                playerInfoIcon[player].on("click", function()
+                                {
+                                    angular.element('#controller').scope().loadPlayerInfo(player);
+
+                                }, null, false, {count:3});
+
+                                playerInfoContainer[player].addChild(playerInfoIcon[player]);
+                                /* info box */
+
+
                                 playerInfoName[player] = new createjs.Text();
                                 playerInfoName[player].set({
                                     text: singlePlayer.lastName,
@@ -158,6 +185,7 @@ var loadPitch = function()
                                 var playerInfoNameBound = playerInfoName[player].getBounds();
 
                                 playerInfoName[player].x = (80 - playerInfoNameBound.width) / 2;
+                                playerInfoName[player].y = 12;
                                 playerInfoContainer[player].addChild(playerInfoName[player]);
                                 stage.addChild(playerInfoContainer[player]);
 
@@ -316,6 +344,30 @@ var loadPitch = function()
                     rect.graphics.drawRect(0, 0, 80, 22);
                     subInfoContainer[subPlayer].addChild(rect);
 
+                    /* info box */
+                    var infoIconSrc = new Image();
+                    infoIconSrc.src = '/matchday/team/public/images/info.png';
+                    console.log(infoIconSrc.src);
+                    infoIconSrc.name = 'button';
+                    infoIconSrc.onload = createjs.loadGfx;
+                    playerInfoIcon[subPlayer] = new createjs.Bitmap(infoIconSrc);
+                    playerInfoIcon[subPlayer].image.onload = function(){
+                        bnhStage.update();
+                    }
+
+                    playerInfoIcon[subPlayer].x = (80 - 12) / 2;
+                    playerInfoIcon[subPlayer].y = 0;
+                    playerInfoIcon[subPlayer].scaleX = 0.7;
+                    playerInfoIcon[subPlayer].scaleY = 0.7;
+                    playerInfoIcon[subPlayer].on("click", function()
+                    {
+                        angular.element('#controller').scope().loadPlayerInfo(subPlayer);
+
+                    }, null, false, {count:3});
+
+                    subInfoContainer[subPlayer].addChild(playerInfoIcon[subPlayer]);
+                    /* info box */
+
                     subInfoName[subPlayer] = new createjs.Text();
                     subInfoName[subPlayer].set({
                         text: selectedPlayerData.lastName,
@@ -325,6 +377,7 @@ var loadPitch = function()
                     var subInfoNameBound = subInfoName[subPlayer].getBounds();
 
                     subInfoName[subPlayer].x = (80 - subInfoNameBound.width) / 2;
+                    subInfoName[subPlayer].y = 12;
                     subInfoContainer[subPlayer].addChild(subInfoName[subPlayer]);
                     bnhStage.addChild(subInfoContainer[subPlayer]);
                     //bnhStage.update();

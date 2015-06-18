@@ -23,29 +23,35 @@
                 <div class="tab-content no-padding">
                     <!-- Morris chart - Sales -->
                     <div class="chart tab-pane active" id="field-view" style="position: relative;">
-
+                        <div class="row" style="margin-left: 20px;margin-right: 20px;margin-bottom: 20px;">
+                            <div class="col-md-6 col-sm-6 col-xs-6 bg-aqua" style="line-height: 21px;">
+                                <div>Team Budget</div>
+                                <span style="font-size: 26px;">$<span ng-bind="team.teamBudget"><% team.teamBudget %></span></span>
+                            </div><!-- /.col -->
+                            <div class="col-md-6 col-sm-6 col-xs-6 bg-yellow" style="line-height: 21px;">
+                                <div>Coach Budget</div>
+                                <span style="font-size: 26px;">$<span ng-model="team.coachBudget"><% team.coachBudget %></span></span>
+                            </div><!-- /.col -->
+                        </div>
                         <div class="row" style="margin: 20px;">
-                            <div class="col-xs-10 col-md-6">
+                            <div class="col-sm-12 col-md-6">
                                 <div class="row" style="padding: 3px;">Team Name:</div>
                                 <div class="row form-group" style="padding: 3px;">
                                     <input class="form-control" type="text" placeholder="Team name:" name="team_name" id="team-name" value="" style="font-size: 16px; font-weight: bold;">
                                 </div>
                             </div>
-                            <div class="col-xs-2 col-md-2">
-                                &nbsp;
-                            </div>
-                            <div class="col-xs-3 col-md-2">
-                                <div class="row" style="padding: 3px;">Team Name:</div>
-                                <div class="row form-group" style="font-size: 16px; font-weight: bold;padding: 3px;">
-                                    $100
+                            <div class="col-sm-12 col-md-6">
+                                <div class="row" style="padding: 3px;">Coach:</div>
+                                <div class="row form-group" style="padding: 3px;">
+                                    <select class="form-control" id="team-coach">
+                                        <option value="">Select Coach</option>
+                                        @foreach ($allCoaches as $coach)
+                                            <option value="{{ $coach->id }}">{{ $coach->first_name . ' ' . $coach->last_name . ' (' . $coach->price . ')'  }}</option>
+                                        @endforeach
+                                    </select>
                                 </div>
                             </div>
-                            <div class="col-xs-3 col-md-2">
-                                <div class="row" style="padding: 3px;">Team Name:</div>
-                                <div class="row form-group" style="font-size: 16px; font-weight: bold;padding: 3px;">
-                                    $50
-                                </div>
-                            </div>
+
                         </div>
 
                         <div  class="row" style="margin: 20px;">
@@ -274,10 +280,10 @@
                         </thead>
                         <tbody>
                             <tr ng-repeat="player in rightSlider.goalkeepers" ng-if="rightSlider.goalkeepers.length > 0">
-                                <td><a href="/team/player-profile/<% player.id %>" class="lnk-blue" target="_blank"><% player.name %></a></td>
+                                <td><a href="javascript:void(0);" data-id="<% player.id %>" class="lnk-blue view-player"><% player.name %></a></td>
                                 <td><% player.price %></td>
                                 <td><% player.score %></td>
-                                <td><a href="javascript:void(0);" data-id="<% player.id %>" <button class="btn btn-black pull-right btn-player-select add-player"><i class="fa fa-plus"></i></button></td>
+                                <td><a href="javascript:void(0);" data-id="<% player.id %>" class="add-player"><button class="btn btn-black pull-right btn-player-select"><i class="fa fa-plus"></i></button></a></td>
                             </tr>
                         </tbody>
                         <thead ng-if="rightSlider.diffenders.length > 0">
@@ -289,10 +295,10 @@
                         </thead>
                         <tbody>
                             <tr ng-repeat="player in rightSlider.diffenders" ng-if="rightSlider.diffenders.length > 0">
-                                <td><a href="/team/player-profile/<% player.id %>" class="lnk-blue" target="_blank"><% player.name %></a></td>
+                                <td><a href="javascript:void(0);" data-id="<% player.id %>" class="lnk-blue view-player"><% player.name %></a></td>
                                 <td><% player.price %></td>
                                 <td><% player.score %></td>
-                                <td><a href="javascript:void(0);" data-id="<% player.id %>" <button class="btn btn-black pull-right btn-player-select add-player"><i class="fa fa-plus"></i></button></td>
+                                <td><a href="javascript:void(0);" data-id="<% player.id %>" class="add-player"><button class="btn btn-black pull-right btn-player-select"><i class="fa fa-plus"></i></button></a></td>
                             </tr>
                         </tbody>
                         <thead ng-if="rightSlider.midfielders.length > 0">
@@ -304,10 +310,10 @@
                         </thead>
                         <tbody>
                             <tr ng-repeat="player in rightSlider.midfielders" ng-if="rightSlider.midfielders.length > 0">
-                                <td><a href="/team/player-profile/<% player.id %>" class="lnk-blue" target="_blank"><% player.name %></a></td>
+                                <td><a href="javascript:void(0);" data-id="<% player.id %>" class="lnk-blue view-player"><% player.name %></a></td>
                                 <td><% player.price %></td>
                                 <td><% player.score %></td>
-                                <td><a href="javascript:void(0);" data-id="<% player.id %>" <button class="btn btn-black pull-right btn-player-select add-player"><i class="fa fa-plus"></i></button></td>
+                                <td><a href="javascript:void(0);" data-id="<% player.id %>" class="add-player"><button class="btn btn-black pull-right btn-player-select"><i class="fa fa-plus"></i></button></a></td>
                             </tr>
                         </tbody>
                         <thead ng-if="rightSlider.forward.length > 0">
@@ -319,26 +325,21 @@
                         </thead>
                         <tbody>
                             <tr ng-repeat="player in rightSlider.forward" ng-if="rightSlider.forward.length > 0">
-                                <td><a href="/team/player-profile/<% player.id %>" class="lnk-blue" target="_blank"><% player.name %></a></td>
+                                <td><a href="javascript:void(0);" data-id="<% player.id %>" class="lnk-blue view-player"><% player.name %></a></td>
                                 <td><% player.price %></td>
                                 <td><% player.score %></td>
-                                <td><a href="javascript:void(0);" data-id="<% player.id %>" <button class="btn btn-black pull-right btn-player-select add-player"><i class="fa fa-plus"></i></button></td>
+                                <td><a href="javascript:void(0);" data-id="<% player.id %>" class="add-player"><button class="btn btn-black pull-right btn-player-select"><i class="fa fa-plus"></i></button></a></td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
-
-
-
             <div style="margin-top: 10px;"><a data-toggle="control-sidebar" href="#"><button class="pull-left btn btn-medium" style="margin-left: 90px;">Hide <i class="fa fa-arrow-circle-right"></i></button></a></div>
 
         </aside><!-- /.control-sidebar -->
         <!-- Add the sidebar's background. This div must be placed
              immediately after the control sidebar -->
         <div class='control-sidebar-bg'></div>
-        </div><!-- ./wrapper -->
-
         <!-- Modal -->
         <div class="modal fade" id="create-team-model" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -356,6 +357,114 @@
                 </div>
             </div>
         </div>
+        <div class="modal fade" id="confirmation-model" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="modal-title">Confirm</h4>
+                    </div>
+                    <div class="modal-body" id="modal-body">
+                        Remove this player?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-medium" data-dismiss="modal">No</button>
+                        <button type="button" class="btn btn-medium" id="confirmed">Yes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="player-info-model" tabindex="-1" role="dialog" aria-labelledby="pinfoLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content" ng-if="model.playerInfo.loaded == 1">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="modal-title"><% model.playerInfo.name %></h4>
+                    </div>
+                    <div class="modal-body" id="modal-body">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                <img src="{{Config::get('app.url')}}/public/images/player_<% model.playerInfo.playerId %>.jpg" style="width: 100%;">
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                <table class="table table-striped">
+                                    <tbody>
+                                        <tr>
+                                            <td>Date of birth:</td>
+                                            <td>07/01/1991</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Height:</td>
+                                            <td>1.73 m</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Age:</td>
+                                            <td>24</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Weight:</td>
+                                            <td>74 kg</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Country of birth:</td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>National team:</td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Appearances</td>
+                                            <td>107</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Titles won:</td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Goals:</td>
+                                            <td>37</td>
+                                        </tr>
+                                        <tr>
+                                            <td>25-man squad member:</td>
+                                            <td>SQUAD</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Yellow cards:</td>
+                                            <td>6</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Home grown player:</td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Red cards:</td>
+                                            <td>0</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-medium" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+                <div class="modal-content" ng-if="model.playerInfo.loaded == 0">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="modal-title">Player Info</h4>
+                    </div>
+                    <div class="modal-body" id="modal-body">
+                        <div class="msg-info" style="text-align: center;">Loading..</div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-medium" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>
 @endsection

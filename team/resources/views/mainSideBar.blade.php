@@ -83,4 +83,22 @@
         </ul>
     </section>
     <!-- /.sidebar -->
+    <section class="left-counter">
+        <div class="league">
+            <h3>EPL</h3>
+            <div id="left-epl-match-counter" class="left-match-counter"></div>
+        </div>
+        <div class="league">
+            <h3>La Liga</h3>
+            <div id="left-spl-match-counter" class="left-match-counter"></div>
+        </div>
+        <div class="league">
+            <h3>MLS</h3>
+            <div id="left-mls-match-counter" class="left-match-counter"></div>
+        </div>
+        <div class="league">
+            <h3>CL</h3>
+            <div id="left-cl-match-counter" class="left-match-counter"></div>
+        </div>
+    </section>
 </aside>
