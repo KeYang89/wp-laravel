@@ -33,6 +33,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 }
 .countdown-styled.hasCountdown div {
   text-align: center;
+  color:orange;
 }
 .codeboxrflexiblecountdown-widget {
   width: 15%;
