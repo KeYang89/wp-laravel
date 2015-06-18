@@ -1,0 +1,60 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: CWidget Countdown\n"
+"POT-Creation-Date: 2013-11-20 14:19+0200\n"
+"PO-Revision-Date: 2014-09-30 11:32+0200\n"
+"Last-Translator: Serkan Algur <info@wpadami.com>\n"
+"Language-Team: Serkan Algur <info@wpadami.com>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.9\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;_e\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-SearchPath-0: ../..\n"
+
+#: ../../cwidget.php:47
+msgid "Widget Title"
+msgstr "Widget du Titre "
+
+#: ../../cwidget.php:51
+msgid "End Date (Y.M.D):"
+msgstr "Date de fin (A.M.J):"
+
+#: ../../cwidget.php:55
+msgid "Language"
+msgstr "Langue"
+
+#: ../../cwidget.php:57
+msgid "Select Language"
+msgstr "Sélectionnez la langue"
+
+#: ../../cwidget.php:67
+msgid "Show:"
+msgstr "Afficher:"
+
+#: ../../cwidget.php:69
+msgid "Year"
+msgstr "Année"
+
+#: ../../cwidget.php:70
+msgid "Month"
+msgstr "Mois"
+
+#: ../../cwidget.php:71
+msgid "Day"
+msgstr "Jour"
+
+#: ../../cwidget.php:72
+msgid "Hour"
+msgstr "Heure"
+
+#: ../../cwidget.php:73
+msgid "Minute"
+msgstr "Minute"
+
+#: ../../cwidget.php:74
+msgid "Second"
+msgstr "Second"

@@ -1,0 +1,59 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: CWidget Countdown\n"
+"POT-Creation-Date: 2013-11-20 14:20+0200\n"
+"PO-Revision-Date: 2013-11-22 12:54+0100\n"
+"Last-Translator: Borisa Djuraskovic <borisad@webhostinghub.com>\n"
+"Language-Team: Serkan Algur <info@wpadami.com>\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ../..\n"
+
+#: ../../cwidget.php:47
+msgid "Widget Title"
+msgstr "Naslov Widget-a"
+
+#: ../../cwidget.php:51
+msgid "End Date (Y.M.D):"
+msgstr "Datum zavrsetka(Y.M.D):"
+
+#: ../../cwidget.php:55
+msgid "Language"
+msgstr "Jezik"
+
+#: ../../cwidget.php:57
+msgid "Select Language"
+msgstr "Izaberi jezik"
+
+#: ../../cwidget.php:67
+msgid "Show:"
+msgstr "Pokazi:"
+
+#: ../../cwidget.php:69
+msgid "Year"
+msgstr "Godina"
+
+#: ../../cwidget.php:70
+msgid "Month"
+msgstr "Mesec"
+
+#: ../../cwidget.php:71
+msgid "Day"
+msgstr "Dan"
+
+#: ../../cwidget.php:72
+msgid "Hour"
+msgstr "Sat"
+
+#: ../../cwidget.php:73
+msgid "Minute"
+msgstr "Minut"
+
+#: ../../cwidget.php:74
+msgid "Second"
+msgstr "Sekund"
