@@ -20,6 +20,20 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   width: 25%;
   text-align: center; 
 }
+.cwidget_plugin_box {
+  width:80%;
+  margin:auto;
+}
+.countdown-styled.hasCountdown {
+  text-align: center;
+  border: 1px solid white;
+  height: 60px;
+  width: 80%;
+  margin: auto;
+}
+.countdown-styled.hasCountdown div {
+  text-align: center;
+}
 .codeboxrflexiblecountdown-widget {
   width: 15%;
   float: left;
