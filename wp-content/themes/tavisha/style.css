@@ -27,7 +27,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 .countdown-styled.hasCountdown {
   text-align: center;
   border: 1px solid white;
-  height: 60px;
   width: 90%;
   margin: auto;
   padding-top: 10px;
