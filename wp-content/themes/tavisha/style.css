@@ -12,7 +12,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 /* ===================================================================
   STRUCTURAL LAYOUT
 =================================================================== */
-.widget .CountDownTimer {
+.CountDownTimer {
   width: 25%;
   float: left;
 }
@@ -1853,7 +1853,7 @@ p .alignnone {
 	}
 }
 @media (min-width: 768px) and (max-width:980px) {
-.widget .CountDownTimer {
+.CountDownTimer {
   width: 50%;
   float: left;
 }
@@ -1862,7 +1862,7 @@ p .alignnone {
   RESPONSIVE: TABLET PORTRAIT
 =================================================================== */
 @media (max-width: 768px) {
-.widget .CountDownTimer {
+.CountDownTimer {
   width: 100%;
 }
 
