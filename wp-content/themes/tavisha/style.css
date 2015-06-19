@@ -2057,6 +2057,9 @@ p .alignnone {
 #mm-0 > div.main-wrapper > div > div > div {
   padding-top: 0px !important;
 }
+.main-content{
+  padding-top: 0px !important;
+}
   /* Category & Post Grid
   ------------------------------------------------------------------- */
   .post-list, 
@@ -2093,12 +2096,14 @@ p .alignnone {
   }
 
   .Top-Register {
-    float:none;
-    
+  width: 50%;
+  float: left;
+  margin-left: 40px; 
   }
   .Top-Login {
-    float:none;
-    padding:4px 10px;
+  width: 50%;
+  float: left;
+  margin-left: 40px; 
   }
   /* Comments
   ------------------------------------------------------------------- */
