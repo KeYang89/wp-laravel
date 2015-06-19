@@ -24,7 +24,7 @@
 <body class="register-page">
 <div class="register-box">
     <div class="register-logo">
-        <a href="/"><b>Team</b></a>
+        <a href="/"><img src="{{Config::get('app.url')}}/public/images/logo_tr_small.png"></a>
     </div>
 
     @if (count($errors) > 0)

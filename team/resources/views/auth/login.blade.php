@@ -25,7 +25,7 @@
 <body class="login-page">
 <div class="login-box">
     <div class="login-logo">
-        <a href="/"><b>Team</b></a>
+        <a href="/"><img src="{{Config::get('app.url')}}/public/images/logo_tr_small.png"></a>
     </div><!-- /.login-logo -->
 
     @if (count($errors) > 0)
