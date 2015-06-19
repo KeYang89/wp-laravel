@@ -123,7 +123,7 @@
                         <tbody>
                         @foreach ($userAllTeams as $allTeam)
                         <tr>
-                            <td><a href="{{ url(Config::get('url.pick_team')) . '/' . $allTeam->id }}">{{ $allTeam->team_name }}</a></td>
+                            <td><a href="{{ Config::get('app.url') . Config::get('url.pick_team') . '/' . $allTeam->id }}">{{ $allTeam->team_name }}</a></td>
                             <td>{{ $allTeam->team_rank }}</td>
                             <td>{{ $allTeam->team_points }}</td>
                             <td>0</td>

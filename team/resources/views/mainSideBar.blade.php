@@ -20,28 +20,28 @@
                  class="active"
             @endif
             >
-                <a href="{{ url(Config::get('url.points')) }}"><span>My Points</span></a>
+                <a href="{{ Config::get('app.url') . Config::get('url.points') }}"><span>My Points</span></a>
             </li>
             <li
             @if ($routePath == Config::get('url.lobby'))
                  class="active"
             @endif
             >
-                <a href="{{ url(Config::get('url.lobby')) }}"><span>Lobby</span></a>
+                <a href="{{ Config::get('app.url') . Config::get('url.lobby') }}"><span>Lobby</span></a>
             </li>
             <li
             @if ($routePath == Config::get('url.pick_team'))
                  class="active"
             @endif
             >
-                <a href="{{ url(Config::get('url.pick_team')) }}"><span>Pick Team</span></a>
+                <a href="{{ Config::get('app.url') . Config::get('url.pick_team') }}"><span>Pick Team</span></a>
             </li>
             <li
             @if ($routePath == Config::get('url.create_team'))
                  class="active"
             @endif
             >
-                <a href="{{ url(Config::get('url.create_team')) }}"><span>Create Team</span></a>
+                <a href="{{ Config::get('app.url') . Config::get('url.create_team') }}"><span>Create Team</span></a>
             </li>
             <!--
             <li
@@ -64,21 +64,21 @@
                  class="active"
             @endif
             >
-                <a href="{{ url(Config::get('url.statistics')) }}"><span>Statistics</span></a>
+                <a href="{{ Config::get('app.url') . Config::get('url.statistics') }}"><span>Statistics</span></a>
             </li>
             <li
             @if ($routePath == Config::get('url.scouts'))
                  class="active"
             @endif
             >
-                <a href="{{ url(Config::get('url.scouts')) }}"><span>Scouts</span></a>
+                <a href="{{ Config::get('app.url') . Config::get('url.scouts') }}"><span>Scouts</span></a>
             </li>
             <li
             @if ($routePath == Config::get('url.player-stats'))
             class="active"
             @endif
             >
-            <a href="{{ url(Config::get('url.player-stats')) }}"><span>Comparison Matrix</span></a>
+            <a href="{{ Config::get('app.url') . Config::get('url.player-stats') }}"><span>Comparison Matrix</span></a>
             </li>
         </ul>
     </section>
