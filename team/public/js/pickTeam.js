@@ -168,7 +168,7 @@ var loadPitch = function()
                                 playerInfoIcon[player].scaleY = 0.7;
                                 playerInfoIcon[player].on("click", function()
                                 {
-                                    angular.element('#controller').scope().loadPlayerInfo(player);
+                                    angular.element('#controller').scope().loadPlayerInfo(singlePlayer.id);
 
                                 }, null, false, {count:3});
 
