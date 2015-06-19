@@ -2055,7 +2055,7 @@ p .alignnone {
   width: 100%;
 }
 #mm-0 > div.main-wrapper > div > div > div {
-  padding-top:460px !important;
+  padding-top:320px !important;
 }
   /* Category & Post Grid
   ------------------------------------------------------------------- */
@@ -2092,7 +2092,16 @@ p .alignnone {
     font-size: 20px;
   }
 
-  
+  .Top-Register {
+    width:80%;
+    float:none;
+    margin:auto;
+  }
+  .Top-Login {
+   width:80%;
+    float:none;
+    margin:auto;
+  }
   /* Comments
   ------------------------------------------------------------------- */
   .comment-form input[type="submit"] {
