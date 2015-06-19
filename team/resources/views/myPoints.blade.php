@@ -230,6 +230,99 @@
             </div><!-- /.box-body-->
         </section><!-- right col -->
         </div><!-- /.row (main row) -->
+
+        <!-- player info model -->
+        <div class="modal fade" id="player-info-model" tabindex="-1" role="dialog" aria-labelledby="pinfoLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content" ng-if="model.playerInfo.loaded == 1">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="modal-title"><% model.playerInfo.name %></h4>
+                    </div>
+                    <div class="modal-body" id="modal-body">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                <img src="{{Config::get('app.url')}}/public/images/player_<% model.playerInfo.playerId %>.jpg" style="width: 100%;">
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                <table class="table table-striped">
+                                    <tbody>
+                                    <tr>
+                                        <td>Date of birth:</td>
+                                        <td>07/01/1991</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Height:</td>
+                                        <td>1.73 m</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Age:</td>
+                                        <td>24</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Weight:</td>
+                                        <td>74 kg</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Country of birth:</td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>National team:</td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Appearances</td>
+                                        <td>107</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Titles won:</td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Goals:</td>
+                                        <td>37</td>
+                                    </tr>
+                                    <tr>
+                                        <td>25-man squad member:</td>
+                                        <td>SQUAD</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Yellow cards:</td>
+                                        <td>6</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Home grown player:</td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Red cards:</td>
+                                        <td>0</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-medium" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+                <div class="modal-content" ng-if="model.playerInfo.loaded == 0">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="modal-title">Player Info</h4>
+                    </div>
+                    <div class="modal-body" id="modal-body">
+                        <div class="msg-info" style="text-align: center;">Loading..</div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-medium" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- player info model -->
         @else
         <div class="box" style="text-align: center; padding: 20px;">No teams created yet.</div>
         @endif

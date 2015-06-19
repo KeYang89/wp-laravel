@@ -54,7 +54,7 @@ var playerStatsApp = angular.module('CreateTeam', [], function($interpolateProvi
 
             $scope.rightSlider.playerList = [];
 
-            console.log('PPPP');
+            //console.log('PPPP');
 
             var myEl = angular.element( document.querySelector( '#tsf' ) );
             myEl.addClass('control-sidebar-open');
