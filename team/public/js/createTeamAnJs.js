@@ -80,7 +80,7 @@ var playerStatsApp = angular.module('CreateTeam', [], function($interpolateProvi
         $scope.getPlayers = function() {
             $scope.emptyPlayerPositionList();
             $scope.rightSlider.playerSearch = 1;
-            $http.get('/team/api/v1/getAllPlayers?teamId=' + $scope.rightSlider.selectedTeamId + '&order=' + $scope.rightSlider.selectedOrder + '&priceLimit=' + $scope.rightSlider.selectedPriceLimit).
+            $http.get('/team/api/v1/getAllPlayers?position=' + $scope.rightSlider.selectedPosition + '&teamId=' + $scope.rightSlider.selectedTeamId + '&order=' + $scope.rightSlider.selectedOrder + '&priceLimit=' + $scope.rightSlider.selectedPriceLimit).
                 success(function(data, status, headers, config)
                 {
                     console.log(JSON.stringify(teamPlayers));
