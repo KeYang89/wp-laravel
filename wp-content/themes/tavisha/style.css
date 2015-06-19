@@ -12,6 +12,10 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 /* ===================================================================
   STRUCTURAL LAYOUT
 =================================================================== */
+.CountDownTimer {
+  width: 25%;
+  float: left;
+}
 .count-down{
   width: 100%;
 }
@@ -1848,14 +1852,20 @@ p .alignnone {
 		position: absolute !important;
 	}
 }
-
+@media (min-width: 479px) and (max-width:980px) {
+.CountDownTimer {
+  width: 50%;
+  float: left;
+}
+#mm-0 > div.main-wrapper > div > div > div {
+  padding-top:250px !important;
+}
+}
 /* ===================================================================
   RESPONSIVE: TABLET PORTRAIT
 =================================================================== */
 @media (max-width: 768px) {
-  .count-down {
-    display:none;
-  }
+
 
   .main-content-inner {
     padding-right: 22px;
@@ -1977,10 +1987,6 @@ p .alignnone {
   RESPONSIVE: MOBILE LANDSCAPE & PORTRAIT
 =================================================================== */
 @media (max-width: 767px) {
-  
-  body {
-    background: #f9f9f9;
-  }
 
   .main-content-inner,
   .two-col-right .main-content-inner {
@@ -2037,7 +2043,12 @@ p .alignnone {
   RESPONSIVE: MOBILE PORTRAIT
 =================================================================== */
 @media (max-width: 479px) {
-
+.CountDownTimer {
+  width: 100%;
+}
+#mm-0 > div.main-wrapper > div > div > div {
+  padding-top:460px !important;
+}
   /* Category & Post Grid
   ------------------------------------------------------------------- */
   .post-list, 
