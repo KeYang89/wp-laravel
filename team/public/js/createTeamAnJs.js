@@ -86,45 +86,49 @@ var playerStatsApp = angular.module('CreateTeam', [], function($interpolateProvi
             $scope.emptyPlayerPositionList();
             $scope.rightSlider.playerSearch = 1;
             $http.get('/team/api/v1/getAllPlayers?position=' + $scope.rightSlider.selectedPosition + '&order=' + $scope.rightSlider.selectedOrder + '&priceLimit=' + $scope.rightSlider.selectedPriceLimit).
-                success(function(data, status, headers, config) {
-                    angular.forEach(data.result, function(value, key) {
-                        //console.log(value.position_id);
-
-                        if(value.position_id == '1')
+                success(function(data, status, headers, config)
+                {
+                    console.log(JSON.stringify(teamPlayers));
+                    angular.forEach(data.result, function(value, key)
+                    {
+                        if(!teamPlayers.some(function(addedPlayer) { return $scope.objectHasValue(addedPlayer, 'playerId', value.id); }))
                         {
-                            $scope.rightSlider.goalkeepers.push({
-                                id      :   value.id,
-                                name    :   value.first_name + ' ' + value.last_name,
-                                price   :   value.price,
-                                score   :   value.score
-                            });
-                        }
-                        else if(value.position_id == '2')
-                        {
-                            $scope.rightSlider.diffenders.push({
-                                id      :   value.id,
-                                name    :   value.first_name + ' ' + value.last_name,
-                                price   :   value.price,
-                                score   :   value.score
-                            });
-                        }
-                        else if(value.position_id == '3')
-                        {
-                            $scope.rightSlider.midfielders.push({
-                                id      :   value.id,
-                                name    :   value.first_name + ' ' + value.last_name,
-                                price   :   value.price,
-                                score   :   value.score
-                            });
-                        }
-                        else if(value.position_id == '4')
-                        {
-                            $scope.rightSlider.forward.push({
-                                id      :   value.id,
-                                name    :   value.first_name + ' ' + value.last_name,
-                                price   :   value.price,
-                                score   :   value.score
-                            });
+                            if(value.position_id == '1')
+                            {
+                                $scope.rightSlider.goalkeepers.push({
+                                    id      :   value.id,
+                                    name    :   value.first_name + ' ' + value.last_name,
+                                    price   :   value.price,
+                                    score   :   value.score
+                                });
+                            }
+                            else if(value.position_id == '2')
+                            {
+                                $scope.rightSlider.diffenders.push({
+                                    id      :   value.id,
+                                    name    :   value.first_name + ' ' + value.last_name,
+                                    price   :   value.price,
+                                    score   :   value.score
+                                });
+                            }
+                            else if(value.position_id == '3')
+                            {
+                                $scope.rightSlider.midfielders.push({
+                                    id      :   value.id,
+                                    name    :   value.first_name + ' ' + value.last_name,
+                                    price   :   value.price,
+                                    score   :   value.score
+                                });
+                            }
+                            else if(value.position_id == '4')
+                            {
+                                $scope.rightSlider.forward.push({
+                                    id      :   value.id,
+                                    name    :   value.first_name + ' ' + value.last_name,
+                                    price   :   value.price,
+                                    score   :   value.score
+                                });
+                            }
                         }
                     });
 
@@ -139,7 +143,8 @@ var playerStatsApp = angular.module('CreateTeam', [], function($interpolateProvi
                 });
         }
 
-
-
+        $scope.objectHasValue = function(obj, key, value){
+            return obj.hasOwnProperty(key) && obj[key] === value;
+        }
 
     });
