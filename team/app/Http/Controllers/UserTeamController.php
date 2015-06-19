@@ -68,7 +68,8 @@ class UserTeamController extends Controller {
                 $teamPlayerData[] = array(
                     'tshirt'    =>  \Config::get('app.url') . '/public/images/shirt_' . $singlePlayer->team_id . '.png',
                     'fullName'  =>  $singlePlayer->first_name . ' ' . $singlePlayer->last_name,
-                    'position'  =>  $positionNames[$teamPlayer['playerPosition']]
+                    'position'  =>  $positionNames[$teamPlayer['playerPosition']],
+                    'price'     =>  $singlePlayer->price
                 );
             }
             return view('pickTeam', compact('team', 'userAllTeams', 'teamPlayerData'));

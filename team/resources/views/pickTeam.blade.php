@@ -85,6 +85,7 @@
                                     <th>&nbsp;</th>
                                     <th>Player</th>
                                     <th>Position</th>
+                                    <th>$</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -93,6 +94,7 @@
                                     <td style="width: 20px;"><img src="{{ $teamPlayer['tshirt'] }}" style="width: 20px;" /></td>
                                     <td>{{ $teamPlayer['fullName'] }}</td>
                                     <td>{{ $teamPlayer['position'] }}</td>
+                                    <td>{{ $teamPlayer['price'] }}</td>
                                 </tr>
                                 @endforeach
                                 </tbody>

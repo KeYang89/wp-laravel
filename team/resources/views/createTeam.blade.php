@@ -245,9 +245,18 @@
                     <div class="form-group">
                         <label>Sorted by</label>
                         <select class="form-control rgt-sldr-frm-ipt" ng-model="rightSlider.selectedOrder" data-role="listview" ng-change="getPlayers()">
-                            <option value="first_name">Player Name</option>
-                            <option value="price">Price</option>
+                            <option value="last_name">Last Name</option>
+                            <option value="price">Goals Scored</option>
                             <option value="score">Total Score</option>
+                            <option value="price">Assists</option>
+                            <option value="score">Saves</option>
+                            <option value="price">Minutes Played</option>
+                            <option value="score">Form</option>
+                            <option value="price">Selected by %</option>
+                            <option value="score">Points per Million</option>
+                            <option value="price">Defense Rating</option>
+                            <option value="score">Attack Rating</option>
+                            <option value="price">Bonus Points</option>
                         </select>
                     </div>
                     <div class="form-group">
