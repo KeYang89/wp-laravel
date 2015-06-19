@@ -2043,6 +2043,14 @@ p .alignnone {
   RESPONSIVE: MOBILE PORTRAIT
 =================================================================== */
 @media (max-width: 479px) {
+.header-section {
+  background: #1758AE;
+  padding: 40px 0px 0px 0px;
+  position: relative;
+  min-height: 150px;
+  margin-top:0px;
+  width: 100%;
+}
 .CountDownTimer {
   width: 100%;
 }
