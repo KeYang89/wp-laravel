@@ -2054,6 +2054,12 @@ p .alignnone {
 .CountDownTimer {
   width: 100%;
 }
+.social-links {
+    list-style: outside none none;
+    margin: 0px;
+    float: left;
+    margin-left: 60px;
+  }
 #mm-0 > div.main-wrapper > div > div > div {
   padding-top: 0px !important;
 }
@@ -2098,12 +2104,12 @@ p .alignnone {
   .Top-Register {
   width: 50%;
   float: left;
-  margin-left: 40px; 
+  margin-left: 60px; 
   }
   .Top-Login {
   width: 50%;
   float: left;
-  margin-left: 40px; 
+  margin-left: 60px; 
   }
   /* Comments
   ------------------------------------------------------------------- */
