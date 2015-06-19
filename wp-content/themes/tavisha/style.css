@@ -1858,7 +1858,7 @@ p .alignnone {
   float: left;
 }
 #mm-0 > div.main-wrapper > div > div > div {
-  padding-top:350px !important;
+  padding-top:250px !important;
 }
 }
 /* ===================================================================
@@ -1987,10 +1987,6 @@ p .alignnone {
   RESPONSIVE: MOBILE LANDSCAPE & PORTRAIT
 =================================================================== */
 @media (max-width: 767px) {
-  
-  body {
-    background: #f9f9f9;
-  }
 
   .main-content-inner,
   .two-col-right .main-content-inner {
