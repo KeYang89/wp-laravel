@@ -2094,9 +2094,11 @@ p .alignnone {
 
   .Top-Register {
     float:none;
+    padding:4px 10px;
   }
   .Top-Login {
     float:none;
+    padding:4px 10px;
   }
   /* Comments
   ------------------------------------------------------------------- */
