@@ -205,7 +205,8 @@ class UserTeamController extends Controller {
     {
         $allCoaches = \DB::table('coaches')->get();
         $allPositions = \DB::table('positions')->get();
-        return view('createTeam', compact('allPositions', 'allCoaches'));
+        $allTeams = \DB::table('teams')->orderBy('name')->get();
+        return view('createTeam', compact('allPositions', 'allCoaches', 'allTeams'));
     }
 
     public function scout()

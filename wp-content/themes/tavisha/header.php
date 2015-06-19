@@ -57,7 +57,7 @@ $userApp = getUserApp();
                 <option class="hello"style="display:none;" disabled selected>
                  <span> Hi, <strong><?php echo $userApp['auth']->user()->name; ?></strong></span>
                 </option>
-                <option id="Top-Logout" value="http://matchday45.com/team/auth/logout">
+                <option id="Top-Logout" value="<?php echo $userApp->config->get('app.url'); ?>/auth/logout">
                     Logout
                   </option>
                  <option id="Top-Account" value="#">
@@ -72,10 +72,10 @@ $userApp = getUserApp();
                 ?>
                 
                 <div class="Top-Register">
-                    <a href="/team/auth/register">Register</a>
+                    <a href="<?php echo $userApp->config->get('app.url'); ?>/auth/register">Register</a>
                 </div><!--Top-Register-->
                 <div class="Top-Login">
-                    <a href="/team/auth/login">Login</a>
+                    <a href="<?php echo $userApp->config->get('app.url'); ?>/auth/login">Login</a>
                 </div><!--Top-Login-->
                 <?php
             }

@@ -68,7 +68,7 @@ var loadPitch = function()
 
     $.getJSON('/team/api/v1/getUserTeam/' + selectedUserTeamId, function(data){
 
-        console.log(JSON.stringify(data.result.team_players));
+        //console.log(JSON.stringify(data.result.team_players));
 
         if(data.result.team_name != '')
         {
@@ -168,7 +168,7 @@ var loadPitch = function()
                                 playerInfoIcon[player].scaleY = 0.7;
                                 playerInfoIcon[player].on("click", function()
                                 {
-                                    angular.element('#controller').scope().loadPlayerInfo(player);
+                                    angular.element('#controller').scope().loadPlayerInfo(singlePlayer.id);
 
                                 }, null, false, {count:3});
 

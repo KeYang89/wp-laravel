@@ -29,7 +29,7 @@
         <div class="wrapper">
             <header class="main-header">
                 <!-- Logo -->
-                <a href="{{Config::get('app.url')}}/lobby" class="logo">
+                <a href="{{Config::get('app.url')}}" class="logo">
                     <!-- mini logo for sidebar mini 50x50 pixels -->
                     <span class="logo-mini">
                         <img src="{{ asset('public/images/logo_small.png') }}">
@@ -57,7 +57,7 @@
                                     <!-- Menu Footer-->
                                     <li class="user-footer">
                                         <div class="pull-right">
-                                            <a href="{{ url(Config::get('url.logout')) }}" class="btn btn-medium btn-flat">Sign out</a>
+                                            <a href="{{ Config::get('app.url') . Config::get('url.logout') }}" class="btn btn-medium btn-flat">Sign out</a>
                                         </div>
                                     </li>
                                 </ul>

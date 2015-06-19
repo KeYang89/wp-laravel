@@ -235,10 +235,10 @@
                 <form id="frm-cteam-plr-ftr">
                     <div class="form-group">
                         <label>View</label>
-                        <select class="form-control rgt-sldr-frm-ipt" ng-model="rightSlider.selectedPosition" data-role="listview" ng-change="getPlayers()">
+                        <select class="form-control rgt-sldr-frm-ipt" ng-model="rightSlider.selectedTeamId" data-role="listview" ng-change="getPlayers()">
                             <option value="">All Players</option>
-                            @foreach ($allPositions as $singlePosition)
-                                <option value="{{ $singlePosition->id }}">{{ $singlePosition->position }}</option>
+                            @foreach ($allTeams as $singleTeam)
+                                <option value="{{ $singleTeam->id }}">{{ $singleTeam->name }}</option>
                             @endforeach
                         </select>
                     </div>

@@ -66,7 +66,7 @@ var loadPitch = function()
     container.y = 10;
     container.setBounds(0, 0, 100, 100);
 
-    $.getJSON('api/v1/getAllPlayers', function(data)
+    $.getJSON('/team/api/v1/getAllPlayers', function(data)
     {
         if(data.result != '')
         {
@@ -261,6 +261,10 @@ var loadPitch = function()
                 {
                     selectedPlayerPosition = this.id;
                     var dbPositionId = '';
+                    if(selectedPlayerPosition == 12)
+                    {
+                        dbPositionId = 1;
+                    }
                     angular.element('#controller').scope().openSlider(dbPositionId);
 
                 }, null, false, {count:3});
@@ -600,7 +604,7 @@ $(document).ready(function(){
             {
                 if(teamPlayers.length >= 15)
                 {
-                    $.post('api/v1/saveTeam', {
+                    $.post('/team/api/v1/saveTeam', {
                         teamName    :   teamName,
                         coachId     :   coachId,
                         teamPlayers :   teamPlayers
