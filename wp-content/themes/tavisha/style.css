@@ -2055,7 +2055,7 @@ p .alignnone {
   width: 100%;
 }
 #mm-0 > div.main-wrapper > div > div > div {
-  padding-top:320px !important;
+  padding-top: 0px !important;
 }
   /* Category & Post Grid
   ------------------------------------------------------------------- */
@@ -2094,7 +2094,7 @@ p .alignnone {
 
   .Top-Register {
     float:none;
-    padding:4px 10px;
+    
   }
   .Top-Login {
     float:none;
