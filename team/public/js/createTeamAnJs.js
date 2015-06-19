@@ -15,6 +15,7 @@ var playerStatsApp = angular.module('CreateTeam', [], function($interpolateProvi
         $scope.rightSlider.playerList = [];
         $scope.rightSlider.playerSearch = 0;
         $scope.rightSlider.selectedPosition = '';
+        $scope.rightSlider.selectedTeamId = '';
         $scope.rightSlider.selectedOrder = 'first_name';
         $scope.rightSlider.selectedPriceLimit = '';
         $scope.rightSlider.allPositions = [];
@@ -49,16 +50,10 @@ var playerStatsApp = angular.module('CreateTeam', [], function($interpolateProvi
             $scope.rightSlider.selectedPosition = position;
             $scope.rightSlider.selectedOrder = 'first_name';
             $scope.rightSlider.selectedPriceLimit = '';
-
-            //$('#frm-cteam-plr-ftr')[0].reset();
-
+            $scope.rightSlider.selectedTeamId = '';
             $scope.rightSlider.playerList = [];
-
-            //console.log('PPPP');
-
             var myEl = angular.element( document.querySelector( '#tsf' ) );
             myEl.addClass('control-sidebar-open');
-
             $scope.getPlayers();
         }
 
@@ -85,7 +80,7 @@ var playerStatsApp = angular.module('CreateTeam', [], function($interpolateProvi
         $scope.getPlayers = function() {
             $scope.emptyPlayerPositionList();
             $scope.rightSlider.playerSearch = 1;
-            $http.get('/team/api/v1/getAllPlayers?position=' + $scope.rightSlider.selectedPosition + '&order=' + $scope.rightSlider.selectedOrder + '&priceLimit=' + $scope.rightSlider.selectedPriceLimit).
+            $http.get('/team/api/v1/getAllPlayers?teamId=' + $scope.rightSlider.selectedTeamId + '&order=' + $scope.rightSlider.selectedOrder + '&priceLimit=' + $scope.rightSlider.selectedPriceLimit).
                 success(function(data, status, headers, config)
                 {
                     console.log(JSON.stringify(teamPlayers));

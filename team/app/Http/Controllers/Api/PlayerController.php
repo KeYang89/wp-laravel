@@ -46,6 +46,7 @@ class PlayerController extends Controller {
         $position = Request::input('position');
         $order = Request::input('order');
         $priceLimit = Request::input('priceLimit');
+        $teamId = Request::input('teamId');
 
         $dbQuery =  \DB::table('players');
 
@@ -56,6 +57,10 @@ class PlayerController extends Controller {
         if(!empty($priceLimit))
         {
             $dbQuery = $dbQuery->where('price', '<=', $priceLimit);
+        }
+        if(!empty($teamId))
+        {
+            $dbQuery = $dbQuery->where('team_id', '=', $teamId);
         }
         if(!empty($order))
         {
