@@ -261,6 +261,10 @@ var loadPitch = function()
                 {
                     selectedPlayerPosition = this.id;
                     var dbPositionId = '';
+                    if(selectedPlayerPosition == 12)
+                    {
+                        dbPositionId = 1;
+                    }
                     angular.element('#controller').scope().openSlider(dbPositionId);
 
                 }, null, false, {count:3});
