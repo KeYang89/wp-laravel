@@ -20,6 +20,7 @@ var playerStatsApp = angular.module('PlayerStatus', [], function($interpolatePro
 
         $scope.compare = {};
         $scope.compare.selectedWidgetId = 1;
+        $scope.compare.widgets = 4;
         $scope.compare.players = [];
         //$scope.compare.players.push({widgetId: $scope.compare.selectedWidgetId, playerId: null});
 
@@ -61,6 +62,18 @@ var playerStatsApp = angular.module('PlayerStatus', [], function($interpolatePro
             });
 
 
+
+        $scope.removePlayer = function(index){
+            var tempPlayers = [];
+            angular.forEach($scope.compare.players, function(value, key){
+                if(key != index)
+                {
+                    tempPlayers.push(value);
+                }
+            });
+
+            $scope.compare.players = tempPlayers;
+        };
 
         $scope.selectPlayer = function(){
             $('#tsf').addClass('control-sidebar-open');
