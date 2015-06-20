@@ -2043,11 +2043,28 @@ p .alignnone {
   RESPONSIVE: MOBILE PORTRAIT
 =================================================================== */
 @media (max-width: 479px) {
+.header-section {
+  background: #1758AE;
+  padding: 40px 0px 0px 0px;
+  position: relative;
+  min-height: 150px;
+  margin-top:0px;
+  width: 100%;
+}
 .CountDownTimer {
   width: 100%;
 }
+.social-links {
+    list-style: outside none none;
+    margin: 0px;
+    float: left;
+    margin-left: 60px;
+  }
 #mm-0 > div.main-wrapper > div > div > div {
-  padding-top:460px !important;
+  padding-top: 0px !important;
+}
+.main-content{
+  padding-top: 0px !important;
 }
   /* Category & Post Grid
   ------------------------------------------------------------------- */
@@ -2084,14 +2101,24 @@ p .alignnone {
     font-size: 20px;
   }
 
-  
+  .Top-Register {
+  width: 50%;
+  float: left;
+  margin-left: 60px; 
+  }
+  .Top-Login {
+  width: 50%;
+  float: left;
+  margin-left: 60px; 
+  }
   /* Comments
   ------------------------------------------------------------------- */
   .comment-form input[type="submit"] {
     display: block;
     width: 100%
   }
-
+.btn-nav {margin-left:60px;}
+.logo-wrapper {margin-left:60px !important;}
 }
 
 
