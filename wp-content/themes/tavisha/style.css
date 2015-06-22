@@ -13,8 +13,14 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   STRUCTURAL LAYOUT
 =================================================================== */
 .CountDownTimer {
-  width: 25%;
+  width: 23%;
   float: left;
+}
+#text-2 {
+  width: 8%;
+  color: orange;
+  float: left;
+  margin-top:2%;
 }
 .count-down{
   width: 100%;
@@ -1726,7 +1732,7 @@ p .alignnone {
 }
 
 .widget-title {
-  margin: 0 0 15px 0;
+  margin: 0px;
   font-size: 20px;
   text-align: center;
   color:white;
@@ -1854,7 +1860,7 @@ p .alignnone {
 }
 @media (min-width: 479px) and (max-width:980px) {
 .CountDownTimer {
-  width: 50%;
+  width: 46%;
   float: left;
 }
 #mm-0 > div.main-wrapper > div > div > div {
@@ -2052,7 +2058,7 @@ p .alignnone {
   width: 100%;
 }
 .CountDownTimer {
-  width: 100%;
+  width: 90%;
 }
 .social-links {
     list-style: outside none none;
