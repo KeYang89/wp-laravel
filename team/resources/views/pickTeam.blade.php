@@ -147,91 +147,29 @@
 
             <div class="box box-success">
                 <div class="box-header">
-                    <h4>Gameweek 38 - 24 May 11:30</h4>
+                    <h4>Current Games</h4>
                 </div>
                 <div class="box-body no-padding">
                     <table id="tbl-gameweek" class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th>User</th>
+                            <th>Contest</th>
+                            <th>Rank</th>
+                            <th>Team</th>
+                            <th>Current Points</th>
+                        </tr>
+                        </thead>
                         <tbody>
+                        @foreach ($currentGames as $currentGame)
                         <tr>
-                            <td>24 May 15:00</td>
-                            <td class="mobile-hidden">Arsenal</td>
-                            <td><img class="small-icon" src="http://cdn.ismfg.net/static/plfpl/img/badges/badge_1.png" alt="Arsenal"></td>
-                            <td>4 - 1</td>
-                            <td><img class="small-icon" src="http://cdn.ismfg.net/static/plfpl/img/badges/badge_19.png" alt="West Brom"></td>
-                            <td class="mobile-hidden">West Brom</td>
+                            <td>{{$currentGame['userName']}}</td>
+                            <td>{{$currentGame['contest']}}</td>
+                            <td>{{$currentGame['rank']}}</td>
+                            <td>{{$currentGame['team']}}</td>
+                            <td>{{$currentGame['points']}}</td>
                         </tr>
-                        <tr>
-                            <td>24 May 15:00</td>
-                            <td class="mobile-hidden">Aston Villa</td>
-                            <td><img class="small-icon" src="http://cdn.ismfg.net/static/plfpl/img/badges/badge_2.png" alt="Aston Villa"></td>
-                            <td>0 - 1</td>
-                            <td><img class="small-icon" src="http://cdn.ismfg.net/static/plfpl/img/badges/badge_3.png" alt="Burnley"></td>
-                            <td class="mobile-hidden">Burnley</td>
-                        </tr>
-                        <tr>
-                            <td>24 May 15:00</td>
-                            <td class="mobile-hidden">Crystal Palace</td>
-                            <td><img  class="small-icon" src="http://cdn.ismfg.net/static/plfpl/img/badges/badge_5.png" alt="Crystal Palace"></td>
-                            <td>1 - 0</td>
-                            <td><img class="small-icon" src="http://cdn.ismfg.net/static/plfpl/img/badges/badge_18.png" alt="Swansea"></td>
-                            <td class="mobile-hidden">Swansea</td>
-                        </tr>
-                        <tr>
-                            <td>24 May 15:00</td>
-                            <td class="mobile-hidden">Chelsea</td>
-                            <td><img class="small-icon" src="http://cdn.ismfg.net/static/plfpl/img/badges/badge_4.png" alt="Chelsea"></td>
-                            <td>3 - 1</td>
-                            <td><img class="small-icon" src="http://cdn.ismfg.net/static/plfpl/img/badges/badge_17.png" alt="Sunderland"></td>
-                            <td class="mobile-hidden">Sunderland</td>
-                        </tr>
-                        <tr>
-                            <td>24 May 15:00</td>
-                            <td class="mobile-hidden">Everton</td>
-                            <td><img class="small-icon" src="http://cdn.ismfg.net/static/plfpl/img/badges/badge_6.png" alt="Everton"></td>
-                            <td>0 - 1</td>
-                            <td><img class="small-icon" src="http://cdn.ismfg.net/static/plfpl/img/badges/badge_15.png" alt="Spurs"></td>
-                            <td class="mobile-hidden">Spurs</td>
-                        </tr>
-                        <tr>
-                            <td>24 May 15:00</td>
-                            <td class="mobile-hidden">Hull</td>
-                            <td><img class="small-icon" src="http://cdn.ismfg.net/static/plfpl/img/badges/badge_7.png" alt="Hull"></td>
-                            <td>0 - 0</td>
-                            <td><img class="small-icon" src="http://cdn.ismfg.net/static/plfpl/img/badges/badge_11.png" alt="Man Utd"></td>
-                            <td class="mobile-hidden">Man Utd</td>
-                        </tr>
-                        <tr>
-                            <td>24 May 15:00</td>
-                            <td class="mobile-hidden">Leicester</td>
-                            <td><img class="small-icon" src="http://cdn.ismfg.net/static/plfpl/img/badges/badge_8.png" alt="Leicester"></td>
-                            <td>5 - 1</td>
-                            <td><img class="small-icon" src="http://cdn.ismfg.net/static/plfpl/img/badges/badge_13.png" alt="QPR"></td>
-                            <td class="mobile-hidden">QPR</td>
-                        </tr>
-                        <tr>
-                            <td>24 May 15:00</td>
-                            <td class="mobile-hidden">Man City</td>
-                            <td><img class="small-icon" src="http://cdn.ismfg.net/static/plfpl/img/badges/badge_10.png" alt="Man City"></td>
-                            <td>2 - 0</td>
-                            <td><img class="small-icon" src="http://cdn.ismfg.net/static/plfpl/img/badges/badge_14.png" alt="Southampton"></td>
-                            <td class="mobile-hidden">Southampton</td>
-                        </tr>
-                        <tr>
-                            <td>24 May 15:00</td>
-                            <td class="mobile-hidden">Newcastle</td>
-                            <td><img class="small-icon" src="http://cdn.ismfg.net/static/plfpl/img/badges/badge_12.png" alt="Newcastle"></td>
-                            <td>2 - 0</td>
-                            <td><img class="small-icon" src="http://cdn.ismfg.net/static/plfpl/img/badges/badge_20.png" alt="West Ham"></td>
-                            <td class="mobile-hidden">West Ham</td>
-                        </tr>
-                        <tr>
-                            <td>24 May 15:00</td>
-                            <td class="mobile-hidden">Stoke</td>
-                            <td><img class="small-icon" src="http://cdn.ismfg.net/static/plfpl/img/badges/badge_16.png" alt="Stoke"></td>
-                            <td>6 - 1</td>
-                            <td><img class="small-icon" src="http://cdn.ismfg.net/static/plfpl/img/badges/badge_9.png" alt="Liverpool"></td>
-                            <td class="mobile-hidden">Liverpool</td>
-                        </tr>
+                        @endforeach
                         </tbody>
                     </table>
                 </div>

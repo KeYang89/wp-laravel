@@ -72,7 +72,21 @@ class UserTeamController extends Controller {
                     'price'     =>  $singlePlayer->price
                 );
             }
-            return view('pickTeam', compact('team', 'userAllTeams', 'teamPlayerData'));
+
+            $arrContests = ['$250K Tue MEGA Layup', '$150K Tue Slam', '$20K Tue Monster', '$30K Tue Swat', '$40K Tue Shot #2', 'Fantasy Playoffs - Win Your Way to the Finals!', '$13K Tue Reboud'];
+            $allTeams = \DB::table('user_teams')->orderBy('id', 'desc')->get();
+            foreach($allTeams as $singleTeam)
+            {
+                $singleUser = \DB::table('users')->where('id', $singleTeam->user_id)->first();
+                $currentGames[] = array(
+                    'userName'  =>  $singleUser->name,
+                    'contest'   =>  $arrContests[array_rand($arrContests)],
+                    'rank'      =>  $singleTeam->team_rank,
+                    'team'      =>  $singleTeam->team_name,
+                    'points'    =>  $singleTeam->team_points
+                );
+            }
+            return view('pickTeam', compact('team', 'userAllTeams', 'teamPlayerData', 'currentGames'));
         }
         else
         {
@@ -128,7 +142,23 @@ class UserTeamController extends Controller {
                     'position'  =>  $positionNames[$teamPlayer['playerPosition']]
                 );
             }
-            return view('myPoints', compact('team', 'userAllTeams', 'teamPlayerData'));
+
+            $arrContests = ['$250K Tue MEGA Layup', '$150K Tue Slam', '$20K Tue Monster', '$30K Tue Swat', '$40K Tue Shot #2', 'Fantasy Playoffs - Win Your Way to the Finals!', '$13K Tue Reboud'];
+            $allTeams = \DB::table('user_teams')->orderBy('id', 'desc')->get();
+            foreach($allTeams as $singleTeam)
+            {
+                $singleUser = \DB::table('users')->where('id', $singleTeam->user_id)->first();
+                $currentGames[] = array(
+                    'userName'  =>  $singleUser->name,
+                    'contest'   =>  $arrContests[array_rand($arrContests)],
+                    'rank'      =>  $singleTeam->team_rank,
+                    'team'      =>  $singleTeam->team_name,
+                    'points'    =>  $singleTeam->team_points
+                );
+            }
+
+
+            return view('myPoints', compact('team', 'userAllTeams', 'teamPlayerData', 'currentGames'));
         }
         else
         {
