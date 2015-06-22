@@ -329,6 +329,7 @@ section.left-counter .left-match-counter{
     width: 100%;
     font-size: 22px;
     font-weight: bold;;
+    margin-top: 6px;
 }
 
 table.tbl-player-stat{

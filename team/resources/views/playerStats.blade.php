@@ -89,10 +89,10 @@
                     </div>
                 </form>
             </div>
-            <div class="form-group row" style="margin: 10px 0px;">
+            <div class="form-group row">
 
-                <div class="col-xs-12 col-sm-6" style="text-align: center;"><a href ng-click="addPlayer(player.widgetId);"><input type="submit" class="btn btn-medium" value="Add Player"></a></div>
-                <div class="col-xs-12 col-sm-6" style="text-align: center;"><a data-toggle="control-sidebar" href><button class="pull-left btn btn-medium">Hide <i class="fa fa-arrow-circle-right"></i></button></a></div>
+                <div class="col-xs-12 col-sm-6" style="text-align: center; margin-top: 6px;"><a href ng-click="addPlayer(player.widgetId);"><input type="submit" class="btn btn-medium" value="Add Player"></a></div>
+                <div class="col-xs-12 col-sm-6" style="text-align: center; margin-top: 6px;"><a data-toggle="control-sidebar" href><button class=" btn btn-medium">Hide <i class="fa fa-arrow-circle-right"></i></button></a></div>
             </div>
         </aside><!-- /.control-sidebar -->
         <!-- Add the sidebar's background. This div must be placed
@@ -122,6 +122,5 @@
 @endsection
 
 @section('javascript')
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
 <script src="{{Config::get('app.url')}}/public/js/playerStats.js" type="text/javascript"></script>
 @endsection

@@ -482,7 +482,6 @@
 <script src="https://code.createjs.com/easeljs-0.8.1.min.js" type="text/javascript"></script>
 <script src="https://code.createjs.com/preloadjs-0.6.1.min.js" type="text/javascript"></script>
 <script src="{{ asset('public/js/preloader.js') }}" type="text/javascript"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
 <script src="{{Config::get('app.url')}}/public/js/createTeam.js" type="text/javascript"></script>
 <script src="{{Config::get('app.url')}}/public/js/createTeamAnJs.js" type="text/javascript"></script>
 @endsection
