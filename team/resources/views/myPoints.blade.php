@@ -109,24 +109,28 @@
 
             <!-- Map box -->
             <div class="box box-success">
-                <div class="box-body"><h4>Saved Teams</h4></div>
+                <div class="box-body"><h4>My Games</h4></div>
                 <div class="box-body no-padding">
                     <table id="tbl-gameweek" class="table table-striped">
                         <thead>
                         <tr>
                             <th>Team Name</th>
                             <th>Rank</th>
+                            <th>Value</th>
+                            <th>Price</th>
                             <th>Points</th>
-                            <th>Transfers</th>
                         </tr>
                         </thead>
                         <tbody>
+                        {{--*/ $arr = [1000, 1500, 2000, 2500, 3000] /*--}}
+                        {{--*/ $arrVal = [5, 10, 15, 20, 25, 50] /*--}}
                         @foreach ($userAllTeams as $allTeam)
                         <tr>
                             <td><a href="{{ Config::get('app.url') . Config::get('url.pick_team') . '/' . $allTeam->id }}">{{ $allTeam->team_name }}</a></td>
                             <td>{{ $allTeam->team_rank }}</td>
+                            <td>{{ $arrVal[array_rand($arrVal)] }}</td>
+                            <td>{{ $arr[array_rand($arr)] }}</td>
                             <td>{{ $allTeam->team_points }}</td>
-                            <td>0</td>
                         </tr>
                         @endforeach
                         </tbody>
