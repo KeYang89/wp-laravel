@@ -17,80 +17,79 @@
                         <h4>Choose the players you want to compare.</h4>
                     </div>
                     <div class="box-body">
-                        <div>
-                            <div ng-repeat="player in compare.players" class="col-lg-3">
-                                <div ng-if="player.playerId != null" class="well well-sm ps-player-widget-<% player.widgetId %>">
-                                    <div class="cmp-wgt-row cmp-wgt-pname cmp-wgt-pname-<% player.widgetId %>"><% player.playerName %></div>
-                                    <div class="cmp-wgt-row cmp-wgt-tname"><% player.teamName %></div>
-                                    <div class="cmp-wgt-ph"><img src="<% player.playerPhoto %>" style="width: 100%; height: 100%;"></div>
-                                    <div class="cmp-wgt-row cmp-wgt-lname"><% player.leagueName %></div>
-                                    <div class="cmp-wgt-row cmp-wgt-sname"><% player.seasonName %></div>
-                                    <div class="cmp-wgt-row cmp-wgt-sname">GAMES</div>
-                                    <div class="cmp-wgt-row cmp-wgt-svalue"><% player.stat.games %></div>
-                                    <div class="cmp-wgt-row cmp-wgt-sname">MINS PLAYED</div>
-                                    <div class="cmp-wgt-row cmp-wgt-svalue"><% player.stat.mins_played %></div>
-                                </div>
-                            </div>
-
-                            <div ng-if="compare.players.length < 4" class="col-lg-3">
-                                <div>
-                                    <a href ng-click="selectPlayer();"><button id="save-team" class="btn btn-primary btn-sm btn-flat btn-black">Choose a Player</button></a>
+                        <div class="row" style="margin: 0;">
+                            <div class="col-xs-12 col-sm-6 col-md-3" ng-repeat="n in [0, 1, 2, 3]">
+                                <button class="btn btn-black btn-player-stat-add" ng-if="compare.players[n] === undefined" ng-click="selectPlayer()"><i class="ion-android-person-add"></i></button>
+                                <div class="" ng-if="compare.players[n] !== undefined">
+                                    <div ng-if="compare.players[n].playerId != null" class="well well-sm ps-player-widget">
+                                        <table class="table table-striped tbl-player-stat">
+                                            <tbody style="margin: 0; padding: 0;">
+                                                <tr style="margin: 0;">
+                                                    <td style="margin: 0;" class="cmp-wgt-pname cmp-wgt-pname-<% compare.players[n].widgetId %>"><% compare.players[n].playerName %></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><img src="<% compare.players[n].playerPhoto %>" style="width: 100%; height: 100%;"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="cmp-wgt-svalue"><% compare.players[n].teamName %></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="cmp-wgt-fvalue"><% compare.players[n].leagueName %></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="cmp-wgt-fvalue"><% compare.players[n].seasonName %></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="cmp-wgt-sname">GAMES<br /><span class="cmp-wgt-svalue"><% compare.players[n].stat.games %></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="cmp-wgt-sname">MINS PLAYED<br /><span class="cmp-wgt-svalue"><% compare.players[n].stat.mins_played %></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="cmp-wgt-sname">GOALS<br /><span class="cmp-wgt-svalue"><% compare.players[n].stat.goals_scored %></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="cmp-wgt-sname">SAVES<br /><span class="cmp-wgt-svalue"><% compare.players[n].stat.saves %></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="cmp-wgt-sname">STARTS<br /><span class="cmp-wgt-svalue"><% compare.players[n].stat.starts %></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="cmp-wgt-sname">CROSSES<br /><span class="cmp-wgt-svalue"><% compare.players[n].stat.crosses %></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="cmp-wgt-sname">GOALS ALLOWED<br /><span class="cmp-wgt-svalue"><% compare.players[n].stat.goals_allowed %></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="cmp-wgt-sname">ASSISTS<br /><span class="cmp-wgt-svalue"><% compare.players[n].stat.assists %></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="cmp-wgt-sname">SHOT ON TARGET<br /><span class="cmp-wgt-svalue"><% compare.players[n].stat.shot_on_target %></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="cmp-wgt-sname">TRACKLES<br /><span class="cmp-wgt-svalue"><% compare.players[n].stat.trackles %></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="cmp-wgt-sname">CHANCES CREATED<br /><span class="cmp-wgt-svalue"><% compare.players[n].stat.chances_created %></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="cmp-wgt-sname">INERCEPTIONS<br /><span class="cmp-wgt-svalue"><% compare.players[n].stat.interceptions %></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="cmp-wgt-sname">RED CARDS<br /><span class="cmp-wgt-svalue"><% compare.players[n].stat.red_cards %></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="cmp-wgt-sname">YELLOW CARDS<br /><span class="cmp-wgt-svalue"><% compare.players[n].stat.yellow_cards %></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><a href ng-click="removePlayer(n)"><i class="ion-android-remove-circle cmp-wgt-remove"></i></a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="box-body" ng-if="compare.players.length > 0">
-                        <table id="tbl-gameweek" class="table table-striped">
-                            <thead>
-                                <tr>
-                                    <th>Stat</th>
-                                    <th ng-repeat="player in compare.players" style="text-transform: uppercase;" class="cmp-grid-player-<% player.widgetId %>"><% player.playerName %></th>
-                                </tr>
-                            </thead>
-
-                            <tbody>
-                                <!--
-                                <tr>
-                                    <td>
-                                        <select onchange="addStat(1)">
-                                            <option value="">Add A Stat</option>
-                                            <option ng-repeat="stat in player.gridStats" value="<% stat.id %>"><% stat.name %></option>
-                                        </select>
-                                    </td>
-                                    <th ng-repeat="player in compare.players" class="cmp-grid-player-<% player.widgetId %>">&nbsp;</th>
-                                </tr>
-                                -->
-                                <tr>
-                                    <td>Total Score</td>
-                                    <td ng-repeat="player in compare.players" class="cmp-grid-player-<% player.widgetId %>"><% player.stat.total_score %></td>
-                                </tr>
-                                <tr>
-                                    <td>Total Passes</td>
-                                    <td ng-repeat="player in compare.players" class="cmp-grid-player-<% player.widgetId %>"><% player.stat.total_passes %></td>
-                                </tr>
-                                <tr>
-                                    <td>Total Shots</td>
-                                    <td ng-repeat="player in compare.players" class="cmp-grid-player-<% player.widgetId %>"><% player.stat.total_shots %></td>
-                                </tr>
-                                <tr>
-                                    <td>Goals Scored</td>
-                                    <td ng-repeat="player in compare.players" class="cmp-grid-player-<% player.widgetId %>"><% player.stat.goals_scored %></td>
-                                </tr>
-                                <tr>
-                                    <td>Saves</td>
-                                    <td ng-repeat="player in compare.players" class="cmp-grid-player-<% player.widgetId %>"><% player.stat.saves %></td>
-                                </tr>
-                                <tr>
-                                    <td>Red Cards</td>
-                                    <td ng-repeat="player in compare.players" class="cmp-grid-player-<% player.widgetId %>"><% player.stat.red_cards %></td>
-                                </tr>
-                                <tr>
-                                    <td>Yellow Cards</td>
-                                    <td ng-repeat="player in compare.players" class="cmp-grid-player-<% player.widgetId %>"><% player.stat.yellow_cards %></td>
-                                </tr>
-                            </tbody>
-
-                        </table>
                     </div>
                 </div><!-- /.box-body-->
             </section><!-- /.Left col -->
@@ -99,37 +98,38 @@
         <!-- Control Sidebar -->
         <aside id="tsf" class="control-sidebar control-sidebar-dark">
 
-            <form id="frm-comp-player" role="form" class="frm-right-slider">
-                <div class="form-group">
-                    <label for="player" class="lbl-right-slider">Player:</label>
-                    <select id="cmp-player-id" class="ipt-right-slider">
-                        <option value="">Select Player</option>
-                        <option ng-repeat="player in player.allPlayers" value="<% player.id %>"><% player.first_name + ' ' + player.last_name %></option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="league" class="lbl-right-slider">League:</label>
-                    <select class="ipt-right-slider" id="cmp-league-id">
-                        <option value="">Select League</option>
-                        <option ng-repeat="league in player.allLeagues" value="<% league.id %>"><% league.league_name %></option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="season" class="lbl-right-slider">Season:</label>
-                    <select class="ipt-right-slider" id="cmp-season-id">
-                        <option value="">Select Season</option>
-                        <option ng-repeat="season in player.allSeasons" value="<% season.id %>"><% season.season %></option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <ul style="margin: 0; padding: 0; list-style: none;">
-                        <li style="float: left;"><a href ng-click="addPlayer(player.widgetId);"><input type="submit" class="btn btn-medium" value="Add Player"></a></li>
-                        <li style="float: left; margin-left: 4px;"><a data-toggle="control-sidebar" href><button class="pull-left btn btn-medium">Hide <i class="fa fa-arrow-circle-right"></i></button></a></li>
-                    </ul>
-                </div>
-            </form>
 
+            <div class="cteam-player-ftr">
+                <div class="title">Add player to compare</div>
+                <form id="frm-comp-player">
+                    <div class="form-group">
+                        <label>Player</label>
+                        <select id="cmp-player-id" class="form-control rgt-sldr-frm-ipt" data-role="listview">
+                            <option value="">Select Player</option>
+                            <option ng-repeat="player in player.allPlayers" value="<% player.id %>"><% player.first_name + ' ' + player.last_name %></option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>League</label>
+                        <select class="form-control rgt-sldr-frm-ipt" id="cmp-league-id" data-role="listview">
+                            <option value="">Select League</option>
+                            <option ng-repeat="league in player.allLeagues" value="<% league.id %>"><% league.league_name %></option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Select Season</label>
+                        <select class="form-control rgt-sldr-frm-ipt" id="cmp-season-id" data-role="listview">
+                            <option value="">Select Season</option>
+                            <option ng-repeat="season in player.allSeasons" value="<% season.id %>"><% season.season %></option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="form-group row">
 
+                <div class="col-xs-12 col-sm-6" style="text-align: center; margin-top: 6px;"><a href ng-click="addPlayer(player.widgetId);"><input type="submit" class="btn btn-medium" value="Add Player"></a></div>
+                <div class="col-xs-12 col-sm-6" style="text-align: center; margin-top: 6px;"><a data-toggle="control-sidebar" href><button class=" btn btn-medium">Hide <i class="fa fa-arrow-circle-right"></i></button></a></div>
+            </div>
         </aside><!-- /.control-sidebar -->
         <!-- Add the sidebar's background. This div must be placed
              immediately after the control sidebar -->
@@ -158,6 +158,5 @@
 @endsection
 
 @section('javascript')
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
 <script src="{{Config::get('app.url')}}/public/js/playerStats.js" type="text/javascript"></script>
 @endsection

@@ -146,17 +146,9 @@ div.player-profile-summary > div{
 
 }
 
-.ps-player-widget-1{
-    border: #f00000 solid 1px;
-}
-.ps-player-widget-2{
-    border: #3D7700 solid 1px;
-}
-.ps-player-widget-3{
-    border: #0000ff solid 1px;
-}
-.ps-player-widget-4{
-    border: #bf800c solid 1px;
+.ps-player-widget{
+    border: #38475F solid 3px;
+    background-color: #fff; padding: 0;
 }
 
 .frm-right-slider{
@@ -181,8 +173,17 @@ div.player-profile-summary > div{
     text-transform: uppercase;
 }
 .cmp-wgt-pname{
-    font-size: 16px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #38475F;
+    color: #ffffff;
 }
+
+.cmp-wgt-fvalue{
+    font-size: 14px;
+    color: #444444;
+}
+
 .cmp-wgt-tname{
     font-size: 13px;
 }
@@ -198,27 +199,21 @@ div.player-profile-summary > div{
     font-size: 13px;
     font-weight: bold;
 }
+.cmp-wgt-remove{
+    color: #FF0000;
+    font-size: 24px;
+}
 
-.cmp-wgt-pname-1,
-.cmp-grid-player-1{
-    color: #f00000;
-}
-.cmp-wgt-pname-2,
-.cmp-grid-player-2{
-    color: #3D7700;
-}
-.cmp-wgt-pname-3,
-.cmp-grid-player-3{
-    color: #0000ff;
-}
-.cmp-wgt-pname-4,
-.cmp-grid-player-4{
-    color: #bf800c;
-}
 .cmp-wgt-ph{
     margin: 0px auto;
     height: 120px;
     max-width: 120px;
+}
+
+.control-sidebar-bg{
+    height: auto;
+    border-left: 1px solid rgb(204, 204, 204);
+    box-shadow: 6px 6px 6px 6px rgba(0, 0, 0, 0.6);
 }
 
 .table-striped > tbody > tr:nth-of-type(2n+1) {
@@ -282,7 +277,7 @@ div.player-profile-summary > div{
 table.cteam-player-list{
     width: 100%;
     background-color: #38475F;
-    border-spacing: 1px;
+    /*border-spacing: 1px;*/
     border-collapse: separate;
     margin-top: 1px;
 }
@@ -327,6 +322,23 @@ section.left-counter .left-match-counter{
 
 .login-logo, .register-logo{
     margin-bottom: 10px;
+}
+
+.btn-player-stat-add{
+    padding: 0 !important;
+    width: 100%;
+    font-size: 22px;
+    font-weight: bold;;
+    margin-top: 6px;
+}
+
+table.tbl-player-stat{
+    margin: 0 !important;
+}
+table.tbl-player-stat td{
+    text-align: center;
+    padding: 0 !important;
+    border: 0 !important;
 }
 
 /* #### Mobile Phones Portrait or Landscape #### */

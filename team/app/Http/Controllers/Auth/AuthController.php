@@ -28,7 +28,7 @@ class AuthController extends Controller {
 	 * @return void
 	 */
 
-	protected $redirectTo = '/lobby';
+	protected $redirectTo = '/my-points';
 
     public function __construct(Guard $auth, Registrar $registrar)
 	{
