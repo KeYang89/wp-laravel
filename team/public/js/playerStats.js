@@ -144,7 +144,15 @@ var playerStatsApp = angular.module('PlayerStatus', [], function($interpolatePro
                                 total_shots: data.result.total_shots,
                                 saves: data.result.saves,
                                 red_cards: data.result.red_cards,
-                                yellow_cards: data.result.yellow_cards
+                                yellow_cards: data.result.yellow_cards,
+                                starts: data.result.starts,
+                                crosses: data.result.crosses,
+                                goals_allowed: data.result.goals_allowed,
+                                assists: data.result.assists,
+                                shot_on_target: data.result.shot_on_target,
+                                trackles: data.result.trackles,
+                                chances_created: data.result.chances_created,
+                                interceptions: data.result.interceptions
                             };
                         }
 

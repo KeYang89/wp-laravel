@@ -46,6 +46,42 @@
                                                     <td class="cmp-wgt-sname">MINS PLAYED<br /><span class="cmp-wgt-svalue"><% compare.players[n].stat.mins_played %></span></td>
                                                 </tr>
                                                 <tr>
+                                                    <td class="cmp-wgt-sname">GOALS<br /><span class="cmp-wgt-svalue"><% compare.players[n].stat.goals_scored %></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="cmp-wgt-sname">SAVES<br /><span class="cmp-wgt-svalue"><% compare.players[n].stat.saves %></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="cmp-wgt-sname">STARTS<br /><span class="cmp-wgt-svalue"><% compare.players[n].stat.starts %></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="cmp-wgt-sname">CROSSES<br /><span class="cmp-wgt-svalue"><% compare.players[n].stat.crosses %></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="cmp-wgt-sname">GOALS ALLOWED<br /><span class="cmp-wgt-svalue"><% compare.players[n].stat.goals_allowed %></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="cmp-wgt-sname">ASSISTS<br /><span class="cmp-wgt-svalue"><% compare.players[n].stat.assists %></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="cmp-wgt-sname">SHOT ON TARGET<br /><span class="cmp-wgt-svalue"><% compare.players[n].stat.shot_on_target %></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="cmp-wgt-sname">TRACKLES<br /><span class="cmp-wgt-svalue"><% compare.players[n].stat.trackles %></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="cmp-wgt-sname">CHANCES CREATED<br /><span class="cmp-wgt-svalue"><% compare.players[n].stat.chances_created %></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="cmp-wgt-sname">INERCEPTIONS<br /><span class="cmp-wgt-svalue"><% compare.players[n].stat.interceptions %></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="cmp-wgt-sname">RED CARDS<br /><span class="cmp-wgt-svalue"><% compare.players[n].stat.red_cards %></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="cmp-wgt-sname">YELLOW CARDS<br /><span class="cmp-wgt-svalue"><% compare.players[n].stat.yellow_cards %></span></td>
+                                                </tr>
+                                                <tr>
                                                     <td><a href ng-click="removePlayer(n)"><i class="ion-android-remove-circle cmp-wgt-remove"></i></a></td>
                                                 </tr>
                                             </tbody>
